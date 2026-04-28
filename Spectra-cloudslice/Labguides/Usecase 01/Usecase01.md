@@ -166,7 +166,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image21.png)
 
 10. Navigate to the
-    +++leavepolicystg@lab.LabInstance.Id+++
+    **leavepolicystg@lab.LabInstance.Id**
     Storage account (Select **Storageaccounts** from the **Home
     page** of the Azure portal and
     select leavepolicystg@lab.LabInstance.Id)
