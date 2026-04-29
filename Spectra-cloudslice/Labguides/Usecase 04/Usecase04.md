@@ -89,7 +89,7 @@ JSON-based indexes to provide fast, relevant search results.
     - Subscription – Select your **assigned subscription**
 
     - Resource group – Select your **assigned Resource
-      group** (**ResourceGroup1**)
+      group** (**AgenticAI**)
 
     - Storage account name –
       +++searchleaves@lab.LabInstance.Id+++
@@ -148,12 +148,12 @@ JSON-based indexes to provide fast, relevant search results.
     - Subscription – Select your **assigned subscription**
 
     - Resource group – Select your **assigned Resource
-      group** (**ResourceGroup1**)
+      group** (**AgenticAI**)
 
     - Storage account name –
-      +++[**iqlab@lab.LabInstance.Id**](mailto:iqlab@lab.LabInstance.Id)+++
+      +++iqlab@lab.LabInstance.Id+++
 
-    - Region – Select @lab.CloudResourceGroup(ResourceGroup1).Location
+    - Region – Select @lab.CloudResourceGroup(AgenticAI).Location
 
     - Primary service – Select **Azure Blob Storage or Azure Data Lake
       Storage Gen 2**
@@ -198,10 +198,10 @@ JSON-based indexes to provide fast, relevant search results.
   ![](./media/image24.png)
 
 10. Navigate to the
-    +++[**iqlab@lab.LabInstance.Id**](mailto:iqlab@lab.LabInstance.Id)+++
+    +++iqlab@lab.LabInstance.Id+++
     Storage account (Select **Storageaccounts** from the **Home
     page** of the Azure portal and select  and select **Access Control
-    (IAM)** from the left pane. Select **Add -\ Add role assignment**.
+    (IAM)** from the left pane. Select **Add > Add role assignment**.
 
   ![](./media/image25.png)
 
@@ -211,7 +211,7 @@ JSON-based indexes to provide fast, relevant search results.
   ![](./media/image26.png)
 
 12. Click on **+Select members**, search for and select your **user
-    name**, <+++@lab.CloudPortalCredential(User1).Username+++ and then
+    name**, +++@lab.CloudPortalCredential(User1).Username+++ and then
     click on **Select**. This adds the Storage Blob Data Reader role to
     your user id.
 
@@ -237,7 +237,7 @@ In this task, you will create a Foundry resource which is required to
 access the Microsoft Foundry.
 
 1.  From the Home page of the Azure
-    portal(+++[https://portal.azure.com+++](https://portal.azure.com+++/)),
+    portal +++https://portal.azure.com+++,
     select **Foundry**.
 
   ![](./media/image32.png)
@@ -331,12 +331,12 @@ reports.
 
   ![](./media/image47.png)
 
-2.  Filter by, and select, the **+++Lakehouse+++** tile.
+2.  Filter by, and select, the **Lakehouse** tile.
 
   ![](./media/image48.png)
 
-3.  In the **New lakehouse** dialog box, enter **+++IQ_Lakehouse
-    +++** in the **Name** field and **unselect** the lakehouses schemas.
+3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse
+    +++ in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
   ![](./media/image49.png)
@@ -562,7 +562,7 @@ contextual connections in your data.
 2.  Enter the following relationship type details and select **Add
     relationship type**.
 
-    - **Relationship type name**: +++Places +++
+    - **Relationship type name**: +++Places+++
 
     - **Source entity type**: Customer
 
@@ -646,7 +646,7 @@ ontology (preview) item.
 
    ![](./media/image117.png)
 
-3.  Enter **+++**IQ_Agent**+++** as the Data agent name and
+3.  Enter +++IQ_Agent+++ as the Data agent name and
     select **Create**.
 
    ![](./media/image118.png)
@@ -669,7 +669,7 @@ ontology (preview) item.
 
 20. Enter the following data into the **Instructions** section, then
     select **Publish**.
-  ```
+   ```
    You are a customer operations and order resolution analytics agent.
   
    Your purpose is to help answer business questions related to:
@@ -775,7 +775,7 @@ ontology (preview) item.
    recommendation based on the available evidence.
   
    Support group by in GQL
-  ```
+   ```
 
   ![](./media/image123.png)
 
@@ -831,7 +831,7 @@ ontology (preview) item.
 7.  In the **Instructions** section, enter the following data to define
     the agent’s behavior.
     
-  ```
+   ```
    You are Contoso’s Resolution Agent for customer shipment and delivery
    issues.
   
@@ -864,7 +864,7 @@ ontology (preview) item.
   
    - If inventory is available and policy supports replacement,
    prioritize fast resolution for Premium customers.
-  ```
+   ```
 
   ![](./media/image136.png)
 
