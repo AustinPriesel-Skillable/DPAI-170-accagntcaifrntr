@@ -45,11 +45,11 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     - Subscription – @lab.CloudSubscription.Name
 
-    - Resource group – @lab.CloudResourceGroup(ResourceGroup1).Name
+    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
 
     - Storage account name – +++searchleaves@lab.LabInstance.Id+++
 
-    - Location – @lab.CloudResourceGroup(ResourceGroup1).Location
+    - Location – @lab.CloudResourceGroup(AgenticAI).Location
 
     ![A screenshot of a search service AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image3.png)
@@ -113,11 +113,11 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     - Subscription – @lab.CloudSubscription.Name
 
-    - Resource group – @lab.CloudResourceGroup(ResourceGroup1).Name
+    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
 
     - Storage account name – +++leavepolicystg@lab.LabInstance.Id+++
 
-    - Region – @lab.CloudResourceGroup(ResourceGroup1).Location
+    - Region – @lab.CloudResourceGroup(AgenticAI).Location
 
     - Primary service – Select **Azure Blob Storage or Azure Data Lake
       Storage Gen 2**
@@ -348,7 +348,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 1.  Back in the Azure portal, open the **searchleaves** AI Search
     service resource.
 
-2.  Select **Import and vectorize data**.
+2.  Select **Import data**.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image50.png)
