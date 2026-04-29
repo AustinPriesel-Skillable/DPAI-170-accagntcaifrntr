@@ -1009,7 +1009,7 @@ standards.+++
 28. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
-   +++ What is the best operational resolution for order O5001?+++
+   +++What is the best operational resolution for order O5001?+++
 
    ![](./media/image167.png)
   
