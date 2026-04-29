@@ -92,7 +92,7 @@ will be using throughout the lab.
 
     ![](./media/image2.png)
 
-   [!Alert] **Important:** Make sure you create all your resources under
+> [!alert] **Important:** Make sure you create all your resources under
 this Resource group
 
 ## Task 1: Register Service provider
