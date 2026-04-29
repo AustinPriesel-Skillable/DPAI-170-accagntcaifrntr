@@ -158,11 +158,11 @@ incorrect.](./media/image8.png)
 
     ![](./media/image15.png)
 
-4.  Click on **Code > Codespaces > Codespaces+**
+4.  Click on **Code > Codespaces > Codespaces**
 
     ![](./media/image16.png) 
 
-5.  Wait for the Codespaces environment to setup .It takes few minutes
+5.  Wait for the Codespaces environment to setup. It takes few minutes
     to setup completely
 
     ![](./media/image17.png) 
@@ -207,7 +207,7 @@ incorrect.](./media/image23.png)
 5.  Run below command to provision the services to Azure, build your
     container.
 
-    +++azd env set AZURE_RESOURCE_GROUP {Name of existing resource group}+++
+    +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
     ![](./media/image26.png)
 
