@@ -166,7 +166,7 @@ incorrect.](./media/image8.png)
 
 3.  Click on **Create fork**
 
-4.  Click on **Code > Codespaces > Codespaces+**
+4.  Click on **Code > Codespaces > Codespaces**
 
     ![](./media/image14.png)
 
