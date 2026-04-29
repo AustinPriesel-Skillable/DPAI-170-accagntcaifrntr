@@ -85,16 +85,14 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-    ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image1.png)
+    ![](./media/image1.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-    ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image2.png)
+    ![](./media/image2.png)
 
-\[!Alert\] **Important:** Make sure you create all your resources under
+   [!Alert] **Important:** Make sure you create all your resources under
 this Resource group
 
 ## Task 1: Register Service provider
@@ -102,29 +100,25 @@ this Resource group
 1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
     your cloud slice account below.
 
-Username: <+++@lab.CloudPortalCredential(User1).Username+++
+   Username: <+++@lab.CloudPortalCredential(User1).Username+++
 
-Password: <+++@lab.CloudPortalCredential(User1). *TAP*+++
+   Password: <+++@lab.CloudPortalCredential(User1). *TAP*+++
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image3.png)
+    ![](./media/image3.png)
 
-    ![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image4.png)
+    ![](./media/image4.png)
 
 2.  Click on **Subscriptions** tile.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image5.png)
+    ![](./media/image5.png)
 
 3.  Click on the subscription name.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+    ![](./media/image6.png)
 
 4.  Expand Settings from the left navigation menu. Click on **Resource
-    providers**, enter **+++** **Microsoft.CognitiveServices+++** and
-    select i,t, and then click **Register**.
+    providers**, enter +++Microsoft.CognitiveServices+++ and
+    select it, and then click **Register**.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image7.png)
@@ -137,7 +131,7 @@ incorrect.](./media/image8.png)
 
 5.  Repeat the steps \#4 to register the following Resource provider.
 
-- +++**Microsoft.AlertsManagement**+++
+   - +++Microsoft.AlertsManagement+++
 
 ## Task 2: Retrieve resource group name and location
 
@@ -173,7 +167,7 @@ incorrect.](./media/image8.png)
 
 3.  Click on **Create fork**
 
-4.  Click on **Code -\ Codespaces -\ Codespaces+**
+4.  Click on **Code > Codespaces > Codespaces+**
 
     ![](./media/image14.png)
 
@@ -187,7 +181,7 @@ incorrect.](./media/image8.png)
 5.  Run the following command to install the Azure Developer CLI
     (**azd**) on your codespace.
 
-+++curl -fsSL https://aka.ms/install-azd.sh | bash+++
+    +++curl -fsSL https://aka.ms/install-azd.sh | bash+++
 
     ![](./media/image17.png)
 
@@ -196,7 +190,7 @@ incorrect.](./media/image8.png)
 1.  Run the following command on the Terminal. It generates the code to
     copy. Copy the code and press Enter.
 
-+++azd auth login+++
+    +++azd auth login+++
 
     ![](./media/image18.png)
 
@@ -207,11 +201,9 @@ incorrect.](./media/image8.png)
 
 3.  Sign in with your Azure credentials.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image20.png)
+    ![](./media/image20.png)
 
-    ![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image21.png)
+    ![](./media/image21.png)
 
     ![](./media/image22.png)
 
@@ -219,31 +211,30 @@ incorrect.](./media/image21.png)
     Azure Developer CLI command.It asks you to enter environment name
     .Enter any name of your choice and press enter (eg :+++agentXXXX+++)
 
-**Note:** When creating an environment, ensure that the name consists of
-lowercase letters.
+    **Note:** When creating an environment, ensure that the name consists of lowercase letters.
 
-+++azd env new+++
+    +++azd env new+++
 
     ![](./media/image23.png)
 
 5.  Run below command to provision the services to Azure, build your
     container.
 
-+++azd env set AZURE_RESOURCE_GROUP {Name of existing resource group}+++
+    +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
     ![](./media/image24.png)
 
 6.  Run azd up - This will provision Azure resources
 
-+++azd up+++
+    +++azd up+++
 
     ![](./media/image25.png)
 
 7.  Select below values.
 
-- **Select an Azure Subscription to use** : Select your subscription
+    - **Select an Azure Subscription to use** : Select your subscription
 
-- **azureAiServiceLocation**: Central US
+    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
 
     ![](./media/image26.png)
 
@@ -262,9 +253,9 @@ lowercase letters.
 
 8.  Run the following command to install PowerShell in Codespaces
 
-sudo apt-get update
+    ```sudo apt-get update```
 
-sudo apt-get install -y powershell
+    ```sudo apt-get install -y powershell```
 
     ![](./media/image31.png)
 
@@ -274,7 +265,7 @@ sudo apt-get install -y powershell
     enable execution of PowerShell scripts within your development
     environment.
 
-+++ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash+++
+    +++curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash+++
 
     ![](./media/image33.png)
 
@@ -346,31 +337,29 @@ sudo apt-get install -y powershell
 
 1.  Select **Resource groups**
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image50.png)
+    ![](./media/image50.png)
 
 2.  Click on your assigned **Resource group**.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image51.png)
+    ![](./media/image51.png)
 
 3.  Make sure the below resource got deployed successfully
 
-- Kubernetes service
-
-- Container App
-
-- Container registry
-
-- Container App Environment
-
-- Azure Cosmos DB account
-
-- Search service
-
-- Azure Storage account
-
-- Azure OpenAI
+   - Kubernetes service
+  
+   - Container App
+  
+   - Container registry
+  
+   - Container App Environment
+  
+   - Azure Cosmos DB account
+  
+   - Search service
+  
+   - Azure Storage account
+  
+   - Azure OpenAI
 
     ![](./media/image52.png)
 
@@ -401,7 +390,7 @@ incorrect.](./media/image51.png)
     ![](./media/image57.png)
 
 4.  Browse to **C:\LabFiles\LabFiles\Data** on your VM, then select 
-    ** all files** and click on **Open** button.
+    **all files** and click on **Open** button.
 
     ![](./media/image58.png)
 
@@ -414,8 +403,7 @@ incorrect.](./media/image51.png)
 
     ![](./media/image61.png)
 
-6.  Enter +++ **What are the main factors contributing to the current
-    housing affordability issues?**+++ and select **Send**.
+6.  Enter +++What are the main factors contributing to the current housing affordability issues?+++ and select **Send**.
 
     ![](./media/image62.png)
 
@@ -434,8 +422,7 @@ incorrect.](./media/image51.png)
 
     ![](./media/image65.png)
 
-3.  Enter +++ **Analyze the two annual reports and compare the positive
-    and negative outcomes YoY. Show the results in a table.**+++ and
+3.  Enter +++Analyze the two annual reports and compare the positive and negative outcomes YoY. Show the results in a table.+++ and
     select **Send**.
 
     ![](./media/image66.png) 
@@ -456,8 +443,7 @@ incorrect.](./media/image51.png)
 
     ![](./media/image71.png)
 
-5.  Enter +++ **Can you summarize and compare the tables on page 10 and
-    11?**+++ and select **Send**.
+5.  Enter +++Can you summarize and compare the tables on page 10 and 11?+++ and select **Send**.
 
     ![](./media/image72.png)
 
@@ -475,9 +461,7 @@ incorrect.](./media/image51.png)
 
     ![](./media/image74.png)
 
-3.  Enter +++ **Analyze these forms and create a table with all buyers,
-    sellers, and corresponding purchase prices.**+++ and
-    select **Send**.
+3.  Enter +++Analyze these forms and create a table with all buyers, sellers, and corresponding purchase prices.+++ and select **Send**.
 
     ![](./media/image75.png)
 
@@ -495,8 +479,7 @@ incorrect.](./media/image51.png)
 
     ![](./media/image79.png)
 
-7.  Enter +++**What liabilities is the buyer responsible for within the
-    contract**+++ and select **Send**.
+7.  Enter +++What liabilities is the buyer responsible for within the contract+++ and select **Send**.
 
     ![](./media/image80.png)
 
@@ -514,7 +497,7 @@ incorrect.](./media/image51.png)
 
     ![](./media/image83.png)
 
-2.  Enter +++**delete**+++ and click on the **Delete** button to confirm
+2.  Enter +++delete+++ and click on the **Delete** button to confirm
     deletion. Click on **Delete** in the Delete confirmation dialog box.
 
     ![](./media/image84.png)
