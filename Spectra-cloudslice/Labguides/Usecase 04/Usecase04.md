@@ -669,6 +669,7 @@ ontology (preview) item.
 
 20. Enter the following data into the **Instructions** section, then
     select **Publish**.
+    
    ```
    You are a customer operations and order resolution analytics agent.
   
@@ -777,9 +778,9 @@ ontology (preview) item.
    Support group by in GQL
    ```
 
-  ![](./media/image123.png)
+   ![](./media/image123.png)
 
-  ![](./media/image124.png)
+   ![](./media/image124.png)
 
 21. After publishing, verify the success message and select **View
     publishing details** to review the agent deployment.
@@ -831,7 +832,7 @@ ontology (preview) item.
 7.  In the **Instructions** section, enter the following data to define
     the agent’s behavior.
     
-   ```
+    ```
    You are Contoso’s Resolution Agent for customer shipment and delivery
    issues.
   
@@ -864,9 +865,9 @@ ontology (preview) item.
   
    - If inventory is available and policy supports replacement,
    prioritize fast resolution for Premium customers.
-   ```
+    ```
 
-  ![](./media/image136.png)
+   ![](./media/image136.png)
 
 8.  Click **Save**
 
