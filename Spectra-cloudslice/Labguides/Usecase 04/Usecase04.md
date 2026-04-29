@@ -670,7 +670,7 @@ ontology (preview) item.
 20. Enter the following data into the **Instructions** section, then
     select **Publish**.
     
-   ```
+    ```
    You are a customer operations and order resolution analytics agent.
   
    Your purpose is to help answer business questions related to:
@@ -776,7 +776,7 @@ ontology (preview) item.
    recommendation based on the available evidence.
   
    Support group by in GQL
-   ```
+    ```
 
    ![](./media/image123.png)
 
