@@ -76,7 +76,7 @@ JSON-based indexes to provide fast, relevant search results.
 
     - Password - +++@lab.CloudPortalCredential(User1).Password+++
 
-From the Home page of the Azure portal, select **Microsoft Foundry** and
+  From the Home page of the Azure portal, select **Microsoft Foundry** and
 select **Microsoft Foundry** under Services.
 
   ![](./media/image2.png)
@@ -94,7 +94,7 @@ select **Microsoft Foundry** under Services.
       group** (**ResourceGroup1**)
 
     - Storage account name –
-      +++[**searchleaves@lab.LabInstance.Id**](mailto:searchleaves@lab.LabInstance.Id)+++
+      +++searchleaves@lab.LabInstance.Id+++
 
     - Location – Select @lab.CloudResourceGroup(AgenticAI).Location
 
