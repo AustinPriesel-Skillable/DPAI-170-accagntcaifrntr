@@ -74,11 +74,9 @@ project.
 
     - Password - +++@lab.CloudPortalCredential(User1).Password+++
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image1.png)
+    ![](./media/image1.png)
 
-    ![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image2.png)
+    ![](./media/image2.png)
 
     ![](./media/image3.png) 
 
