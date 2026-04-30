@@ -100,10 +100,11 @@ project.
 
     ![](./media/image6.png) 
 
-6.  The project creation process may take a few minutes to
-    ![](./media/image7.png)    complete.
+6.  The project creation process may take a few minutes to complete.
+   
+    ![](./media/image7.png)    
 
-7.  You should now see your Foundry project landing page. **Take note of
+8.  You should now see your Foundry project landing page. **Take note of
     the Project Endpoint information shown here** - we will use it
     later.
 
@@ -313,7 +314,7 @@ while adhering to its intended role
 
     ![](./media/image30.png)
 
-16. Click the **Traces** tab - you should see rows for each conversation
+16.  **Traces** tab - you should see rows for each conversation
     run
 
     ![](./media/image31.png)
@@ -398,8 +399,8 @@ also invoke *code-first*.
 
     ![](./media/image47.png)
 
-5.  Click the **Create **button. You should see this dialog. This is the
-    workflow to create a +++*customevaluator+++* to cover criteria
+5.  Click the **Create** button. You should see this dialog. This is the
+    workflow to create a +++customevaluator+++ to cover criteria
     specific to your requirements that are not covered by built-in
     evaluators. 
 
@@ -683,22 +684,25 @@ responses.
     ![](./media/image110.png)
 
 7.  Run the cell under **Create the Enhanced Travel Agent** to define
-    the agent instructions and create an agent with the registered
-    ![](./media/image111.png)    function tools attached.
+    the agent instructions and create an agent with the registered function tools attached.
+    
+    ![](./media/image111.png)    
 
     ![](./media/image112.png)
 
-8.  Run the cell under **Test: Flight Search** to test the agent’s
-    ability to call the **search_flights** tool and return relevant
-    ![](./media/image113.png)    results.
+9.  Run the cell under **Test: Flight Search** to test the agent’s
+    ability to call the **search_flights** tool and return relevant results.
+    
+    ![](./media/image113.png)    
 
     ![](./media/image114.png)
 
-9.  Run the cell under **Handle Function Call Responses** to execute the
-    tool call, send the results back to the agent, and generate the
-    ![](./media/image115.png)    final response.
+11.  Run the cell under **Handle Function Call Responses** to execute the
+    tool call, send the results back to the agent, and generate the final response.
 
-10. Run the cell under **Test: Hotel + Car Combo** to test a multi-step
+    ![](./media/image115.png)    
+
+13. Run the cell under **Test: Hotel + Car Combo** to test a multi-step
     query where the agent calls multiple tools sequentially to provide
     combined results.
 
@@ -706,7 +710,7 @@ responses.
 
     ![](./media/image117.png)
 
-11. Run the final cell to delete the conversation and agent resources.
+14. Run the final cell to delete the conversation and agent resources.
 
     ![](./media/image118.png)
 
@@ -836,8 +840,8 @@ requests.
 
     ![](./media/image145.png)
 
-9.  Open a browser go to ++++++ and sign in with your cloud slice
-    account below.
+9.  Open a browser go to +++https://portal.azure.com+++ and sign in with your cloud slice
+    account.
 
 10. Select **Resource groups**
 
@@ -859,15 +863,16 @@ requests.
 
     ![](./media/image150.png)
 
-15. Select **Agents**, then click on the **contoso-travel-traced** agent
-    ![](./media/image151.png)    to view its details and traces.
+15. Select **Agents**, then click on the **contoso-travel-traced** agent to view its details and traces.
+    
+    ![](./media/image151.png)    
 
-16. Click on the **Tracing** tab for your agent. You should see your
+17. Click on the **Tracing** tab for your agent. You should see your
     traces listed with the span names that were defined.
 
     ![](./media/image152.png)
 
-17. Click on a trace to see the full span tree
+18. Click on a trace to see the full span tree
 
     ![](./media/image153.png)
 
@@ -877,16 +882,16 @@ requests.
 
     ![](./media/image155.png)
 
-18. Return to your Codespace to continue the lab.
+19. Return to your Codespace to continue the lab.
 
-19. Run the cell under **Custom Span Attributes** to add custom metadata
+20. Run the cell under **Custom Span Attributes** to add custom metadata
     to traces for improved filtering and analysis in Azure Monitor.
 
     ![](./media/image156.png)
 
     ![](./media/image157.png)
 
-20. Run the final cell to delete the conversation and agent resources.
+21. Run the final cell to delete the conversation and agent resources.
 
     ![](./media/image158.png)
 
