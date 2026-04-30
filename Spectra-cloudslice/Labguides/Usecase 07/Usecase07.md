@@ -72,7 +72,7 @@ project.
 
     - Username - +++@lab.CloudPortalCredential(User1).Username+++
 
-    - Password - +++@lab.CloudPortalCredential(User1).Password+++
+    - Password - +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![](./media/image1.png)
 
