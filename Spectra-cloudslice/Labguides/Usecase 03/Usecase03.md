@@ -1,5 +1,5 @@
-**Usecase 03- Create a cross-department intelligent multi-agent
-automation solution**
+## Usecase 03- Create a cross-department intelligent multi-agent
+automation solution
 
 **Introduction**
 
