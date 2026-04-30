@@ -15,7 +15,7 @@ an interactive chat interface, where employees can simply ask a question
 and receive a precise, citation-supported answer grounded in Zava’s
 internal knowledge.
 
-![Architecture diagram showing that user input is provided to the Azure
+    ![Architecture diagram showing that user input is provided to the Azure
 Container App, which contains the app code. With user identity and
 resource access through managed identity, the input is used to form a
 response. The input and the Azure monitor are able to use the Azure
@@ -91,16 +91,14 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image2.png)
+    ![](./media/image2.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image3.png)
+    ![](./media/image3.png)
 
-\[!Alert\] **Important:** Make sure you create all your resources under
+>[!Alert] **Important:** Make sure you create all your resources under
 this Resource group
 
 ## Task 1: Register Service provider
@@ -108,256 +106,213 @@ this Resource group
 1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
     your cloud slice account below.
 
-Username: <+++@lab.CloudPortalCredential>(User1).Username+++
+    Username: <+++@lab.CloudPortalCredential(User1).Username+++
 
-Password: <+++@lab.CloudPortalCredential>(User1). *TAP*+++
+    Password: <+++@lab.CloudPortalCredential(User1). *TAP*+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image4.png)
+    ![](./media/image4.png)
 
-![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image5.png)
+    ![](./media/image5.png)
 
 1.  Click on **Subscriptions** tile.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+    ![](./media/image6.png)
 
 2.  Click on the subscription name.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
+    ![](./media/image7.png)
 
 3.  Expand Settings from the left navigation menu. Click on **Resource
-    providers**, enter **+++** **Microsoft.CognitiveServices+++** and
-    select i,t, and then click **Register**.
+    providers**, enter +++Microsoft.CognitiveServices+++ and
+    select it, and then click **Register**.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image8.png)
+    ![](./media/image8.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image9.png)
+    ![](./media/image9.png)
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image10.png)
+    ![](./media/image10.png)
 
-4.  Repeat the steps \#4 to register the following Resource provider.
+4.  Repeat the steps #4 to register the following Resource provider.
 
-- +++**Microsoft.AlertsManagement**+++
+    - +++Microsoft.AlertsManagement+++
 
 ## Task 2: Retrieve resource group name and location
 
-1.  Type in +++**Resource group+++** in the search bar and
+1.  Type in +++Resource group+++ in the search bar and
     select **Resource groups**.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image11.png)
+    ![](./media/image11.png)
 
 2.  Click on your assigned **Resource group**.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image12.png)
+    ![](./media/image12.png)
 
 3.  In **Resource group** page, copy **resource group name and
     location** and paste them in a notepad, then **Save** the notepad to
     use the information in the upcoming tasks.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image13.png)
+    ![](./media/image13.png)
 
 ## Task 3: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL:  +++https://github.com/technofocus-pte/aiagents+++
 
-![](./media/image14.png)
+    ![](./media/image14.png)
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
-![](./media/image15.png)
+    ![](./media/image15.png)
 
 3.  Click on **Create fork**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image16.png)
+    ![](./media/image16.png)
 
-4.  Click on **Code -\> Codespaces -\> Codespaces+**
+4.  Click on **Code > Codespaces > Codespaces+**
 
-![](./media/image17.png)
+    ![](./media/image17.png)
 
 4.  Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image18.png)
+    ![](./media/image18.png)
 
-![](./media/image19.png)
+    ![](./media/image19.png)
 
 ## Task 4: Provision Services and deploy application to Azure
 
 1.  Run the following command on the Terminal. It generates the code to
     copy. Copy the code and press Enter.
 
-+++azd auth login+++
+    +++azd auth login+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image20.png)
+    ![](./media/image20.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image21.png)
+    ![](./media/image21.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image22.png)
+    ![](./media/image22.png)
 
 3.  Sign in with your Azure credentials.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image23.png)
+    ![](./media/image23.png)
 
-![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image24.png)
+    ![](./media/image24.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image25.png)
+    ![](./media/image25.png)
 
-4.  To create an environment for Azure resources, run the following
-    Azure Developer CLI command.It asks you to enter environment name
-    .Enter any name of your choice and press enter (eg
-    :+++aiagentXXXX+++)
+4.  To create an environment for Azure resources, run the following Azure Developer CLI command.It asks you to enter environment name. Enter any name of your choice and press enter (eg: +++aiagentXXXX+++)
 
-**Note:** When creating an environment, ensure that the name consists of
-lowercase letters.
+    **Note:** When creating an environment, ensure that the name consists of
+    lowercase letters.
+    
+    +++azd env new+++
 
-+++azd env new+++
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image26.png)
+    ![](./media/image26.png)
 
 5.  Run below command to provision the services to Azure, build your
     container.
 
-+++azd env set AZURE_RESOURCE_GROUP {Name of existing resource group}+++
+    +++azd env set AZURE_RESOURCE_GROUP {Name of existing resource group}+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image27.png)
+    ![](./media/image27.png)
 
 6.  Run azd up - This will provision Azure resources
 
-+++azd up+++
+    +++azd up+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image28.png)
+    ![](./media/image28.png)
 
 7.  Select below values.
 
-- **Select an Azure Subscription to use** : Select your subscription
+    - **Select an Azure Subscription to use** : Select your subscription
+    
+    - **azureAiServiceLocation**: Sweden Central
 
-- **azureAiServiceLocation**: Sweden Central
+    ![](./media/image29.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image29.png)
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image30.png)
+    ![](./media/image30.png)
 
 4.  This deployment will take *7-10 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image31.png)
+    ![](./media/image31.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image32.png)
+    ![](./media/image32.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image33.png)
+    ![](./media/image33.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image34.png)
+    ![](./media/image34.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image35.png)
+    ![](./media/image35.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image36.png)
+    ![](./media/image36.png)
 
 5.  Now the deployment is complete
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image37.png)
+    ![](./media/image37.png)
 
 6.  After the application has been successfully deployed, you see a URL
     displayed in the terminal. Copy the **URL**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image37.png)
+    ![](./media/image37.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
 1.  Select **Resource groups**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image38.png)
+    ![](./media/image38.png)
 
 2.  Click on your assigned **Resource group**.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image39.png)
+    ![](./media/image39.png)
 
 3.  Make sure the below resource got deployed successfully
 
-- Foundry
+    - Foundry
+    
+    - Foundry project
+    
+    - Container App
+    
+    - Container registry
+    
+    - Container App Environment
+    
+    - Azure Cosmos DB account
+    
+    - Search service
+    
+    - Azure Storage account
 
-- Foundry project
-
-- Container App
-
-- Container registry
-
-- Container App Environment
-
-- Azure Cosmos DB account
-
-- Search service
-
-- Azure Storage account
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image40.png)
+    ![](./media/image40.png)
 
 4.  On the resource group and click on **Azure Storage account.**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image41.png)
+    ![](./media/image41.png)
 
 5.  From the left navigation menu, click on **Containers** , Make sure
     data should be deployed successfully
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image42.png)
+    ![](./media/image42.png)
 
 6.  Go back to resorcegroup and click on **Foundry Project.**
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image43.png)
+    ![](./media/image43.png)
 
 7.  Click **Go to Foundry portal** to verify that the model has been
     successfully deployed.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image44.png)
+    ![](./media/image44.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image45.png)
+    ![](./media/image45.png)
 
 8.  In the top navigation, select **Build**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46.png)
+    ![](./media/image46.png)
 
 9.  In the left-hand menu, select **Agents.** Locate your agent in the
     list - the agent name and version will be displayed
@@ -366,111 +321,85 @@ incorrect.](./media/image46.png)
     format: {agent_name}:{agent_version} (e.g., agent-template-assistant:1).
     Copy the Agent ID in a notepad
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image47.png)
+    ![](./media/image47.png)
 
 ## Task 6: Interact with Your AI Agent Using Predefined Questions
 
 1.  Go back to GitHub Codespaces and select the **Endpoint URL**.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image48.png)
+    ![](./media/image48.png)
 
 2.  Click on **Open** button
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image49.png)
+    ![](./media/image49.png)
 
 3.  Wait for the web application deployment to complete.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image50.png)
+    ![](./media/image50.png)
 
 2.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
     below image.
 
-**+++What's the best tent under $200 for two people, and what features
-does it include?+++**
+    +++What's the best tent under $200 for two people, and what features does it include?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image51.png)
+    ![](./media/image51.png)
 
-![A screenshot of a chat AI-generated content may be
-incorrect.](./media/image52.png)
+    ![](./media/image52.png)
 
 3.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
     below image.
 
-> +++ What has David Kim purchased in the past, and based on his buying
-> patterns, what other products might interest him?+++
+     +++ What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image53.png)
+    ![](./media/image53.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image54.png)
+    ![](./media/image54.png)
 
-> +++ Compare hiking boots from different brands in your inventory -
-> which ones offer the best value for durability and comfort?+++
+     +++ Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image55.png)
+    ![](./media/image55.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image56.png)
+    ![](./media/image56.png)
 
-+++How do I set up the Alpine Explorer Tent, and what should I know
-about its weather protection features?+++
+    +++How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image57.png)
+    ![](./media/image57.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image58.png)
+    ![](./media/image58.png)
 
 4.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
     below image.
 
-+++ I'm planning a 3-day camping trip for my family. What complete setup
-would you recommend under $500, and why?+++
+    +++ I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image59.png)
+    ![](./media/image59.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image60.png)
+    ![](./media/image60.png)
 
 ## Task 7: Sample Prompts for Azure AI Search
 
 1.  In the **agent-template-assistant** web app page, select New Chat
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image61.png)
+    ![](./media/image61.png)
 
 2.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
     below image.
 
-+++ Which products have wireless charging capabilities and what are
-their battery life specifications?+++
+    +++ Which products have wireless charging capabilities and what are their battery life specifications?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image62.png)
+    ![](./media/image62.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image63.png)
+    ![](./media/image63.png)
 
-> +++Find products designed for comfort and temperature control - what
-> features do they offer?+++
->
-> +++What care and maintenance instructions are available for electronic
-> products with waterproof features?+++
+     +++Find products designed for comfort and temperature control - what features do they offer?+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image64.png)
+     +++What care and maintenance instructions are available for electronic products with waterproof features?+++
+
+    ![](./media/image64.png)
 
 ## Task 8: Agent Evaluation
 
@@ -487,28 +416,25 @@ your unique assessment criteria.
 1.  Go back to GitHub Codespaces, open the terminal, and run the Python
     requirements script below to set up your environment
 
-+++python -m pip install -r src/requirements.txt+++
+    +++python -m pip install -r src/requirements.txt+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image65.png)
+    ![](./media/image65.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image66.png)
+    ![](./media/image66.png)
 
 2.  Run the below script to set the variable
 
-+++export AZURE_AI_AGENT_DEPLOYMENT_NAME="gpt-5-mini"+++
+    +++export AZURE_AI_AGENT_DEPLOYMENT_NAME="gpt-5-mini"+++
 
-+++export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"+++
+    +++export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"+++
 
-+++export AZURE_AI_AGENT_NAME="agent-template-assistant"+++
+    +++export AZURE_AI_AGENT_NAME="agent-template-assistant"+++
 
 3.  Go back to the Microsoft Foundry
 
 4.  Copy the **Microsoft Foundry project endpont**.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image67.png)
+    ![](./media/image67.png)
 
 5.  Go back to Github Cospaces and select the **test_utils.py** under
     the **test** folder in the left hand panel.
@@ -518,31 +444,26 @@ incorrect.](./media/image66.png)
 
 7.  Run the below script below
 
-+++export AZURE_EXISTING_AIPROJECT_ENDPOINT="Microsoft Foundry project
-endpont"+++
+    +++export AZURE_EXISTING_AIPROJECT_ENDPOINT="Microsoft Foundry project endpont"+++
 
 8.  Run the below script below.
 
-+++pytest tests/test_evaluation.py -s+++
+    +++pytest tests/test_evaluation.py -s+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image68.png)
+    ![](./media/image68.png)
 
 9.  Upon completion, the test will display an URL in the output where
     you can review the detailed evaluation results in the Azure AI
     Foundry UI, including individual evaluator passing scores and
     explanations.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image69.png)
+    ![](./media/image69.png)
 
 10. Click on the **Open**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image70.png)
+    ![](./media/image70.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image71.png)
+    ![](./media/image71.png)
 
 ## Task 9: AI Red Teaming Agent
 
@@ -569,62 +490,53 @@ will generate all the attack prompts for you.
 
 1.  Run the below script to set the variable
 
-+++export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"+++
+    +++export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"+++
 
 2.  Run the red teaming test in your local development environment:
 
-+++pytest tests/test_red_teaming.py -s+++
+    +++pytest tests/test_red_teaming.py -s+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image72.png)
+    ![](./media/image72.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image73.png)
+    ![](./media/image73.png)
 
 3.  Upon completion, the test will display an URL in the output where
     you can review the detailed red teaming evaluation results in the
     Microsoft Foundry UI, including attack inputs, outcomes, and
     reasons.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image74.png)
+    ![](./media/image74.png)
 
 4.  Click on **Open** button
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image75.png)
+    ![](./media/image75.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image76.png)
+    ![](./media/image76.png)
 
 ## Task 10: Tracing and monitoring
 
 1.  Enable tracing by setting the environment variable
 
-> +++azd env set ENABLE_AZURE_MONITOR_TRACING true+++
+    +++azd env set ENABLE_AZURE_MONITOR_TRACING true+++
 
 2.  Deploy the resources
 
-> +++azd deploy+++
+    +++azd deploy+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image77.png)
+    ![](./media/image77.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image78.png)
+    ![](./media/image78.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image79.png)
+    ![](./media/image79.png)
 
 ## Task 11: Console traces
 
 1.  You can view console traces in the Azure portal. You can get the
     link to the resource group with the azd tool:
 
-> +++azd show+++
+    +++azd show+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image80.png)
+    ![](./media/image80.png)
 
 Or if you want to navigate from the Azure portal main page, select your
 resource group from the 'Recent' list, or by clicking the 'Resource
@@ -644,28 +556,24 @@ evaluation data in Microsoft Foundry.
 
 1.  Go back the Microsoft Foundry and select agent.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image81.png)
+    ![](./media/image81.png)
 
 2.  Select the **Traces**
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image82.png)
+    ![](./media/image82.png)
 
-![Tracing Tab](./media/image83.png)
+    ![](./media/image83.png)
 
 3.  Once App Insights is connected to your foundry project, you can also
     visit the monitoring dashboard to view trends such as agent runs and
     tokens count, error rates, evaluation results, and other key metrics
     that help you monitor agent performance and usage.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image84.png)
+    ![](./media/image84.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image85.png)
+    ![](./media/image85.png)
 
-![Monitor Dashboard](./media/image86.png)
+    ![Monitor Dashboard](./media/image86.png)
 
 ## Task 13: Continuous Evaluation
 
@@ -686,36 +594,30 @@ To customize continuous evaluation from the Azure AI Foundry:
 1.  Select **Monitor.** Choose the agent you want to enable continuous
     evaluation for from the agent list and click on **Settings**
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image87.png)
+    ![](./media/image87.png)
 
 2.  Select evaluators and adjust maximal number of runs per hour and
     click on **Submit** button
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image88.png)
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image89.png)
+    ![](./media/image88.png)
+
+    ![](./media/image89.png)
 
 ## Task 14: Delete the resources
 
 1.  From the Azure portal home page, select the assigned Resouce group.
     Select all the resources under the Resource group and select Delete.
 
-![A screenshot of a computer Description automatically
-generated](./media/image90.png)
+    ![](./media/image90.png)
 
 2.  Enter +++**delete**+++ and click on the **Delete** button to confirm
     deletion. Click on **Delete** in the Delete confirmation dialog box.
 
-![A screenshot of a computer Description automatically
-generated](./media/image91.png)
+    ![](./media/image91.png)
 
 3.  Confirm the deletion of all the resources with a success message.
 
-![A screenshot of a computer screen Description automatically
-generated](./media/image92.png)
+    ![](./media/image92.png)
 
 **Summary**
 
