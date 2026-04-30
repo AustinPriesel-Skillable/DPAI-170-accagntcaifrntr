@@ -85,9 +85,9 @@ this Resource group
 1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
     your cloud slice account below.
 
-    Username: <+++@lab.CloudPortalCredential(User1).Username+++
+    Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-    Password: <+++@lab.CloudPortalCredential(User1).AccessToken+++
+    Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image3.png)
