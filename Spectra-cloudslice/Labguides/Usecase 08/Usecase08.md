@@ -102,7 +102,7 @@ this Resource group
 
     Username: <+++@lab.CloudPortalCredential(User1).Username+++
 
-    Password: <+++@lab.CloudPortalCredential(User1).AccessPass+++
+    Password: <+++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![](./media/image4.png)
 
