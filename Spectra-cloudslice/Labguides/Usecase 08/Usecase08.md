@@ -15,13 +15,7 @@ an interactive chat interface, where employees can simply ask a question
 and receive a precise, citation-supported answer grounded in Zava’s
 internal knowledge.
 
-    ![Architecture diagram showing that user input is provided to the Azure
-Container App, which contains the app code. With user identity and
-resource access through managed identity, the input is used to form a
-response. The input and the Azure monitor are able to use the Azure
-resources deployed in the solution: Application Insights, Microsoft
-Foundry Project, Foundry Tools, Storage account, Azure Container App,
-and Log Analytics Workspace.](./media/image1.png)
+![](./media/image1.png)
 
 **Introduction**
 
