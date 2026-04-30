@@ -157,7 +157,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     will get a notification once the role assignment is complete.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image14.png)
->
+
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image15.png)
 
 8.  You will see a notification
@@ -198,7 +198,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image22.png)
 
-3.  Click on **Code -\codespaces -\codespaces+**
+3.  Click on **Code > codespaces > codespaces+**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image23.png)
 
@@ -267,10 +267,10 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     - **Select an Azure Subscription to use** : @lab.CloudSubscription.Name
     
-    - **Enter a value for existingResourceGroup Name:** @lab.CloudResourceGroup(ResourceGroup1).Name
+    - **Enter a value for existingResourceGroup Name:** @lab.CloudResourceGroup(AgenticAI).Name
     
-    - **Enter location**: Sweden Central
-
+    - **Enter location**: @lab.CloudResourceGroup(AgenticAI).Location
+      
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image39.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image40.png)
