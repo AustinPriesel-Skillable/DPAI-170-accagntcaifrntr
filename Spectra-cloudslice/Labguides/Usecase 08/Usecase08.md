@@ -163,7 +163,7 @@ this Resource group
 
     ![](./media/image16.png)
 
-4.  Click on **Code > Codespaces > Codespaces+**
+4.  Click on **Code > Codespaces > Codespaces**
 
     ![](./media/image17.png)
 
@@ -210,7 +210,7 @@ this Resource group
 5.  Run below command to provision the services to Azure, build your
     container.
 
-    +++azd env set AZURE_RESOURCE_GROUP {Name of existing resource group}+++
+    +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
     ![](./media/image27.png)
 
@@ -224,7 +224,7 @@ this Resource group
 
     - **Select an Azure Subscription to use** : Select your subscription
     
-    - **azureAiServiceLocation**: Sweden Central
+    - **azureAiServiceLocation**: @labCloudResourceGroup(AgenticAI).Location
 
     ![](./media/image29.png)
 
@@ -345,13 +345,13 @@ this Resource group
     following text and click on the **Submit icon** as shown in the
     below image.
 
-     +++ What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?+++
+     +++What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?+++
 
     ![](./media/image53.png)
 
     ![](./media/image54.png)
 
-     +++ Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?+++
+     +++Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?+++
 
     ![](./media/image55.png)
 
@@ -367,7 +367,7 @@ this Resource group
     following text and click on the **Submit icon** as shown in the
     below image.
 
-    +++ I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?+++
+    +++I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?+++
 
     ![](./media/image59.png)
 
@@ -383,7 +383,7 @@ this Resource group
     following text and click on the **Submit icon** as shown in the
     below image.
 
-    +++ Which products have wireless charging capabilities and what are their battery life specifications?+++
+    +++Which products have wireless charging capabilities and what are their battery life specifications?+++
 
     ![](./media/image62.png)
 
