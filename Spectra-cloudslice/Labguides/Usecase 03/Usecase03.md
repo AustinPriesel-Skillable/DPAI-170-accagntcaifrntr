@@ -179,7 +179,7 @@ incorrect.](./media/image10.png)
 
     - **Select an Azure Subscription to use** : Select your subscription
   
-    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgentiAI).Location
+    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
   
     - **‘location' infrastructure parameter:** Central US
   
