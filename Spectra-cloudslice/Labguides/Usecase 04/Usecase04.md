@@ -338,8 +338,7 @@ reports.
 
   ![](./media/image48.png)
 
-3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse
-    +++ in the **Name** field and **unselect** the lakehouses schemas.
+3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse+++ in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
   ![](./media/image49.png)
