@@ -233,7 +233,7 @@ incorrect.](./media/image8.png)
 
     - **Select an Azure Subscription to use** : Select your subscription
 
-    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
+    - **azureAiServiceLocation**: centralus
 
     ![](./media/image26.png)
 
