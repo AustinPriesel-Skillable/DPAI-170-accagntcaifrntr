@@ -277,7 +277,7 @@ access the Microsoft Foundry.
 
   ![](./media/image38.png)
 
-8.  In the top navigation, select **Build**
+8.  Enable New Foundry, and in the top navigation, select **Build**
 
   ![](./media/image39.png)
 
