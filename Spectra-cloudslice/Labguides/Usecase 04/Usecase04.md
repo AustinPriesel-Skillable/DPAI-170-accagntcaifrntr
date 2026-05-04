@@ -249,10 +249,13 @@ access the Microsoft Foundry.
 
 3.  Enter the below details and select **Review + create**.
 
-    - Name - <+++agentic-@lab.LabInstance.Id+++
+    - Resource Group: AgenticAI   
 
-    - Default project name
-      - <+++agentic-ai-project-@lab.LabInstance.Id+++
+    - Name: +++agentic-@lab.LabInstance.Id+++
+
+    - Region: @lab.CloudResourceGroup(AgenticAI).Location
+
+    - Default project name: +++agentic-ai-project-@lab.LabInstance.Id+++
 
   ![](./media/image34.png)
 
