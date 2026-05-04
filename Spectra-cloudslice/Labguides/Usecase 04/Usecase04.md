@@ -362,7 +362,7 @@ reports.
 
   ![](./media/image53.png)
 
-3.  Browse to **C:\LabFiles\LabFiles\Usecase 6\Fabric** on your VM, then
+3.  Browse to **C:\LabFiles\LabFiles\Usecase4\Fabric** on your VM, then
     select  ** all** tables and click on **Open** button.
 
   ![](./media/image54.png)
