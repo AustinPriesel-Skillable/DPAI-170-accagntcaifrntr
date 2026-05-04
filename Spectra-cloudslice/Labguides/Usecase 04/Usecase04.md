@@ -279,6 +279,8 @@ access the Microsoft Foundry.
 
 8.  Enable New Foundry, and in the top navigation, select **Build**
 
+    Note: It might take 2-3 minutes for the background permissions to finalize.  Just refresh the page until the Create agent button is visible.   
+
   ![](./media/image39.png)
 
 9.  Select **Create agent** to create a new agent.
