@@ -252,9 +252,9 @@ incorrect.](./media/image8.png)
 
 8.  Run the following command to install PowerShell in Codespaces
 
-    ```sudo apt-get update```
+    +++sudo apt-get update+++
 
-    ```sudo apt-get install -y powershell```
+    +++sudo apt-get install -y powershell+++
 
     ![](./media/image31.png)
 
