@@ -197,21 +197,20 @@ incorrect.](./media/image23.png)
 
 4.  To create an environment for Azure resources, run the following
     Azure Developer CLI command.It asks you to enter environment name.
-    Enter any name of your choice and press enter (eg
-    :+++Bankagent@lab.LabInstance.Id+++)
-
+    
     +++azd env new+++
+    Use this name: +++Bankagent@lab.LabInstance.Id+++
 
     ![](./media/image25.png)
 
-5.  Run below command to provision the services to Azure, build your
+6.  Run below command to provision the services to Azure, build your
     container.
 
     +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
     ![](./media/image26.png)
 
-6.  Run azd up - This will provision Azure resources
+7.  Run azd up - This will provision Azure resources
 
     +++azd up+++
 
