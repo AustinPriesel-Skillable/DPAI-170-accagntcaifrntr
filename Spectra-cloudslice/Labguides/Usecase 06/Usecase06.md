@@ -198,7 +198,7 @@ incorrect.](./media/image23.png)
 4.  To create an environment for Azure resources, run the following
     Azure Developer CLI command.It asks you to enter environment name.
     Enter any name of your choice and press enter (eg
-    :+++BankagentXXXX+++)
+    :+++Bankagent@lab.LabInstance.Id+++)
 
     +++azd env new+++
 
