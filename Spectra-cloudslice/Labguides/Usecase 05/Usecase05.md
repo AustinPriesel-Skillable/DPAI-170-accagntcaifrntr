@@ -268,7 +268,7 @@ incorrect.](./media/image8.png)
 
     ![](./media/image33.png)
 
-1.  Select Terminal dropdown, select **New Terminal** and choose **PowerShell**.     
+1.  Run +++pwsh++ to switch from Bash to Powershell.     
 
 4.  Run the +++az login+++ command to log in to your Azure account and
     authenticate your session.
