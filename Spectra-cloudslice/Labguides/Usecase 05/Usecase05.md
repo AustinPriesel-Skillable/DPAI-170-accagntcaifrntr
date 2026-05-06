@@ -268,12 +268,18 @@ incorrect.](./media/image8.png)
 
     ![](./media/image33.png)
 
-4.  Run the following command to log in to your Azure account and
+1.  Select Terminal dropdown, select **New Terminal** and choose **PowerShell**.     
+
+4.  Run the +++az login+++ command to log in to your Azure account and
     authenticate your session.
 
     ![](./media/image34.png)
 
     ![](./media/image35.png)
+
+1. Change directory to **Deployment** +++cd Deployment+++
+
+2. Run +++.\resourcedeployment.ps1+++
 
 10. Enter your email address for certificate management, then open the
     provided URL and enter the displayed code to complete Azure login
