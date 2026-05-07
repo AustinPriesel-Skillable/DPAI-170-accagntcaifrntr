@@ -253,7 +253,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image35.png)
 
-10. Run azd up - This will provision Azure resources
+10. Run `azd up` - This will provision Azure resources
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image36.png)
 
@@ -267,7 +267,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     - **Select an Azure Subscription to use** : @lab.CloudSubscription.Name
     
-    - **Enter a value for existingResourceGroup Name:** @lab.CloudResourceGroup(AgenticAI).Name
+    - **Enter a value for existingResourceGroup Name:** +++@lab.CloudResourceGroup(AgenticAI).Name+++
     
     - **Enter location**: @lab.CloudResourceGroup(AgenticAI).Location
       
