@@ -23,20 +23,16 @@ privately curated data. It uses a combination of Microsoft’s AI and
 JSON-based indexes to provide fast, relevant search results.
 
 1.  Open a browser and login to Azure portal at
-    +++https://portal.azure.com/+++> with your credentials.
+    +++https://portal.azure.com/+++ with your credentials.
 
     - Username - +++@lab.CloudPortalCredential(User1).Username+++
 
     - Password - +++@lab.CloudPortalCredential(User1).AccessToken+++
 
-    From the Home page of the Azure portal, select **Microsoft Foundry** and
+1.  From the Home page of the Azure portal, select **Foundry** and
     select **Microsoft Foundry** under Services.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image1.png)
-
-2.  In the **AI Foundry page**, select **AI Search** under **Use with AI
-    Foundry** from the left pane and then select **+ Create**.
+2.  In the **Microsoft Foundry** Overview page, select **Use with Foundry** on the left side. Select **AI Search** and then select **+ Create**.
 
     ![A screenshot of a search engine AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image2.png)
@@ -229,7 +225,7 @@ document and required Role permissions to it.
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image30.png)
 
-2.  Select **+ Create**.
+2.  Select **+ Create**, **Azure OpenAI**.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image31.png)
