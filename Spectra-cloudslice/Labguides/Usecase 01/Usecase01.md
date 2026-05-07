@@ -234,9 +234,9 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     - Subscription – @lab.CloudSubscription.Name
 
-    - Resource group – @lab.CloudResourceGroup(ResourceGroup1).Name
+    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
 
-    - Region – @lab.CloudResourceGroup(ResourceGroup1).Location
+    - Region – @lab.CloudResourceGroup(AgenticAI).Location
 
     - Name – +++openaiservice@lab.LabInstance.Id+++
 

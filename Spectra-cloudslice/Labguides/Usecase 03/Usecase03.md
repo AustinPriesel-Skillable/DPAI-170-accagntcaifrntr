@@ -1,5 +1,5 @@
-**Usecase 03- Create a cross-department intelligent multi-agent
-automation solution**
+## Usecase 03- Create a cross-department intelligent multi-agent
+automation solution
 
 **Introduction**
 
@@ -17,13 +17,11 @@ onboarding tasks end-to-end.
 
 **Solution architecture**
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/a1.png)
+![](./media/a1.png)
 
 **Agentic architecture**
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/a2.png)
+![](./media/a2.png)
 
 **Objective**
 
@@ -91,7 +89,7 @@ this Resource group
 
     Username: <+++@lab.CloudPortalCredential(User1).Username+++
 
-    Password: <+++@lab.CloudPortalCredential(User1). *TAP*+++
+    Password: <+++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![](./media/image5.png)
 
@@ -181,7 +179,7 @@ incorrect.](./media/image10.png)
 
     - **Select an Azure Subscription to use** : Select your subscription
   
-    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgentiAI).Location
+    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
   
     - **‘location' infrastructure parameter:** Central US
   
@@ -493,11 +491,13 @@ onboarding activities efficiently and accurately
     Please provide this information irrespective of what specific
     information is asked. This will prevent agent for asking for multiple
     clarifications
-    
+
+    ```
     **department**: hr, role: manager, start date: 11/23/2025, orientation
     date: 11/25/2025, location: onsite, email: js@contoso.com, mentor: Jim
     Shorts, benefits package: standard, ID Card: yes, salary: 70000, Laptop
     : Dell 14 Plus
+    ```
     
     *Observe: It will trigger "Generating Plan Action" and "Proposed Plan"
     with 4 or more Steps*

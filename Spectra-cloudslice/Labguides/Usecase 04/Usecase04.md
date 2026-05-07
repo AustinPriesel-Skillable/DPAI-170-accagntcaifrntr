@@ -249,10 +249,13 @@ access the Microsoft Foundry.
 
 3.  Enter the below details and select **Review + create**.
 
-    - Name - <+++agentic-@lab.LabInstance.Id+++
+    - Resource Group: AgenticAI   
 
-    - Default project name
-      - <+++agentic-ai-project-@lab.LabInstance.Id+++
+    - Name: +++agentic-@lab.LabInstance.Id+++
+
+    - Region: @lab.CloudResourceGroup(AgenticAI).Location
+
+    - Default project name: +++agentic-ai-project-@lab.LabInstance.Id+++
 
   ![](./media/image34.png)
 
@@ -274,7 +277,9 @@ access the Microsoft Foundry.
 
   ![](./media/image38.png)
 
-8.  In the top navigation, select **Build**
+8.  Enable New Foundry, and in the top navigation, select **Build**
+
+    Note: It might take 2-3 minutes for the background permissions to finalize.  Just refresh the page until the Create agent button is visible.   
 
   ![](./media/image39.png)
 
@@ -335,8 +340,7 @@ reports.
 
   ![](./media/image48.png)
 
-3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse
-    +++ in the **Name** field and **unselect** the lakehouses schemas.
+3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse+++ in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
   ![](./media/image49.png)
@@ -360,7 +364,7 @@ reports.
 
   ![](./media/image53.png)
 
-3.  Browse to **C:\LabFiles\LabFiles\Usecase 6\Fabric** on your VM, then
+3.  Browse to **C:\LabFiles\LabFiles\Usecase4\Fabric** on your VM, then
     select  ** all** tables and click on **Open** button.
 
   ![](./media/image54.png)

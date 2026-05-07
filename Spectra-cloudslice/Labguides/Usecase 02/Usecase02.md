@@ -438,7 +438,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     backend health, and frontend availability remain healthy before
     submitting PA requests.
 
-    +++python scripts/check_agents.py –poll+++
+    +++python scripts/check_agents.py -–poll+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image74.png)
 
