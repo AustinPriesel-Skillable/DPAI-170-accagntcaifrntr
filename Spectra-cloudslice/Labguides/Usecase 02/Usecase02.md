@@ -241,7 +241,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image32.png)
 
-9.  Run the az login command, copy the displayed authentication code,
+9.  Run `az login`, copy the displayed authentication code,
     and complete the sign-in process in your browser to authenticate
     your environment.
 
