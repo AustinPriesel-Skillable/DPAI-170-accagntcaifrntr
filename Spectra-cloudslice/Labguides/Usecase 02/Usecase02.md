@@ -187,7 +187,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL: 
 
-    +++https://github.com/technofocus-pte/MultiAgent-Solution-Accelerator.git+++
+    +++https://github.com/technofocus-pte/MultiAIAgentAccelerator+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image20.png)
 
