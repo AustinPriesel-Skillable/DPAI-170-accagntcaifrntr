@@ -428,8 +428,8 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image60.png)
 
-4.  Once the agent is created, in the Test pane, enter +++How many days
-    of Maternity leaves can I avail?+++ and click **Send.**
+4.  Once the agent is created, in the Test pane, enter ```How many days
+    of Maternity leaves can I avail?``` and click **Send.**
 
     ![image](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image61.png)
 
