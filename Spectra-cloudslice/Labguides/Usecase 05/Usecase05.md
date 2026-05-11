@@ -1,4 +1,4 @@
-# Use Case 5 - Extracting Customer Insights from Conversations using Foundry IQ and AI agents
+# Usecase 5 - Extracting Customer Insights from Conversations using Foundry IQ and AI agents
 
 **Introduction**
 
