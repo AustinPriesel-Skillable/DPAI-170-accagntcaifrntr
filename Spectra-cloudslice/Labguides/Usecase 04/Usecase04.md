@@ -57,7 +57,7 @@ The main objectives of this use case are:
 - Send email samples (**C:\LabFiles\LabFiles\Usecase 6\\**WorkIQ
   Labfiles) from mail id of your choice to your tenant id.
 
-![](./media/image1.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image1.png)
 
 ## Task 1: Create an Azure AI Search resource
 
@@ -75,127 +75,123 @@ JSON-based indexes to provide fast, relevant search results.
 
     - Password - +++@lab.CloudPortalCredential(User1).Password+++
 
-   From the Home page of the Azure portal, select **Microsoft Foundry** and select **Microsoft Foundry** under Services.
+    From the Home page of the Azure portal, select **Microsoft Foundry** and select **Microsoft Foundry** under Services.
 
-  ![](./media/image2.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image2.png)
 
 2.  In the **AI Foundry page**, select **AI Search** under **Use with AI
     Foundry** from the left pane and then select **+ Create**.
 
-  ![](./media/image3.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image3.png)
 
 3.  Enter the below details and select **Review + create**.
 
-    - Subscription – Select your **assigned subscription**
+    - Subscription – @lab.CloudSubscription.Name
 
-    - Resource group – Select your **assigned Resource
-      group** (**AgenticAI**)
+    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
 
-    - Storage account name –
-      +++searchleaves@lab.LabInstance.Id+++
+    - Storage account name – +++searchleaves@lab.LabInstance.Id+++
 
-    - Location – Select @lab.CloudResourceGroup(AgenticAI).Location
+    - Location – @lab.CloudResourceGroup(AgenticAI).Location
 
-  ![](./media/image4.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image4.png)
 
 4.  Once the validation passes, select **Create**.
 
-  ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image5.png)
 
 5.  The deployment takes around 10 minutes to complete. Select **Go to
     resource** once the search service is created.
 
-  ![](./media/image6.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image6.png)
 
 6.  From the **Overview** page, copy the **Url** value and save it in a
     notepad to be used in a future exercise.
 
-  ![](./media/image7.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image7.png)
 
 7.  Select **Keys** under **Settings** from the left pane. Copy
     the **Primary admin key** and save it in a notepad for using it in
     the upcoming exercises.
 
-  ![](./media/image8.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image8.png)
 
 8.  Select **Identity** under **Settings** from the left pane.
 
-  ![](./media/image9.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image9.png)
 
 9.  Toggle the Status to **On** under **System assigned** and then click
     on **Save**.
 
-  ![](./media/image10.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image10.png)
 
 10. Select **Yes** in the **Enable system assigned managed
     identity** confirmation dialog.
 
-  ![](./media/image11.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image11.png)
 
 ## Task 2: Create a Storage account
 
 1.  From the Azure portal Home page select **Storage accounts**.
 
-  ![](./media/image12.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image12.png)
 
 2.  Select **+ Create** to create a new Storage account.
 
-  ![](./media/image13.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image13.png)
 
 3.  Enter the below details, accept the default values in the other
     fields and click on **Review + create**.
 
-    - Subscription – Select your **assigned subscription**
+    - Subscription – @lab.CloudSubscription.Name
 
-    - Resource group – Select your **assigned Resource
-      group** (**AgenticAI**)
+    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
 
-    - Storage account name –
-      +++iqlab@lab.LabInstance.Id+++
+    - Storage account name – +++iqlab@lab.LabInstance.Id+++
 
     - Region – Select @lab.CloudResourceGroup(AgenticAI).Location
 
     - Primary service – Select **Azure Blob Storage or Azure Data Lake
       Storage Gen 2**
 
-  ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image14.png)
 
 4.  Once the validation passes, click on **Create**.
 
-  ![](./media/image15.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image15.png)
 
 5.  Once the resource creation succeeds, click on **Go to resource**.
 
-  ![](./media/image16.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image16.png)
 
-  ![](./media/image17.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image17.png)
 
 6.  Select **Containers** under **Data storage**. Select **+
-    Container**, enter the name as +++**document**+++ and click
+    Container**, enter the name as +++document+++ and click
     on **Create** to create the container.
 
-  ![](./media/image18.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image18.png)
 
-  ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image19.png)
 
 7.  Select the created container **document** to upload the leave policy
     document into it.
 
-  ![](./media/image20.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image20.png)
 
 8.  Click on **Upload** and then select **Browse for files**.
 
-  ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image21.png)
 
 9.  Select the **all
     documents** from **C:\Labfiles\LabFiles\Usecase4\Foundry** and then
     click on **Upload**.
 
-  ![](./media/image22.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image22.png)
 
-  ![](./media/image23.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image23.png)
 
-  ![](./media/image24.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image24.png)
 
 10. Navigate to the
     +++iqlab@lab.LabInstance.Id+++
@@ -203,33 +199,33 @@ JSON-based indexes to provide fast, relevant search results.
     page** of the Azure portal and select  and select **Access Control
     (IAM)** from the left pane. Select **Add > Add role assignment**.
 
-  ![](./media/image25.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image25.png)
 
-11. Search for +++**Storage Blob Data Reader**+++, select it and click
+11. Search for +++Storage Blob Data Reader+++, select it and click
     on **Next**.
 
-  ![](./media/image26.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image26.png)
 
 12. Click on **+Select members**, search for and select your **user
     name**, +++@lab.CloudPortalCredential(User1).Username+++ and then
     click on **Select**. This adds the Storage Blob Data Reader role to
     your user id.
 
-  ![](./media/image27.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image27.png)
 
 13. Select **Managed identity** and then select **+ Select members**.
     Select **Search service** under **Managed identity** and select
     the **searchleaves** search service that gets listed.
 
-  ![](./media/image28.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image28.png)
 
 14. Select **Review + assign** in the next 2 screens.
 
-  ![](./media/image29.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image29.png)
 
-  ![](./media/image30.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image30.png)
 
-  ![](./media/image31.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image31.png)
 
 ## Task 3: Create Foundry resource
 
@@ -240,12 +236,12 @@ access the Microsoft Foundry.
     portal +++https://portal.azure.com+++,
     select **Foundry**.
 
-  ![](./media/image32.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image32.png)
 
 2.  Select **Foundry** from the left pane, and then select **Create** to
     create the Foundry resource.
 
-  ![](./media/image33.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image33.png)
 
 3.  Enter the below details and select **Review + create**.
 
@@ -257,42 +253,42 @@ access the Microsoft Foundry.
 
     - Default project name: +++agentic-ai-project-@lab.LabInstance.Id+++
 
-  ![](./media/image34.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image34.png)
 
 4.  Select **Create** once validated.
 
-  ![](./media/image35.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image35.png)
 
 5.  Ensure that the resource is created.
 
-  ![](./media/image36.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image36.png)
 
 6.  Open
     the [**agentic-ai-project-@lab.LabInstance.Id**](mailto:agentic-ai-project-@lab.LabInstance.Id) and
     select **Go to Foundry portal**.
 
-  ![](./media/image37.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image37.png)
 
 7.  Click **Go to Foundry portal** 
 
-  ![](./media/image38.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image38.png)
 
 8.  Enable New Foundry, and in the top navigation, select **Build**
 
     Note: It might take 2-3 minutes for the background permissions to finalize.  Just refresh the page until the Create agent button is visible.   
 
-  ![](./media/image39.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image39.png)
 
 9.  Select **Create agent** to create a new agent.
 
-  ![](./media/image40.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image40.png)
 
 10. Enter a unique agent name (e.g., **IQAgent**) and click **Create**
     to create the new agent.
 
-  ![](./media/image41.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image41.png)
 
-  ![](./media/image42.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image42.png)
 
 ## Task 4 : Create a Fabric workspace
 
@@ -312,7 +308,7 @@ reports.
 
 2.  In the Workspaces pane, click on **+New workspace** tile
 
-  ![](./media/image43.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image43.png)
 
 3.  In the **Create a workspace** pane that appears on the right side,
     enter the following details, and click on the **Apply** button.
@@ -323,34 +319,34 @@ reports.
   | Advanced  | Under License mode, select Fabric                         |
   | Default   | Small dataset storage format                              |
 
-  ![](./media/image44.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image44.png)
 
-  ![](./media/image45.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image45.png)
 
-  ![](./media/image46.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image46.png)
 
 ## Task 5: Create a lakehouse
 
 1.  Create a new lakehouse by clicking on the **+New item** button in
     the navigation bar.
 
-  ![](./media/image47.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image47.png)
 
 2.  Filter by, and select, the **Lakehouse** tile.
 
-  ![](./media/image48.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image48.png)
 
 3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse+++ in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
-  ![](./media/image49.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image49.png)
 
-  ![](./media/image50.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image50.png)
 
 4.  You will see a notification stating **Successfully created SQL
     endpoint**.
 
-  ![](./media/image51.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image51.png)
 
 ## Task 6: Ingest sample data
 
@@ -358,78 +354,78 @@ reports.
     lakehouse** section, and click on **Upload files as shown in the
     below image.**
 
-  ![](./media/image52.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image52.png)
 
 2.  On the Upload files tab, click on the folder under the Files
 
-  ![](./media/image53.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image53.png)
 
 3.  Browse to **C:\LabFiles\LabFiles\Usecase4\Fabric** on your VM, then
     select  ** all** tables and click on **Open** button.
 
-  ![](./media/image54.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image54.png)
 
 4.  Then, click on the **Upload** button and close the **Upload
     files** dialog by selecting the **X** icon for the dialog.
 
-  ![](./media/image55.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image55.png)
 
-  ![](./media/image56.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image56.png)
 
 5.  Click and select refresh on the **Files**. The file appear.
 
-  ![](./media/image57.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image57.png)
 
 6.  In the **Lakehouse** page, Under the Explorer pane select **Files**.
     Now, hover your mouse over the **Customer.csv** file. Click on the
     horizontal ellipses **(…)** beside **Customer.csv**. Navigate and
     click on **Load Table**, then select **New table**.
 
-   ![](./media/image58.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image58.png)
 
-   ![](./media/image59.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image59.png)
 
 7.  In the **Load file to new table** dialog box, click on
     the **Load** button.
 
-   ![](./media/image60.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image60.png)
 
 8.  Now successfully created **Customer** table
 
-   ![](./media/image61.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image61.png)
 
 9.  Repeat Steps 7 through 9 to push the remaining file into the tables.
 
-    ![](./media/image62.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image62.png)
 
-    ![](./media/image63.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image63.png)
 
-    ![](./media/image64.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image64.png)
 
-    ![](./media/image65.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image65.png)
 
 10. From the left navigation bar, select **Fabric IQ Ontology**.
 
-   ![](./media/image66.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image66.png)
 
 ## Task 7: Create ontology (preview) item
 
 1.  In your Fabric workspace, select **+ New item**. Search for and
     select the **Ontology (preview)** item.
 
-    ![](./media/image67.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image67.png)
 
-2.  Enter +++**NetworkOperationsOntology+++** for the **Name** of your
+2.  Enter +++NetworkOperationsOntology+++ for the **Name** of your
     ontology and select **Create**.
 
-    ![](./media/image68.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image68.png)
 
    ** Tip:** Ontology names can include numbers, letters, and
  underscores. Don't use spaces or dashes.
 
 3.  The ontology opens when it's ready.
 
-  ![](./media/image69.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image69.png)
 
  Next, create entity types, data bindings, and relationships based on
  data from your lakehouse tables.
@@ -443,31 +439,31 @@ reports.
 1.  From the top ribbon or the center of the configuration canvas,
     select **Add entity type**.
 
-  ![](./media/image70.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image70.png)
 
-2.  Enter +++**Customer**+++ as the name and select **Add Entity
+2.  Enter +++Customer+++ as the name and select **Add Entity
     Type**. 
 
-  ![](./media/image71.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image71.png)
 
 3.  The **Tickets** entity type appears on the configuration canvas and
     the **Entity type configuration** pane opens.
 
-  ![](./media/image72.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image72.png)
 
 4.  Switch to the **Bindings** tab and select **Add data to entity
     type**.
 
-  ![](./media/image73.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image73.png)
 
 5.  Choose your data source: a. Select your **Lakehouse** and
     select **Add**. 
 
-  ![](./media/image74.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image74.png)
 
 6.  Select the **Customers** table and select **Next**. 
 
-  ![](./media/image75.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image75.png)
 
 7.  Configure a **Static** data binding:
 
@@ -478,53 +474,53 @@ reports.
   
   - Select **Save**.
 
-  ![](./media/image76.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image76.png)
 
 8.  Back in the Entity type configuration pane, select **Add entity type
     key**. 
 
-   ![](./media/image77.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image77.png)
 
 9.  Select **customer_id** as the key property and select **Save**.
 
-   ![](./media/image78.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image78.png)
 
 10. Select **Add entity type** from the ribbon. 
 
-   ![](./media/image79.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image79.png)
 
 11. Enter **Order** as the name and select **Add Entity Type**. 
 
-  ![](./media/image80.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image80.png)
 
 12. Switch to the **Bindings** tab → **Add data to entity type**. 
 
-  ![](./media/image81.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image81.png)
 
 13. Choose your data source, select your **Lakehouse** and
     select **Add**. 
 
-   ![](./media/image82.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image82.png)
 
 14. Select the **orders** table and select **Next**.
 
-   ![](./media/image83.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image83.png)
 
 15. Configure a **Static** data binding with the following columns:
 
   - Select **Save**.
 
-  ![](./media/image84.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image84.png)
 
 16. Select **Add entity type key** 
 
-  ![](./media/image85.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image85.png)
 
 17. Select **OrderID** as the key property and select **Save**.
 
-  ![](./media/image86.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image86.png)
 
-  ![](./media/image87.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image87.png)
 
 18. Follow the same steps that you used for the **Store** entity type to
     create the entity types described in the following table. Each
@@ -538,21 +534,21 @@ reports.
   | RefundClaim             | RefundClaims                 | ClaimID         |
   | ShipmentTrackingEvent   | ShipmentTracking             | TrackingID      |
 
-   ![](./media/image88.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image88.png)
   
-   ![](./media/image89.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image89.png)
   
-   ![](./media/image90.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image90.png)
   
-   ![](./media/image91.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image91.png)
   
-   ![](./media/image92.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image92.png)
   
-   ![](./media/image93.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image93.png)
   
-   ![](./media/image94.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image94.png)
   
-  ![](./media/image95.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image95.png)
 
 ## Task 9: Create relationship types
 
@@ -561,7 +557,7 @@ contextual connections in your data.
 
 1.  Select **Add relationship** from the menu ribbon.
 
-  ![](./media/image96.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image96.png)
 
 2.  Enter the following relationship type details and select **Add
     relationship type**.
@@ -572,7 +568,7 @@ contextual connections in your data.
 
     - **Target entity type**: Order
 
-  ![](./media/image97.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image97.png)
 
 3.  The **Relationship configuration** pane opens, where you can
     configure additional information. Enter the following details (some
@@ -582,9 +578,9 @@ contextual connections in your data.
     1.  **Source data**: Select your tutorial workspace, the **Fabric IQ
         Ontology_Lakehouse** lakehouse, and the **Customers** table.
 
-  ![](./media/image98.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image98.png)
 
-  ![](./media/image99.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image99.png)
 
   Now the first relationship is created, and bound to data in your source
   table. Continue to the next section to create another relationship type.
@@ -602,37 +598,37 @@ contextual connections in your data.
   | mayLeadTo              | OrderItem                                  | RefundClaim               |
   | hasInventory           | OrderItem                                  | InventoryRecord           |
 
-   ![](./media/image100.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image100.png)
   
-   ![](./media/image101.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image101.png)
   
-   ![](./media/image102.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image102.png)
   
-   ![](./media/image103.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image103.png)
   
-   ![](./media/image104.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image104.png)
   
-   ![](./media/image105.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image105.png)
   
-   ![](./media/image106.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image106.png)
   
-   ![](./media/image107.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image107.png)
   
-   ![](./media/image108.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image108.png)
   
-   ![](./media/image109.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image109.png)
   
-   ![](./media/image110.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image110.png)
   
-   ![](./media/image111.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image111.png)
   
-   ![](./media/image112.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image112.png)
   
-   ![](./media/image113.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image113.png)
   
-   ![](./media/image114.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image114.png)
   
-   ![](./media/image115.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image115.png)
 
 ## Task 10: Create data agent with ontology (preview) source
 
@@ -642,34 +638,34 @@ ontology (preview) item.
 1.  Now, click on **Fabric IQ OntologyXX** on the left-sided navigation
     pane.
 
-  ![](./media/image116.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image116.png)
 
 2.  In the **Fabric** home page, select **+New item.** In the Filter by
-    item type search box, enter +++**data agent**+++ and select the Data
+    item type search box, enter +++data agent+++ and select the Data
     agent
 
-   ![](./media/image117.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image117.png)
 
 3.  Enter +++IQ_Agent+++ as the Data agent name and
     select **Create**.
 
-   ![](./media/image118.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image118.png)
 
 4.  In **FabricDataAgent** page, select **Add a data source**
 
-   ![](./media/image119.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image119.png)
 
 5.  In the OneLake catalog tab, select the **NetworkOperationsOntology**
     Ontology and select **Add.**
 
-  ![](./media/image120.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image120.png)
 
-  ![](./media/image121.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image121.png)
 
 19. Select **Agent instructions** to configure and customize the
     behavior of the agent.
 
-  ![](./media/image122.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image122.png)
 
 20. Enter the following data into the **Instructions** section, then
     select **Publish**.
@@ -782,28 +778,28 @@ ontology (preview) item.
    Support group by in GQL
     ```
 
-   ![](./media/image123.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image123.png)
 
-   ![](./media/image124.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image124.png)
 
 21. After publishing, verify the success message and select **View
     publishing details** to review the agent deployment.
 
-   ![](./media/image125.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image125.png)
 
 22. Copy the **Published URL** and paste it into Notepad for use in the
     next task.
 
-   ![](./media/image126.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image126.png)
 
 23. Save the **Workspace ID** and **AISkills ID** in **Notepad** for
     later use
 
-  ![](./media/image127.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image127.png)
   
-  ![](./media/image128.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image128.png)
   
-  ![](./media/image129.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image129.png)
 
 ## Task 11: Create Foundry agent that unifies all IQ’s data
 
@@ -811,27 +807,27 @@ ontology (preview) item.
 
 2.  Select your **Resource group**
 
-  ![](./media/image130.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image130.png)
 
 3.  Select **Foundry project**
 
-   ![](./media/image131.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image131.png)
 
 4.  On the Overview pane, click on **Go to Foundry portal**. This will
     navigate you to the Microsoft Foundry portal.
 
-  ![](./media/image132.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image132.png)
 
 5.  Select **Build** to proceed
 
-  ![](./media/image133.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image133.png)
 
 6.  In the **Agents** section, locate and select the newly created agent
     (for example, **IQAgent**) from the list.
 
-  ![](./media/image134.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image134.png)
 
-  ![](./media/image135.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image135.png)
 
 7.  In the **Instructions** section, enter the following data to define
     the agent’s behavior.
@@ -871,136 +867,136 @@ ontology (preview) item.
    prioritize fast resolution for Premium customers.
     ```
 
-   ![](./media/image136.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image136.png)
 
 8.  Click **Save**
 
-  ![](./media/image137.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image137.png)
 
-  ![](./media/image138.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image138.png)
 
 9.  In the **Knowledge** section, select **Add**, then choose **Connect
     to Foundry IQ** to link the agent with the data source.
 
-   ![](./media/image139.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image139.png)
 
 10. In the **Connect to Foundry IQ** window, select **Connect to an AI
     Search resource** to configure the connection.
 
-   ![](./media/image140.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image140.png)
 
 11. In the **Choose a knowledge type** window, select **Azure Blob
     Storage**, then click **Connect** to proceed.
 
-  ![](./media/image141.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image141.png)
 
 12. In the **Choose a knowledge type** window, select Chat completions
     model as gpt-4.1 and click on **create**
 
-   ![](./media/image142.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image142.png)
 
 13. After configuring the knowledge base details, select **Save
     knowledge base** to create and save it.
 
-  ![](./media/image143.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image143.png)
 
-  ![](./media/image144.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image144.png)
 
-  ![](./media/image145.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image145.png)
 
 14. Verify that the knowledge source is added successfully and its
     status is **Active**.
 
-  ![](./media/image146.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image146.png)
 
 11. Select **Use in an agent**, then choose the created agent (for
     example, **IQAgent**) to associate the knowledge base with it
 
-  ![](./media/image147.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image147.png)
 
-  ![](./media/image148.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image148.png)
 
 12. In the **Tools** section, select **Add**, then choose **Browse all
     tools** to view and configure additional tools for the agent.
 
-  ![](./media/image149.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image149.png)
 
 13. In the **Catalog** tab, search for **Work IQ**, select **Work IQ
     Mail**, and then click **Create** to add the tool to the agent.
 
-  ![](./media/image150.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image150.png)
 
 14. In the **Connect the Work IQ Mail tool** window, review the default
     settings and select **Connect** to complete the configuration.
 
-  ![](./media/image151.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image151.png)
 
 15. Verify that **Work IQ Mail** is connected successfully.
 
-  ![](./media/image152.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image152.png)
 
 16. In the **Tools** section, select **Add**, then choose **Browse all
     tools** to view and configure additional tools for the agent.
 
-  ![](./media/image153.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image153.png)
 
 17. Select **Fabric Data Agent**, and then click **Create** to add the
     tool to the agent.
 
-  ![](./media/image154.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image154.png)
 
 18. In the **Connect to Fabric Data Agent** window, enter the required
     **Workspace ID** and **Artifact ID**, then select **Connect** to
     complete the setup.
 
-  ![](./media/image155.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image155.png)
 
 19. Verify that **Fabric Data Agent** and **Work IQ Mail** is connected
     successfully.
 
-  ![](./media/image156.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image156.png)
 
 20. A chat panel will open where you can enter your prompts. The agent
     will now respond.
 
    +++Review the latest Apex Legal email and tell me what happened.+++
 
-  ![](./media/image157.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image157.png)
 
 21. Select **Approve** to grant the required permissions and continue.
 
-  ![](./media/image158.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image158.png)
 
 22. Select **Always Approve this tool**
 
-    ![](./media/image159.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image159.png)
 
 23. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
    +++Is this customer eligible for replacement based on our policy?+++
 
-   ![](./media/image160.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image160.png)
 
-   ![](./media/image161.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image161.png)
 
 25. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
    +++Do we have enough stock to resolve this today?+++
 
-   ![](./media/image162.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image162.png)
 
-   ![](./media/image163.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image163.png)
 
 26. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
    +++Should this issue be escalated?+++
 
-  ![](./media/image164.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image164.png)
 
-  ![](./media/image165.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image165.png)
 
 27. A chat panel will open where you can enter your prompts. The agent
     will now respond
@@ -1008,16 +1004,16 @@ ontology (preview) item.
   +++Draft a customer response based on the issue and our communication
 standards.+++
 
-  ![](./media/image166.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image166.png)
 
 28. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
    +++What is the best operational resolution for order O5001?+++
 
-   ![](./media/image167.png)
+     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image167.png)
   
-  ![](./media/image168.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image168.png)
 
  **Summary**
 
