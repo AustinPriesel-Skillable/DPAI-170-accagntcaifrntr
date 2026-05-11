@@ -331,7 +331,9 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image47.png)
 
-18. Click on **Open** button
+18. Click on **Open** button.
+
+    >[!Note] If there is an error or issue when opening the link, please refresh the web browser.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image48.png)
 
@@ -365,7 +367,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
   
    - Azure OpenAI
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image52.png)
+      ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image52.png)
 
 6.  Click on **Azure OpenAI.**
 
