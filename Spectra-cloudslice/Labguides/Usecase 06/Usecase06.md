@@ -70,15 +70,14 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image1.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image1.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image2.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image2.png)
 
-    >[!Alert] **Important:** Make sure you create all your resources under
-this Resource group
+    >[!Alert] Make sure you create all your resources under this Resource group.
 
 ## Task 1: Register Service provider
 
@@ -90,33 +89,33 @@ this Resource group
     Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image3.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image3.png)
 
     ![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image4.png)
+may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image4.png)
 
 2.  Click on **Subscriptions** tile.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image5.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image5.png)
 
 3.  Click on the subscription name.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image6.png)
 
 4.  Expand Settings from the left navigation menu. Click on **Resource
     providers**, enter +++Microsoft.CognitiveServices+++ and
     select it, and then click **Register**.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image7.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image8.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image8.png)
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image9.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image9.png)
 
 5.  Repeat the steps in #4 to register the following Resource provider.
 
@@ -128,19 +127,19 @@ incorrect.](./media/image8.png)
     select **Resource groups**.
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image10.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image10.png)
 
 2.  Click on your assigned **Resource group**.
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image11.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image11.png)
 
 3.  In **Resource group** page, copy **resource group name and
     location** and paste them in a notepad, then **Save** the notepad to
     use the information in the upcoming tasks.
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image12.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image12.png)
 
 ## Task 3: Open Github Codespaces environment
 
@@ -149,25 +148,25 @@ incorrect.](./media/image8.png)
     
     +++https://github.com/technofocus-pte/Banking-assistant-Agent+++
 
-    ![](./media/image13.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image13.png)
 
 3.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
-    ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image14.png)
 
-    ![](./media/image15.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image15.png)
 
 4.  Click on **Code > Codespaces > Codespaces**
 
-    ![](./media/image16.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image16.png) 
 
 5.  Wait for the Codespaces environment to setup. It takes few minutes
     to setup completely
 
-    ![](./media/image17.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image17.png) 
 
-    ![](./media/image18.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image18.png) 
 
 ## Task 4: Provision Services and deploy application to Azure
 
@@ -176,112 +175,113 @@ incorrect.](./media/image8.png)
 
     +++azd auth login+++
 
-    ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image19.png)
 
-    ![](./media/image20.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image20.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-    ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image21.png)
 
 3.  Sign in with your Azure credentials.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image22.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image22.png)
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image23.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image23.png)
 
-    ![](./media/image24.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image24.png)
 
 4.  To create an environment for Azure resources, run the following
-    Azure Developer CLI command.It asks you to enter environment name.
+    Azure Developer CLI command and enter the following names:
     
     +++azd env new+++
-    Use this name: +++Bankagent@lab.LabInstance.Id+++
+    
+    environment name: +++Bankagent@lab.LabInstance.Id+++
 
-    ![](./media/image25.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image25.png)
 
 6.  Run below command to provision the services to Azure, build your
     container.
 
     +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
-    ![](./media/image26.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image26.png)
 
 7.  Run azd up - This will provision Azure resources
 
     +++azd up+++
 
-    ![](./media/image27.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image27.png)
 
 5.  Select below values.
 
-   - **Select an Azure Subscription to use** : Select your subscription
-  
-   - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
-  
-   - **‘location' infrastructure parameter:** Central US
-  
-   - **Pick a resource group to use:** Existing resource group
-
-    ![](./media/image28.png)
-
-    ![](./media/image29.png)
+    - **Select an Azure Subscription to use**: @lab.CloudSubscription.Name
+    
+    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
+    
+    - **‘location' infrastructure parameter:** Central US
+    
+    - **Pick a resource group to use:** @lab.CloudResourceGroup(AgenticAI).Name
+    
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image28.png)
+    
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image29.png)
 
 6.  This deployment will take *7-10 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
-    ![](./media/image30.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image30.png)
 
-    ![](./media/image31.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image31.png)
 
-    ![](./media/image32.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image32.png)
 
-    ![](./media/image33.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image33.png)
 
-    ![](./media/image34.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image34.png)
 
 7.  The service account endpoint has been completed successfully.
 
-    ![](./media/image35.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image35.png)
 
-    ![](./media/image36.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image36.png)
 
 8.  The service backend has been completed successfully.
 
-    ![](./media/image37.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image37.png)
 
 9.  The service payment has been completed successfully.
 
-    ![](./media/image38.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image38.png)
 
 10. The service transaction has been completed successfully.
 
-    ![](./media/image39.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image39.png)
 
 11. The service web has been completed successfully.
 
-    ![](./media/image40.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image40.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
 1.  Select **Resource groups**
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image41.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image41.png)
 
 2.  Click on your assigned **Resource group**.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image42.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image42.png)
 
 3.  Make sure all the resources got deployed successfully
 
-    ![](./media/image43.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image43.png)
 
-    ![](./media/image44.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image44.png)
 
 3.  Make sure the below resource got deployed successfully
 
@@ -309,59 +309,59 @@ incorrect.](./media/image42.png)
   
     - Azure Storage account
 
-    ![](./media/image45.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image45.png)
 
 4.  Select **Foundry project**
 
-    ![](./media/image46.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image46.png) 
 
 6.  Click **Go to Foundry portal** to verify that the model has been
     successfully deployed.
 
-    ![](./media/image47.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image47.png)
 
 5.  In Microsoft Foundry, navigate to the **Build** section from the top
     menu to start creating and managing your AI solutions.
 
-    ![](./media/image48.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image48.png)
 
 ## **Task 6:** **Test the Application**
 
 1.  Click on the generated **service web endpoint URL** to open and
     access the deployed application in your browser.
 
-    ![](./media/image49.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image49.png)
 
 2.  Click on **Open** button
 
-    ![](./media/image50.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image50.png)
 
 3.  Click on **Start banking**
 
-    ![](./media/image51.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image51.png)
 
-    ![](./media/image52.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image52.png)
 
 4.  On the Banking Assistant home page, select **Transaction Analysis**
     to view and analyze transaction details.
 
-    ![](./media/image53.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image53.png)
 
 5.  Select **Start Chat** to initiate a conversation with the Banking
     Assistant.
 
-    ![](./media/image54.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image54.png)
 
 6.  Click **Review Card Spend** to analyze and review card transaction
     spending details.
 
-    ![](./media/image55.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image55.png)
 
-    ![](./media/image56.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image56.png)
 
-    ![](./media/image57.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image57.png)
 
-    ![](./media/image58.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image58.png)
 
 ## Task 7: Delete the resources
 
@@ -369,18 +369,18 @@ incorrect.](./media/image42.png)
     Select all the resources under the Resource group and select Delete.
 
     ![A screenshot of a computer Description automatically
-generated](./media/image59.png)
+generated](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image59.png)
 
 2.  Enter +++**delete**+++ and click on the **Delete** button to confirm
     deletion. Click on **Delete** in the Delete confirmation dialog box.
 
     ![A screenshot of a computer Description automatically
-generated](./media/image60.png)
+generated](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image60.png)
 
 3.  Confirm the deletion of all the resources with a success message.
 
     ![A screenshot of a computer screen Description automatically
-generated](./media/image61.png)
+generated](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image61.png)
 
 **Summary**
 
