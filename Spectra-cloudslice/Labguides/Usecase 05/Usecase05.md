@@ -1,4 +1,4 @@
-## Use case 5 - Extracting Customer Insights from Conversations using Foundry IQ and AI agents
+# Use case 5 - Extracting Customer Insights from Conversations using Foundry IQ and AI agents
 
 **Introduction**
 
@@ -85,14 +85,14 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-    ![](./media/image1.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image1.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-    ![](./media/image2.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image2.png)
 
-    > [!alert] **Important:** Make sure you create all your resources under this Resource group
+    >[!alert] Make sure you create all your resources under this Resource group
 
 ## Task 1: Register Service provider
 
@@ -103,30 +103,30 @@ will be using throughout the lab.
 
     Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
-    ![](./media/image3.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image3.png)
 
-    ![](./media/image4.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image4.png)
 
 2.  Click on **Subscriptions** tile.
 
-    ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image5.png)
 
 3.  Click on the subscription name.
 
-    ![](./media/image6.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image6.png)
 
 4.  Expand Settings from the left navigation menu. Click on **Resource
     providers**, enter +++Microsoft.CognitiveServices+++ and
     select it, and then click **Register**.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image7.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image8.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image8.png)
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image9.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image9.png)
 
 5.  Repeat the steps \#4 to register the following Resource provider.
 
@@ -138,19 +138,19 @@ incorrect.](./media/image8.png)
     select **Resource groups**.
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image10.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image10.png)
 
 2.  Click on your assigned **Resource group**.
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image11.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image11.png)
 
 3.  In **Resource group** page, copy **resource group name and
     location** and paste them in a notepad, then **Save** the notepad to
     use the information in the upcoming tasks.
 
     ![A screenshot of a computer AI-generated content may be 
- incorrect.](./media/image12.png)
+ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image12.png)
 
 ## Task 3: Open Github Codespaces environment
 
@@ -162,27 +162,27 @@ incorrect.](./media/image8.png)
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
-    ![](./media/image13.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image13.png)
 
 3.  Click on **Create fork**
 
 4.  Click on **Code > Codespaces > Codespaces**
 
-    ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image14.png)
 
-    ![](./media/image15.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image15.png)
 
 4.  Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
-    ![](./media/image16.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image16.png)
 
 5.  Run the following command to install the Azure Developer CLI
     (**azd**) on your codespace.
 
     +++curl -fsSL https://aka.ms/install-azd.sh | bash+++
 
-    ![](./media/image17.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image17.png)
 
 ## Task 4: Provision Services and deploy application to Azure
 
@@ -191,20 +191,20 @@ incorrect.](./media/image8.png)
 
     +++azd auth login+++
 
-    ![](./media/image18.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image18.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-    ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image19.png)
 
 3.  Sign in with your Azure credentials.
 
-    ![](./media/image20.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image20.png)
 
-    ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image21.png)
 
-    ![](./media/image22.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image22.png)
 
 4.  To create an environment for Azure resources, run the following
     Azure Developer CLI command.
@@ -213,20 +213,20 @@ incorrect.](./media/image8.png)
     
     Name: +++agent@lab.LabInstance.Id+++
 
-    ![](./media/image23.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image23.png)
 
 6.  Run below command to provision the services to Azure, build your
     container.
 
     +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
-    ![](./media/image24.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image24.png)
 
 7.  Run azd up - This will provision Azure resources
 
     +++azd up+++
 
-    ![](./media/image25.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image25.png)
 
 8.  Select below values.
 
@@ -234,20 +234,20 @@ incorrect.](./media/image8.png)
 
     - **azureAiServiceLocation**: centralus
 
-    ![](./media/image26.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image26.png)
 
-    ![](./media/image27.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image27.png)
 
 6.  This deployment will take *20-25 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
-    ![](./media/image28.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image28.png)
 
-    ![](./media/image29.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image29.png)
 
 7.  Now the deployment is complete
 
-    ![](./media/image30.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image30.png)
 
 8.  Run the following command to install PowerShell in Codespaces
 
@@ -255,9 +255,9 @@ incorrect.](./media/image8.png)
 
     +++sudo apt-get install -y powershell+++
 
-    ![](./media/image31.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image31.png)
 
-    ![](./media/image32.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image32.png)
 
 9.  Run the following command to install PowerShell in Codespaces to
     enable execution of PowerShell scripts within your development
@@ -265,16 +265,16 @@ incorrect.](./media/image8.png)
 
     +++curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash+++
 
-    ![](./media/image33.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image33.png)
 
 1.  Run +++pwsh+++ to switch from Bash to Powershell.     
 
 4.  Run the +++az login+++ command to log in to your Azure account and
     authenticate your session.
 
-    ![](./media/image34.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image34.png)
 
-    ![](./media/image35.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image35.png)
 
 1. Change directory to **Deployment** +++cd Deployment+++
 
@@ -284,68 +284,68 @@ incorrect.](./media/image8.png)
     provided URL and enter the displayed code to complete Azure login
     authentication.
 
-    ![](./media/image36.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image36.png)
 
-    ![](./media/image37.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image37.png)
 
 11. Select your subscription
 
-    ![](./media/image38.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image38.png)
 
 12. After successfully logging in to Azure, review the deployed resource
     details and proceed with configuring the Kubernetes infrastructure.
 
-    ![](./media/image39.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image39.png)
 
 13. AKS cluster updated successfully
 
-    ![](./media/image40.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image40.png)
 
 14. Verify that the application routing add-on is enabled, note the
     external IP address assigned to NGINX, and proceed with assigning a
     DNS name to the public IP.
 
-    ![](./media/image41.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image41.png)
 
 15. Assign the required role to the AKS system-assigned managed
     identity, then monitor the node pool upgrade process until it
     completes successfully.
 
-    ![](./media/image42.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image42.png)
 
 16. Update the Kubernetes YAML files with the container image path and
     email address, then configure AKS by deploying Cert Manager and
     application images to the cluster.
 
-    ![](./media/image43.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image43.png)
 
-    ![](./media/image44.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image44.png)
 
-    ![](./media/image45.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image45.png)
 
-    ![](./media/image46.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image46.png)
 
 17. Once the deployment is successful, review the provided details,
     access the frontend application using the given URL, and proceed
     with the data import process using the specified command.
 
-    ![](./media/image47.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image47.png)
 
 18. Click on **Open** button
 
-    ![](./media/image48.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image48.png)
 
-    ![](./media/image49.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image49.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
 1.  Select **Resource groups**
 
-    ![](./media/image50.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image50.png)
 
 2.  Click on your assigned **Resource group**.
 
-    ![](./media/image51.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image51.png)
 
 3.  Make sure the below resource got deployed successfully
 
@@ -365,55 +365,55 @@ incorrect.](./media/image8.png)
   
    - Azure OpenAI
 
-    ![](./media/image52.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image52.png)
 
 6.  Click on **Azure OpenAI.**
 
-    ![](./media/image53.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image53.png)
 
 7.  Click **Go to Foundry portal** to verify that the model has been
     successfully deployed.
 
-    ![](./media/image54.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image54.png)
 
-    ![](./media/image55.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image55.png)
 
 ## Task 6: Test the Application – Housing Affordability & Report Analysis
 
 1.  Return to the application to continue testing the Housing
     Affordability and Report Analysis features.
 
-    ![](./media/image49.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image49.png) 
 
 2.  Click on **Upload documents**
 
-    ![](./media/image56.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image56.png)
 
 3.  Click on **Browse files**
 
-    ![](./media/image57.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image57.png)
 
 4.  Browse to **C:\LabFiles\LabFiles\Data** on your VM, then select 
     **all files** and click on **Open** button.
 
-    ![](./media/image58.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image58.png)
 
 5.  Uploading the documents may take approximately 10–13 minutes to
     complete.
 
-    ![](./media/image59.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image59.png)
 
-    ![](./media/image60.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image60.png)
 
-    ![](./media/image61.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image61.png)
 
 6.  Enter +++What are the main factors contributing to the current housing affordability issues?+++ and select **Send**.
 
-    ![](./media/image62.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image62.png)
 
-    ![](./media/image63.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image63.png)
 
-    ![](./media/image64.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image64.png)
 
 ## Task 7: Housing Report Search & Comparison
 
@@ -424,36 +424,36 @@ incorrect.](./media/image8.png)
 
     - Confirm the top panel shows **"2 Selected"**
 
-    ![](./media/image65.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image65.png)
 
 3.  Enter +++Analyze the two annual reports and compare the positive and negative outcomes YoY. Show the results in a table.+++ and
     select **Send**.
 
-    ![](./media/image66.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image66.png) 
 
-    ![](./media/image67.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image67.png) 
 
 4.  Click **DETAILS** on **Annual Housing Report 2023**
 
-    ![](./media/image68.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image68.png)
 
-    ![](./media/image69.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image69.png)
 
 3.  Scroll to **pages 10 & 11**
 
-    ![](./media/image70.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image70.png)
 
 4.  Click on **Chat** tab in the pop-up viewer
 
-    ![](./media/image71.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image71.png)
 
 5.  Enter +++Can you summarize and compare the tables on page 10 and 11?+++ and select **Send**.
 
-    ![](./media/image72.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image72.png)
 
 5.  Review the summarized comparison
 
-    ![](./media/image73.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image73.png)
 
 6.  Close the pop-up viewer
 
@@ -463,48 +463,48 @@ incorrect.](./media/image8.png)
 
 2.  Select **6 handwritten contract documents**
 
-    ![](./media/image74.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image74.png)
 
 3.  Enter +++Analyze these forms and create a table with all buyers, sellers, and corresponding purchase prices.+++ and select **Send**.
 
-    ![](./media/image75.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image75.png)
 
 4.  Review the table for correct buyer/seller names and purchase prices
 
-    ![](./media/image76.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image76.png)
 
 5.  Click **DETAILS** on one of the handwritten contracts
 
-    ![](./media/image77.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image77.png)
 
-    ![](./media/image78.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image78.png)
 
 6.  Click on **Chat** tab in the pop-up viewer
 
-    ![](./media/image79.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image79.png)
 
 7.  Enter +++What liabilities is the buyer responsible for within the contract+++ and select **Send**.
 
-    ![](./media/image80.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image80.png)
 
 8.  Review the response for specific obligations (e.g., fees, taxes,
     maintenance, contingencies)
 
-    ![](./media/image81.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image81.png)
 
 ## Task 9: Delete the resources
 
 1.  From the Azure portal home page, select the assigned Resource group.
     Select all the resources under the Resource group and select Delete.
 
-    ![](./media/image82.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image82.png)
 
-    ![](./media/image83.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image83.png)
 
 2.  Enter +++delete+++ and click on the **Delete** button to confirm
     deletion. Click on **Delete** in the Delete confirmation dialog box.
 
-    ![](./media/image84.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image84.png)
 
 3.  Confirm the deletion of all the resources with a success message.
 
