@@ -230,7 +230,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
 8.  Select below values.
 
-    - **Select an Azure Subscription to use** : Select your subscription
+    - **Select an Azure Subscription to use**: @lab.CloudSubscription.Name
 
     - **azureAiServiceLocation**: centralus
 
