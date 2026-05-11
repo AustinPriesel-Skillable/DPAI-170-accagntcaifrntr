@@ -1,4 +1,4 @@
-# Usecase 04 - Build a customer resolution agent grounded with Work IQ, Foundry IQ, and Fabric IQ
+# Usecase 4 - Build a customer resolution agent grounded with Work IQ, Foundry IQ, and Fabric IQ
 
 **Introduction**
 
