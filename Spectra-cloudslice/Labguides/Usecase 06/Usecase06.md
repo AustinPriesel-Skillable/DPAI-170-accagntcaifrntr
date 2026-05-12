@@ -199,7 +199,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     
     +++azd env new+++
     
-    environment name: +++Bankagent@lab.LabInstance.Id+++
+    environment name: +++bagent@lab.LabInstance.Id+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image25.png)
 
