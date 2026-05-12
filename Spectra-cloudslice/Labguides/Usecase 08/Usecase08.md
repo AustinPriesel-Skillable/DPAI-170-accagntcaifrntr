@@ -15,7 +15,7 @@ an interactive chat interface, where employees can simply ask a question
 and receive a precise, citation-supported answer grounded in Zava’s
 internal knowledge.
 
-![](./media/image1.png)
+![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image1.png)
 
 **Introduction**
 
@@ -85,15 +85,15 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-    ![](./media/image2.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image2.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-    ![](./media/image3.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image3.png)
 
->[!Alert] **Important:** Make sure you create all your resources under
-this Resource group
+    >[!Alert] Make sure you create all your resources under
+    this Resource group
 
 ## Task 1: Register Service provider
 
@@ -104,27 +104,27 @@ this Resource group
 
     Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
-    ![](./media/image4.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image4.png)
 
-    ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image5.png)
 
 1.  Click on **Subscriptions** tile.
 
-    ![](./media/image6.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image6.png)
 
 2.  Click on the subscription name.
 
-    ![](./media/image7.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image7.png)
 
 3.  Expand Settings from the left navigation menu. Click on **Resource
     providers**, enter +++Microsoft.CognitiveServices+++ and
     select it, and then click **Register**.
 
-    ![](./media/image8.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image8.png)
 
-    ![](./media/image9.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image9.png)
 
-    ![](./media/image10.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image10.png)
 
 4.  Repeat the steps #4 to register the following Resource provider.
 
@@ -135,44 +135,44 @@ this Resource group
 1.  Type in +++Resource group+++ in the search bar and
     select **Resource groups**.
 
-    ![](./media/image11.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image11.png)
 
 2.  Click on your assigned **Resource group**.
 
-    ![](./media/image12.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image12.png)
 
 3.  In **Resource group** page, copy **resource group name and
     location** and paste them in a notepad, then **Save** the notepad to
     use the information in the upcoming tasks.
 
-    ![](./media/image13.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image13.png)
 
 ## Task 3: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL:  +++https://github.com/technofocus-pte/aiagents+++
 
-    ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image14.png)
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
-    ![](./media/image15.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image15.png)
 
 3.  Click on **Create fork**
 
-    ![](./media/image16.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image16.png)
 
 4.  Click on **Code > Codespaces > Codespaces**
 
-    ![](./media/image17.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image17.png)
 
 4.  Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
-    ![](./media/image18.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image18.png)
 
-    ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image19.png)
 
 ## Task 4: Provision Services and deploy application to Azure
 
@@ -181,22 +181,22 @@ this Resource group
 
     +++azd auth login+++
 
-    ![](./media/image20.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image20.png)
 
-    ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image21.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-    ![](./media/image22.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image22.png)
 
 3.  Sign in with your Azure credentials.
 
-    ![](./media/image23.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image23.png)
 
-    ![](./media/image24.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image24.png)
 
-    ![](./media/image25.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image25.png)
 
 4.  To create an environment for Azure resources, run the following Azure Developer CLI command.It asks you to enter environment name. Enter any name of your choice and press enter (eg: +++aiagentXXXX+++)
 
@@ -205,20 +205,20 @@ this Resource group
     
     +++azd env new+++
 
-    ![](./media/image26.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image26.png)
 
 5.  Run below command to provision the services to Azure, build your
     container.
 
     +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
-    ![](./media/image27.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image27.png)
 
 6.  Run azd up - This will provision Azure resources
 
     +++azd up+++
 
-    ![](./media/image28.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image28.png)
 
 7.  Select below values.
 
@@ -226,43 +226,43 @@ this Resource group
     
     - **azureAiServiceLocation**: @labCloudResourceGroup(AgenticAI).Location
 
-    ![](./media/image29.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image29.png)
 
-    ![](./media/image30.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image30.png)
 
 4.  This deployment will take *7-10 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
-    ![](./media/image31.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image31.png)
 
-    ![](./media/image32.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image32.png)
 
-    ![](./media/image33.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image33.png)
 
-    ![](./media/image34.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image34.png)
 
-    ![](./media/image35.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image35.png)
 
-    ![](./media/image36.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image36.png)
 
 5.  Now the deployment is complete
 
-    ![](./media/image37.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image37.png)
 
 6.  After the application has been successfully deployed, you see a URL
     displayed in the terminal. Copy the **URL**
 
-    ![](./media/image37.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image37.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
 1.  Select **Resource groups**
 
-    ![](./media/image38.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image38.png)
 
 2.  Click on your assigned **Resource group**.
 
-    ![](./media/image39.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image39.png)
 
 3.  Make sure the below resource got deployed successfully
 
@@ -282,31 +282,31 @@ this Resource group
     
     - Azure Storage account
 
-    ![](./media/image40.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image40.png)
 
 4.  On the resource group and click on **Azure Storage account.**
 
-    ![](./media/image41.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image41.png)
 
 5.  From the left navigation menu, click on **Containers** , Make sure
     data should be deployed successfully
 
-    ![](./media/image42.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image42.png)
 
 6.  Go back to resorcegroup and click on **Foundry Project.**
 
-    ![](./media/image43.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image43.png)
 
 7.  Click **Go to Foundry portal** to verify that the model has been
     successfully deployed.
 
-    ![](./media/image44.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image44.png)
 
-    ![](./media/image45.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image45.png)
 
 8.  In the top navigation, select **Build**
 
-    ![](./media/image46.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image46.png)
 
 9.  In the left-hand menu, select **Agents.** Locate your agent in the
     list - the agent name and version will be displayed
@@ -315,21 +315,21 @@ this Resource group
     format: {agent_name}:{agent_version} (e.g., agent-template-assistant:1).
     Copy the Agent ID in a notepad
 
-    ![](./media/image47.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image47.png)
 
 ## Task 6: Interact with Your AI Agent Using Predefined Questions
 
 1.  Go back to GitHub Codespaces and select the **Endpoint URL**.
 
-    ![](./media/image48.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image48.png)
 
 2.  Click on **Open** button
 
-    ![](./media/image49.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image49.png)
 
 3.  Wait for the web application deployment to complete.
 
-    ![](./media/image50.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image50.png)
 
 2.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
@@ -337,9 +337,9 @@ this Resource group
 
     +++What's the best tent under $200 for two people, and what features does it include?+++
 
-    ![](./media/image51.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image51.png)
 
-    ![](./media/image52.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image52.png)
 
 3.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
@@ -347,21 +347,21 @@ this Resource group
 
      +++What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?+++
 
-    ![](./media/image53.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image53.png)
 
-    ![](./media/image54.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image54.png)
 
      +++Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?+++
 
-    ![](./media/image55.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image55.png)
 
-    ![](./media/image56.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image56.png)
 
     +++How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?+++
 
-    ![](./media/image57.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image57.png)
 
-    ![](./media/image58.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image58.png)
 
 4.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
@@ -369,15 +369,15 @@ this Resource group
 
     +++I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?+++
 
-    ![](./media/image59.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image59.png)
 
-    ![](./media/image60.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image60.png)
 
 ## Task 7: Sample Prompts for Azure AI Search
 
 1.  In the **agent-template-assistant** web app page, select New Chat
 
-    ![](./media/image61.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image61.png)
 
 2.  In the **agent-template-assistant** web app page, enter the
     following text and click on the **Submit icon** as shown in the
@@ -385,15 +385,15 @@ this Resource group
 
     +++Which products have wireless charging capabilities and what are their battery life specifications?+++
 
-    ![](./media/image62.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image62.png)
 
-    ![](./media/image63.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image63.png)
 
      +++Find products designed for comfort and temperature control - what features do they offer?+++
 
      +++What care and maintenance instructions are available for electronic products with waterproof features?+++
 
-    ![](./media/image64.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image64.png)
 
 ## Task 8: Agent Evaluation
 
@@ -412,9 +412,9 @@ your unique assessment criteria.
 
     +++python -m pip install -r src/requirements.txt+++
 
-    ![](./media/image65.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image65.png)
 
-    ![](./media/image66.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image66.png)
 
 2.  Run the below script to set the variable
 
@@ -428,7 +428,7 @@ your unique assessment criteria.
 
 4.  Copy the **Microsoft Foundry project endpont**.
 
-    ![](./media/image67.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image67.png)
 
 5.  Go back to Github Cospaces and select the **test_utils.py** under
     the **test** folder in the left hand panel.
@@ -444,20 +444,20 @@ your unique assessment criteria.
 
     +++pytest tests/test_evaluation.py -s+++
 
-    ![](./media/image68.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image68.png)
 
 9.  Upon completion, the test will display an URL in the output where
     you can review the detailed evaluation results in the Azure AI
     Foundry UI, including individual evaluator passing scores and
     explanations.
 
-    ![](./media/image69.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image69.png)
 
 10. Click on the **Open**
 
-    ![](./media/image70.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image70.png)
 
-    ![](./media/image71.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image71.png)
 
 ## Task 9: AI Red Teaming Agent
 
@@ -490,22 +490,22 @@ will generate all the attack prompts for you.
 
     +++pytest tests/test_red_teaming.py -s+++
 
-    ![](./media/image72.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image72.png)
 
-    ![](./media/image73.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image73.png)
 
 3.  Upon completion, the test will display an URL in the output where
     you can review the detailed red teaming evaluation results in the
     Microsoft Foundry UI, including attack inputs, outcomes, and
     reasons.
 
-    ![](./media/image74.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image74.png)
 
 4.  Click on **Open** button
 
-    ![](./media/image75.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image75.png)
 
-    ![](./media/image76.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image76.png)
 
 ## Task 10: Tracing and monitoring
 
@@ -517,11 +517,11 @@ will generate all the attack prompts for you.
 
     +++azd deploy+++
 
-    ![](./media/image77.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image77.png)
 
-    ![](./media/image78.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image78.png)
 
-    ![](./media/image79.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image79.png)
 
 ## Task 11: Console traces
 
@@ -530,7 +530,7 @@ will generate all the attack prompts for you.
 
     +++azd show+++
 
-    ![](./media/image80.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image80.png)
 
 Or if you want to navigate from the Azure portal main page, select your
 resource group from the 'Recent' list, or by clicking the 'Resource
@@ -550,24 +550,24 @@ evaluation data in Microsoft Foundry.
 
 1.  Go back the Microsoft Foundry and select agent.
 
-    ![](./media/image81.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image81.png)
 
 2.  Select the **Traces**
 
-    ![](./media/image82.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image82.png)
 
-    ![](./media/image83.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image83.png)
 
 3.  Once App Insights is connected to your foundry project, you can also
     visit the monitoring dashboard to view trends such as agent runs and
     tokens count, error rates, evaluation results, and other key metrics
     that help you monitor agent performance and usage.
 
-    ![](./media/image84.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image84.png)
 
-    ![](./media/image85.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image85.png)
 
-    ![Monitor Dashboard](./media/image86.png)
+    ![Monitor Dashboard](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image86.png)
 
 ## Task 13: Continuous Evaluation
 
@@ -588,30 +588,30 @@ To customize continuous evaluation from the Azure AI Foundry:
 1.  Select **Monitor.** Choose the agent you want to enable continuous
     evaluation for from the agent list and click on **Settings**
 
-    ![](./media/image87.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image87.png)
 
 2.  Select evaluators and adjust maximal number of runs per hour and
     click on **Submit** button
 
-    ![](./media/image88.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image88.png)
 
-    ![](./media/image89.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image89.png)
 
 ## Task 14: Delete the resources
 
 1.  From the Azure portal home page, select the assigned Resouce group.
     Select all the resources under the Resource group and select Delete.
 
-    ![](./media/image90.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image90.png)
 
 2.  Enter +++**delete**+++ and click on the **Delete** button to confirm
     deletion. Click on **Delete** in the Delete confirmation dialog box.
 
-    ![](./media/image91.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image91.png)
 
 3.  Confirm the deletion of all the resources with a success message.
 
-    ![](./media/image92.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image92.png)
 
 **Summary**
 
