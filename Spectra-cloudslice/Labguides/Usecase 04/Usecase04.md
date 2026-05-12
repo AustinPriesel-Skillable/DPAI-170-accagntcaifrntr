@@ -57,7 +57,7 @@ The main objectives of this use case are:
 - Send email samples (**C:\LabFiles\LabFiles\Usecase 6\\**WorkIQ
   Labfiles) from mail id of your choice to your tenant id.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image1.png)
+![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image1.png)
 
 ## Task 1: Create an Azure AI Search resource
 
@@ -144,15 +144,15 @@ JSON-based indexes to provide fast, relevant search results.
     fields and click on **Review + create**.
 
     - Subscription – @lab.CloudSubscription.Name
-
+    
     - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
-
+    
     - Storage account name – +++iqlab@lab.LabInstance.Id+++
-
+    
     - Region – Select @lab.CloudResourceGroup(AgenticAI).Location
-
+    
     - Primary service – Select **Azure Blob Storage or Azure Data Lake
-      Storage Gen 2**
+    Storage Gen 2**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image14.png)
 
