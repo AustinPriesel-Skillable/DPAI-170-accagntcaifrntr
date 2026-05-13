@@ -461,7 +461,7 @@ assistance for home improvement projects.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image72.png)
 
-10.  The cell executes successfully, creating a vector store named
+10. The cell executes successfully, creating a vector store named
     **"Zava-Paint-Products"** using the uploaded files, and confirms
     that the vector store was created with 10 files.
 
@@ -533,7 +533,7 @@ system, with specialized agents for inventory management and customer
 service. You'll learn to orchestrate multiple agents working together to
 provide sophisticated and role-specific assistance.
 
-1.  Navigate to the **labs/agents/** folder and open the
+1.  Navigate to the **labs/agents/1-agents** folder and open the
     **12-agent-framework-orchestration.ipynb** notebook to begin the
     environment setup lab.
 
@@ -613,7 +613,7 @@ you generate synthetic query-response pairs based on your product
 catalog, creating a robust evaluation dataset to measure Cora's
 performance before deployment.
 
-1.  Navigate to the **labs/models/** folder and open the
+1.  Navigate to the **labs/2-models/** folder and open the
     **21-simulated-dataset.ipynb** notebook to begin the environment
     setup lab.
 
@@ -662,7 +662,7 @@ foundation model. With multiple Azure OpenAI models available (GPT-4o,
 GPT-4o-mini, GPT-4), you need to evaluate which model delivers the best
 balance of quality, safety, and performance for your retail use case.
 
-1.  Navigate to the **labs/models/** folder and open the
+1.  Navigate to the **labs/2-models/** folder and open the
     **22-evaluate-models.ipynb** notebook to begin the environment setup
     lab.
 
@@ -675,6 +675,8 @@ balance of quality, safety, and performance for your retail use case.
 
 4.  Click **Run All** to execute all the cells in the notebook and
     observe the outputs.
+
+    >[!Alert] If you run into any errors regarding GPT model, search for the gpt-4o model, and in the list of models to evaluate, ensure **gpt-4.1** is the only model listed.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image110.png)
 
