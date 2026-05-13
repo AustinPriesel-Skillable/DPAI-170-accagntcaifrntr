@@ -248,7 +248,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image33.png)
 
-    **Note:** Check the deployment status in your resource group to ensure all resources are provisioned successfully.
+    >[!Note] Check the deployment status in your resource group to ensure all resources are provisioned successfully.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image34.png)
 
@@ -279,7 +279,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     following text and click on the **Submit icon** as shown in the
     below image.
 
-    +++Can you help me choose the best tools for painting my house? +++
+    `Can you help me choose the best tools for painting my house?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image41.png)
 
@@ -289,7 +289,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     following text and click on the **Submit icon** as shown in the
     below image.
 
-    +++What are the cheapest products available? +++
+    `What are the cheapest products available?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image43.png)
 
@@ -299,7 +299,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     following text and click on the **Submit icon** as shown in the
     below image.
 
-    +++Suggest eco-friendly paint options?+++
+    `Suggest eco-friendly paint options?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image45.png)
 
@@ -309,7 +309,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     following text and click on the **Submit icon** as shown in the
     below image.
 
-    +++How much does the Synthetic Brush set cost and do you have it in stock?+++
+    `How much does the Synthetic Brush set cost and do you have it in stock?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image47.png)
 
@@ -341,9 +341,9 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     index in Azure AI Search. Switch to the scripts/ folder and run the
     command:
 
-     +++cd scripts/+++
+    +++cd scripts/+++
 
-     +++python 2-add-product-index.py+++
+    +++python 2-add-product-index.py+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image52.png)
 
