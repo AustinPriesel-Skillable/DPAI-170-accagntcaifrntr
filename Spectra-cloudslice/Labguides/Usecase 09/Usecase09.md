@@ -1,4 +1,4 @@
-# Use case 9 - Implement end to end agent operations for Zava’s shopping assistant in Microsoft Foundry
+# Usecase 9 - Implement end to end agent operations for Zava’s shopping assistant in Microsoft Foundry
 
 **Introduction**
 
@@ -181,21 +181,23 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
 4.  Then complete the interactive steps providing responses like this:
 
-    1.  Enter branch name: for-release-1.0.4
+    1.  Enter branch name: +++for-release-1.0.4+++
 
-    2.  Enter environment name: Ignite-PREL13
+    2.  Enter environment name: +++Ignite-PREL13+++
 
-    3.  Enter Azure region: @lab.CloudResourceGroup(AgenticAI).Location
+    3.  Enter Azure region: +++@lab.CloudResourceGroup(AgenticAI).Location+++
 
-    4.  Enter Subscription ID: *your subscription id here*
+    4.  Enter Subscription ID: +++@lab.CloudSubscription.Id+++
 
     5.  Do you want to activate Azure AI Search? (yes/no): yes
-
-    6.  Use these defaults? (yes/no): yes
-
-    7.  Proceed with deployment? (yes/no): yes
-
-    8.  Enter the **Resourcegroup**
+  
+    6.  Enter existing Resource Group Name: +++@lab.CloudResourceGroup(AgenticAI).Name+++
+  
+    7.  Azure OpenAI Service Name: +++aoai@lab.labinstance.id+++
+  
+    8.  Storage Account Name: +++st@lab.labinstance.id+++
+  
+    9.  Azure AI Search Service Name: +++aisearch@lab.labinstance.id+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image22.png)
 
