@@ -217,11 +217,13 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     +++cd ForBeginners/.azd-setup+++
 
+    +++rm -f .env.lock+++
+
     +++azd up+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image28.png)
 
-6.  When prompted, type **y** and press Enter to log in to Azure before
+7.  When prompted, type **y** and press Enter to log in to Azure before
     continuing with the deployment.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image29.png)
