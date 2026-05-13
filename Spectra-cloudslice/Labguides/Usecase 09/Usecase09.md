@@ -329,9 +329,11 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     extracted by Azure CLI. By default it looks for
     an rg-Ignite-XXX resource group but you can override it.
 
-     +++./scripts/1-update-env-selfguided.sh+++
+    >[!Note] Right click on the *1-update-env-selfguided.sh* and select **open in integrated terminal**.
 
-3.  Enter the resourcegroup
+     +++./1-update-env-selfguided.sh+++
+
+4.  Enter the resourcegroup +++@lab.CloudResourceGroup(AgenticAI).Name+++ and select **Enter** to use the default **Agent Name**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image49.png)
 
@@ -339,22 +341,22 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image51.png)
 
-4.  We have Zava data in scripts/customization. Let's create a product
+5.  We have Zava data in scripts/customization. Let's create a product
     index in Azure AI Search. Switch to the scripts/ folder and run the
     command:
 
-    +++cd scripts/+++
-
     +++python 2-add-product-index.py+++
+
+    >[!Alert] You may need to fill out **env variables** in the created new **.env file**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image52.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image53.png)
 
-5.  This will first run an RBAC update script to give this user the
+7.  This will first run an RBAC update script to give this user the
     right roles and access to make updates.
 
-6.  Then it should upload 49 products to a zava-products index with
+8.  Then it should upload 49 products to a zava-products index with
     semantic search, in Azure AI Search.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image54.png)
