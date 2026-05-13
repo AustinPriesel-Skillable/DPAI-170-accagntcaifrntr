@@ -417,7 +417,7 @@ hardware, electrical supplies, and plumbing materials. Cora helps
 customers find products, check inventory, and provides personalized
 assistance for home improvement projects.
 
-1.  Navigate to the **labs/setup/** folder and open the
+1.  Navigate to the **labs/setup/1-agents** folder and open the
     **11-build-cora-retail-agent.ipynb** notebook to begin the
     environment setup lab.
 
