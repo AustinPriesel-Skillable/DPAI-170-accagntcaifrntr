@@ -211,7 +211,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     +++azd env new+++
     
-    Name: +++agent@lab.LabInstance.Id+++
+    Name: +++bagent@lab.LabInstance.Id+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image23.png)
 
