@@ -65,50 +65,50 @@ monitoring to ensure safety, accuracy, and compliance.
 In this task, we will identify and understand the credentials that we
 will be using throughout the lab.
 
-1.  **Instructions** tab hold the lab guide with the instructions to be
+1.  **Instructions** tab hold the lab guide with the instructions to be
     followed throughout the lab.
 
-2.  **Resources** tab has got the credentials that will be needed for
+2.  **Resources** tab has got the credentials that will be needed for
     executing the lab.
 
-    - **URL** – URL to the Azure portal
+    - **URL** – URL to the Azure portal
 
-    - **Subscription** – This is the ID of the subscription assigned to
+    - **Subscription** – This is the ID of the subscription assigned to
       you
 
-    - **Username** – The user id with which you need to login to the
+    - **Username** – The user id with which you need to login to the
       Azure services.
 
-    - **Password** – Password to the Azure login. Let us call this
+    - **Password** – Password to the Azure login. Let us call this
       Username and password as Azure login credentials. We will use
       these creds wherever we mention Azure login credentials.
 
-    - **Resource Group** – The **Resource group** assigned to you.
+    - **Resource Group** – The **Resource group** assigned to you.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image2.png)
 
-3.  **Help** tab holds the Support information. The **ID** value here is
-    the **Lab instance ID** which will be used during the lab execution.
+3.  **Help** tab holds the Support information. The **ID** value here is
+    the **Lab instance ID** which will be used during the lab execution.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image3.png)
 
-    >[!Alert] Make sure you create all your resources under
+    >[!Alert] Make sure you create all your resources under
     this Resource group
 
 ## Task 1: Register Service provider
 
-1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
+1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
     your cloud slice account below.
 
-    Username: +++@lab.CloudPortalCredential(User1).Username+++
+    Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-    Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
+    Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image4.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image5.png)
 
-1.  Click on **Subscriptions** tile.
+1.  Click on **Subscriptions** tile.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image6.png)
 
@@ -116,9 +116,9 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image7.png)
 
-3.  Expand Settings from the left navigation menu. Click on **Resource
-    providers**, enter +++Microsoft.CognitiveServices+++ and
-    select it, and then click **Register**.
+3.  Expand Settings from the left navigation menu. Click on **Resource
+    providers**, enter +++Microsoft.CognitiveServices+++ and
+    select it, and then click **Register**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image8.png)
 
@@ -132,17 +132,17 @@ will be using throughout the lab.
 
 ## Task 2: Retrieve resource group name and location
 
-1.  Type in +++Resource group+++ in the search bar and
-    select **Resource groups**.
+1.  Type in +++Resource group+++ in the search bar and
+    select **Resource groups**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image11.png)
 
-2.  Click on your assigned **Resource group**.
+2.  Click on your assigned **Resource group**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image12.png)
 
-3.  In **Resource group** page, copy **resource group name and
-    location** and paste them in a notepad, then **Save** the notepad to
+3.  In **Resource group** page, copy **resource group name and
+    location** and paste them in a notepad, then **Save** the notepad to
     use the information in the upcoming tasks.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image13.png)
@@ -150,12 +150,12 @@ will be using throughout the lab.
 ## Task 3: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
-    following URL:  +++https://github.com/technofocus-pte/aiagents+++
+    following URL:  +++https://github.com/technofocus-pte/aiagents+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image14.png)
 
-2.  Click on **fork** to fork the repo. Give unique name to the repo and
-    click on **Create repo** button.
+2.  Click on **fork** to fork the repo. Give unique name to the repo and
+    click on **Create repo** button.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image15.png)
 
@@ -163,7 +163,7 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image16.png)
 
-4.  Click on **Code > Codespaces > Codespaces**
+4.  Click on **Code > Codespaces > Codespaces**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image17.png)
 
@@ -186,7 +186,7 @@ will be using throughout the lab.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image21.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
-    the code and click **Next**.
+    the code and click **Next**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image22.png)
 
@@ -198,23 +198,28 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image25.png)
 
-4.  To create an environment for Azure resources, run the following Azure Developer CLI command.It asks you to enter environment name. Enter any name of your choice and press enter (eg: +++aiagentXXXX+++)
+4.  To create an environment for Azure resources, run the following Azure Developer CLI command.
 
-    **Note:** When creating an environment, ensure that the name consists of
+	+++azd env new+++
+
+
+7. It asks you to enter environment name. Enter +++aiagent@lab.LabInstance.Id+++ and press enter.
+
+    **Note:** When creating an environment, ensure that the name consists of
     lowercase letters.
     
-    +++azd env new+++
+    
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image26.png)
 
 5.  Run below command to provision the services to Azure, build your
     container.
 
-    +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
+    +++azd env set AZURE_RESOURCE_GROUP @lab.CloudResourceGroup(AgenticAI).Name+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image27.png)
 
-6.  Run azd up - This will provision Azure resources
+6.  Run azd up - This will provision Azure resources
 
     +++azd up+++
 
@@ -222,15 +227,15 @@ will be using throughout the lab.
 
 7.  Select below values.
 
-    - **Select an Azure Subscription to use** : Select your subscription
+    - **Select an Azure Subscription to use** : @lab.CloudSubscription.Id
     
-    - **azureAiServiceLocation**: @labCloudResourceGroup(AgenticAI).Location
+    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image29.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image30.png)
 
-4.  This deployment will take *7-10 minutes* to provision the resources
+4.  This deployment will take *7-10 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image31.png)
@@ -250,17 +255,17 @@ will be using throughout the lab.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image37.png)
 
 6.  After the application has been successfully deployed, you see a URL
-    displayed in the terminal. Copy the **URL**
+    displayed in the terminal. Copy the **URL**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image37.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
-1.  Select **Resource groups**
+1.  Select **Resource groups**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image38.png)
 
-2.  Click on your assigned **Resource group**.
+2.  Click on your assigned **Resource group**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image39.png)
 
@@ -284,16 +289,16 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image40.png)
 
-4.  On the resource group and click on **Azure Storage account.**
+4.  On the resource group and click on **Azure Storage account.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image41.png)
 
-5.  From the left navigation menu, click on **Containers** , Make sure
+5.  From the left navigation menu, click on **Containers** , Make sure
     data should be deployed successfully
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image42.png)
 
-6.  Go back to resorcegroup and click on **Foundry Project.**
+6.  Go back to resorcegroup and click on **Foundry Project.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image43.png)
 
@@ -304,15 +309,15 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image45.png)
 
-8.  In the top navigation, select **Build**
+8.  In the top navigation, select **Build**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image46.png)
 
-9.  In the left-hand menu, select **Agents.** Locate your agent in the
+9.  In the left-hand menu, select **Agents.** Locate your agent in the
     list - the agent name and version will be displayed
 
 10. The Agent ID follows the
-    format: {agent_name}:{agent_version} (e.g., agent-template-assistant:1).
+    format: {agent_name}:{agent_version} (e.g., agent-template-assistant:1).
     Copy the Agent ID in a notepad
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image47.png)
@@ -331,8 +336,8 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image50.png)
 
-2.  In the **agent-template-assistant** web app page, enter the
-    following text and click on the **Submit icon** as shown in the
+2.  In the **agent-template-assistant** web app page, enter the
+    following text and click on the **Submit icon** as shown in the
     below image.
 
     +++What's the best tent under $200 for two people, and what features does it include?+++
@@ -341,8 +346,8 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image52.png)
 
-3.  In the **agent-template-assistant** web app page, enter the
-    following text and click on the **Submit icon** as shown in the
+3.  In the **agent-template-assistant** web app page, enter the
+    following text and click on the **Submit icon** as shown in the
     below image.
 
      +++What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?+++
@@ -363,8 +368,8 @@ will be using throughout the lab.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image58.png)
 
-4.  In the **agent-template-assistant** web app page, enter the
-    following text and click on the **Submit icon** as shown in the
+4.  In the **agent-template-assistant** web app page, enter the
+    following text and click on the **Submit icon** as shown in the
     below image.
 
     +++I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?+++
@@ -375,12 +380,12 @@ will be using throughout the lab.
 
 ## Task 7: Sample Prompts for Azure AI Search
 
-1.  In the **agent-template-assistant** web app page, select New Chat
+1.  In the **agent-template-assistant** web app page, select New Chat
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image61.png)
 
-2.  In the **agent-template-assistant** web app page, enter the
-    following text and click on the **Submit icon** as shown in the
+2.  In the **agent-template-assistant** web app page, enter the
+    following text and click on the **Submit icon** as shown in the
     below image.
 
     +++Which products have wireless charging capabilities and what are their battery life specifications?+++
@@ -397,7 +402,7 @@ will be using throughout the lab.
 
 ## Task 8: Agent Evaluation
 
-Azure AI Foundry offers a number of built-in evaluators to measure the
+Azure AI Foundry offers a number of built-in evaluators to measure the
 quality, efficiency, risk and safety of your agents. For example, intent
 resolution, tool call accuracy, and task adherence evaluators are
 targeted to assess the end-to-end and tool call process quality of agent
@@ -426,15 +431,15 @@ your unique assessment criteria.
 
 3.  Go back to the Microsoft Foundry
 
-4.  Copy the **Microsoft Foundry project endpont**.
+4.  Copy the **Microsoft Foundry project endpont**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image67.png)
 
-5.  Go back to Github Cospaces and select the **test_utils.py** under
-    the **test** folder in the left hand panel.
+5.  Go back to Github Cospaces and select the **test_utils.py** under
+    the **test** folder in the left hand panel.
 
 6.  Paste the endpoint between the empty double quotes on line 40
-    after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
+    after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
 
 7.  Run the below script below
 
@@ -461,12 +466,12 @@ your unique assessment criteria.
 
 ## Task 9: AI Red Teaming Agent
 
-The AI Red Teaming Agent is a powerful tool designed to help
+The AI Red Teaming Agent is a powerful tool designed to help
 organizations proactively find security and safety risks associated with
 generative AI systems during design and development of generative AI
 models and applications.
 
-In the red teaming test script, you will be able to set up an AI Red
+In the red teaming test script, you will be able to set up an AI Red
 Teaming Agent to run an automated scan of your agent in this sample. The
 test demonstrates how to:
 
@@ -575,8 +580,8 @@ Continuous evaluation is an automated monitoring capability that
 continuously assesses your agent's quality, performance, and safety as
 it handles real user interactions in production.
 
-During container startup, continuous evaluation is enabled by default
-and pre-configured with a sample evaluator set to evaluate up to 5 agent
+During container startup, continuous evaluation is enabled by default
+and pre-configured with a sample evaluator set to evaluate up to 5 agent
 responses per hour. Continuous evaluation does not generate test
 inputs—instead, it evaluates real user conversations as they occur. This
 means evaluation runs are triggered only when actual users interact with
@@ -585,8 +590,8 @@ evaluation entries.
 
 To customize continuous evaluation from the Azure AI Foundry:
 
-1.  Select **Monitor.** Choose the agent you want to enable continuous
-    evaluation for from the agent list and click on **Settings**
+1.  Select **Monitor.** Choose the agent you want to enable continuous
+    evaluation for from the agent list and click on **Settings**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image87.png)
 
