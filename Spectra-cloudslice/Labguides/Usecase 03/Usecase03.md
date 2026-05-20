@@ -1,5 +1,5 @@
-**Usecase 03- Create a cross-department intelligent multi-agent
-automation solution**
+## Usecase 03- Create a cross-department intelligent multi-agent
+automation solution
 
 **Introduction**
 
@@ -17,13 +17,11 @@ onboarding tasks end-to-end.
 
 **Solution architecture**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/a1.png)
+![](./media/a1.png)
 
 **Agentic architecture**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/a2.png)
+![](./media/a2.png)
 
 **Objective**
 
@@ -47,7 +45,7 @@ system** can:
 - **GitHub Account**: You are expected to have your own GitHub login
   credentials.  
   If you do not have an account, please create one by visiting:  
-  +++<https://github.com/signup?user_email=&source=form-home-signup+++>
+  +++https://github.com/signup?user_email=&source=form-home-signup+++
 
 ## Task 0: Understand the VM and the credentials
 
@@ -74,16 +72,14 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image3.png)
+    ![](./media/image3.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image4.png)
+    ![](./media/image4.png)
 
-\[!Alert\] **Important:** Make sure you create all your resources under
+    >[!Alert] **Important:** Make sure you create all your resources under
 this Resource group
 
 ## Task 1: Register Service provider
@@ -91,139 +87,129 @@ this Resource group
 1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
     your cloud slice account below.
 
-Username: <+++@lab.CloudPortalCredential>(User1).Username+++
+    Username: <+++@lab.CloudPortalCredential(User1).Username+++
 
-Password: <+++@lab.CloudPortalCredential>(User1). *TAP*+++
+    Password: <+++@lab.CloudPortalCredential(User1).AccessToken+++
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image5.png)
+    ![](./media/image5.png)
 
-![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image6.png)
+    ![](./media/image6.png)
 
 2.  Click on **Subscriptions** tile.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
+    ![](./media/image7.png)
 
 3.  Click on the subscription name.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image8.png)
+    ![](./media/image8.png)
 
 4.  Expand Settings from the left navigation menu. Click on **Resource
-    providers**, enter **+++** **Microsoft.CognitiveServices+++** and
-    select i,t, and then click **Register**.
+    providers**, enter +++Microsoft.CognitiveServices+++ and
+    select it, and then click **Register**.
 
-![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image9.png)
 
-![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image10.png)
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image11.png)
+    ![A screenshot of a computer AI-generated content may be 
+ incorrect.](./media/image11.png)
 
 ## Task 2: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
-    following URL: 
-    <https://github.com/technofocus-pte/MultiAgentAccelerator/tree/main>
+    following URL: +++https://github.com/technofocus-pte/MultiAgentAccelerator/tree/main+++
 
-> ![](./media/image12.png)
+    ![](./media/image12.png) 
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
-![](./media/image13.png)
+    ![](./media/image13.png)
 
-3.  Click on **Code -\> Codespaces -\> Codespaces+**
+3.  Click on **Code > Codespaces > Codespaces+**
 
-> ![](./media/image14.png)
+    ![](./media/image14.png) 
 
 4.  Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
-> ![](./media/image15.png)
->
-> ![](./media/image16.png)
+    ![](./media/image15.png) 
+
+    ![](./media/image16.png) 
 
 ## Task 3: Provision Services and deploy application to Azure
 
 1.  Run the following command on the Terminal. It generates the code to
     copy. Copy the code and press Enter.
 
-+++azd auth login+++
+    +++azd auth login+++
 
-![](./media/image17.png)
+    ![](./media/image17.png)
 
-![](./media/image18.png)
+    ![](./media/image18.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-![](./media/image19.png)
+    ![](./media/image19.png)
 
 3.  Sign in with your Azure credentials.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image20.png)
+    ![](./media/image20.png)
 
-![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image21.png)
+    ![](./media/image21.png)
 
-![](./media/image22.png)
+    ![](./media/image22.png)
 
 4.  Run azd up - This will provision Azure resources
 
-+++azd up+++
+    +++azd up+++
 
-![](./media/image23.png)
+    ![](./media/image23.png)
 
-5.  To create an environment for Azure resources, enter any name of your
-    choice and press enter (eg :+++
-    macaedev[@lab.LabInstance.Id](mailto:Ontology@lab.LabInstance.Id)
-    +++)
+5.  To create an environment for Azure resources, enter: +++macaedev@lab.LabInstance.Id+++
 
-![](./media/image24.png)
+    ![](./media/image24.png)
 
-![](./media/image25.png)
+    ![](./media/image25.png)
 
 6.  Select below values.
 
-- **Select an Azure Subscription to use** : Select your subscription
+    - **Select an Azure Subscription to use** : Select your subscription
+  
+    - **azureAiServiceLocation**: Sweden Central
+  
+    - **‘location' infrastructure parameter:** Central US
+  
+    - **Pick a resource group to use:** AgenticAI
 
-- **azureAiServiceLocation**: Sweden Central
+    ![](./media/image26.png)
 
-- **‘location' infrastructure parameter:** Central US
+    ![](./media/image27.png)
 
-- **Pick a resource group to use:** Existing resource group
+    ![](./media/image28.png)
 
-![](./media/image26.png)
-
-![](./media/image27.png)
-
-![](./media/image28.png)
-
-![](./media/image29.png)
+    ![](./media/image29.png)
 
 7.  This deployment will take *7-10 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
-![](./media/image30.png)
+    ![](./media/image30.png)
 
-![](./media/image31.png)
+    ![](./media/image31.png)
 
-![](./media/image32.png)
+    ![](./media/image32.png)
 
 8.  Now the deployment is complete
 
-![](./media/image33.png)
+    ![](./media/image33.png)
 
 9.  After the application has been successfully deployed, you see a URL
     displayed in the terminal. Copy the **Frontend application URL**
 
-![](./media/image34.png)
+    ![](./media/image34.png)
 
 ## Task 4: Post-Deployment Configuration
 
@@ -231,158 +217,149 @@ incorrect.](./media/image21.png)
     infra/scripts/selecting_team_config_and_data.sh** from the project
     root to prepare and upload the required data.
 
-+++bash infra/scripts/selecting_team_config_and_data.sh +++
+    +++bash infra/scripts/selecting_team_config_and_data.sh+++
 
-> ![](./media/image35.png)
+    ![](./media/image35.png) 
 
-2.  After running the command **bash
-    infra/scripts/selecting_team_config_and_data.sh**, authenticate in
-    the browser by opening
-    [**https://microsoft.com/devicelogin**](https://microsoft.com/devicelogin)
-    and entering the **displayed code** to continue the script
-    execution.
+2.  After running the command **bash infra/scripts/selecting_team_config_and_data.sh**, authenticate in the browser by opening +++https://microsoft.com/devicelogin+++ and entering the **displayed code** to continue the script execution.
 
-> ![](./media/image36.png)
+    ![](./media/image36.png) 
 
-![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image37.png)
+    ![](./media/image37.png)
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image38.png)
+    ![](./media/image38.png)
 
 3.  Select your subscription
 
-> ![](./media/image39.png)
+    ![](./media/image39.png) 
 
 4.  After running the script, a list of available use case scenarios
     will appear for selection. You can choose specific scenarios or
     deploy all use cases at once. Based on your selection, the required
     datasets and configuration files for those use case(s) will be
-    uploaded to your Azure environment. For this lab, select
-    **6**![](./media/image40.png)
+    uploaded to your Azure environment. For this lab, select **6**.
+    
+    ![](./media/image40.png)    
 
-![](./media/image41.png)
+    ![](./media/image41.png)
 
-![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image42.png)
+    ![](./media/image42.png)
 
-![](./media/image43.png)
+    ![](./media/image43.png)
 
-![](./media/image44.png)
+    ![](./media/image44.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
-1.  Open a browser go to ++++++ and sign in with your cloud slice
-    account below.
+1.  Open a browser go to +++https://portal.azure.com+++ and sign in with your cloud slice
+    account.
 
 2.  Select **Resource groups**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image45.png)
+    ![](./media/image45.png)
 
 3.  Click on your assigned **Resource group**.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46.png)
+    ![](./media/image46.png)
 
 3.  Make sure the below resource got deployed successfully
 
-- Foundry
+    - Foundry
+    
+    - Foundry project
+    
+    - App Service
+    
+    - Container registry
+    
+    - Azure Cosmos DB account
+    
+    - Container App
+    
+    - SQL Database
+    
+    - Search service
+    
+    - Azure Storage account
 
-- Foundry project
+    ![](./media/image47.png)
 
-- App Service
-
-- Container registry
-
-- Azure Cosmos DB account
-
-- Container App
-
-- SQL Database
-
-- Search service
-
-- Azure Storage account
-
-![](./media/image47.png)
-
-![](./media/image48.png)
+    ![](./media/image48.png)
 
 4.  On the resource group and click on **Azure Storage account.**
 
-![](./media/image49.png)
+    ![](./media/image49.png)
 
 5.  From the left navigation menu, click on **Containers** , Make sure
     data should be deployed successfully
 
-![](./media/image50.png)
+    ![](./media/image50.png)
 
 6.  Go back to resorcegroup and click on **Foundry Project.**
 
-> ![](./media/image51.png)
+    ![](./media/image51.png) 
 
-4.  Click **Go to Foundry portal** to verify that the model has been
-    successfully deployed. ![](./media/image52.png)
+4.  Click **Go to Foundry portal** to verify that the model has been successfully deployed. 
 
-![](./media/image53.png)
+    ![](./media/image52.png)    
+
+    ![](./media/image53.png)
 
 ## Task 6: Add Authentication in Azure App Service configuration
 
 1.  Go back to resourcegroup and click on **App
     Service(app-macaedevXXX).**
 
-![](./media/image54.png)
+    ![](./media/image54.png)
 
 2.  On the web app home page, go to **Settings** and click
     **Authentication** from the left menu
 
-![](./media/image55.png)
+    ![](./media/image55.png)
 
 3.  Click on **Add identity provider** to see a list of identity
     providers.
 
-> ![](./media/image56.png)
+    ![](./media/image56.png) 
 
 4.  Click on Identity Provider dropdown to see a list of identity
     providers and select the first option **Microsoft** from the
     drop-down list 
 
-![](./media/image57.png)
+    ![](./media/image57.png)
 
 5.  Select **client secret expiration** under App registration and click
     on **Add** button
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image58.png)
+    ![](./media/image58.png)
 
 6.  You have successfully added app authentication, and now required to
     log in to access the application.
 
-> ![](./media/image59.png)
->
-> ![](./media/image60.png)
+    ![](./media/image59.png) 
+
+    ![](./media/image60.png) 
 
 6.  On the web app home page, go to **Overview** and click **Browse**
 
-> ![](./media/image61.png)
+    ![](./media/image61.png) 
 
 7.  Wait for the web application deployment to complete.
 
-> ![](./media/image62.png)
+    ![](./media/image62.png) 
 
-![](./media/image63.png)
+    ![](./media/image63.png)
 
 ## Task 7: Review and Explore the Sample Questions for Your Copilot Application
 
 1.  Select the Team option from the top-left section, then click
     Continue after choosing the desired team.
 
-> ![](./media/image64.png)
->
-> ![](./media/image65.png)
+    ![](./media/image64.png) 
 
-![](./media/image66.png)
+    ![](./media/image65.png) 
+
+    ![](./media/image66.png)
 
 ## Task 8: Retail Scenario
 
@@ -398,32 +375,30 @@ actions.
 
 1.  Select the Retail team, follow the prompts below.
 
-**Agents Used:** Customer, Order, Analysis Recommendation
+    **Agents Used:** Customer, Order, Analysis Recommendation
 
-![](./media/image67.png)
+    ![](./media/image67.png)
 
 2.  In the **Multi-Agent Planner**, under *Quick tasks*, select
     ***Satisfaction Plan* to generate an analysis of Emily Thompson’s
     satisfaction with Contoso along with recommended actions to improve
     it**
 
-![](./media/image68.png)
+    ![](./media/image68.png)
 
 3.  Click the **Submit** icon as shown in the image.
 
-> ![](./media/image69.png)
+    ![](./media/image69.png) 
 
-![](./media/image70.png)
+    ![](./media/image70.png)
 
 4.  Task: Click **"Approve Task Plan"** Button
 
-![](./media/image71.png)
+    ![](./media/image71.png)
 
-**Observe***: It goes into "Thinking Process", "Processing your plan"
-and "coordinating with AI Agents".*  
-*Review the output.*
+    **Observe***: It goes into "Thinking Process", "Processing your plan" and "coordinating with AI Agents".* *Review the output.*
 
-![](./media/image72.png)
+    ![](./media/image72.png)
 
 ## Task 9 :Product Marketing Scenario
 
@@ -439,38 +414,38 @@ creation while ensuring alignment with product details and brand voice.
 
 1.  Select the Marketing team, follow the prompts below.
 
-> ![](./media/image73.png)
+    ![](./media/image73.png) 
 
-**Agents Used:** Product, Marketing , Proxy
+    **Agents Used:** Product, Marketing , Proxy
 
 2.  Switch to **"Product Marketing Team"** from the top left section and
     click **"Continue"** button.
 
-> ![](./media/image74.png)
+    ![](./media/image74.png) 
 
-- Task: From the Quick Tasks, select **"Draft a press release"** and
+    - Task: From the Quick Tasks, select **"Draft a press release"** and
   submit it.
 
-> ![](./media/image75.png)
+    ![](./media/image75.png) 
 
 3.  Click the **Submit** icon as shown in the image.
 
-![](./media/image76.png)
+    ![](./media/image76.png)
 
-*Note: Average response time is 15–20 seconds.*  
-*Observe: It will trigger the "Generating Plan Action" and give the
-Proposed Plan with 4 or more Steps*
+    *Note: Average response time is 15–20 seconds.*  
+    *Observe: It will trigger the "Generating Plan Action" and give the
+    Proposed Plan with 4 or more Steps*
 
-- Task: Click on **"Approve Task Plan"** Button
+    - Task: Click on **"Approve Task Plan"** Button
 
-![](./media/image77.png)
+    ![](./media/image77.png)
 
-*Note: Average response time is around 01 minute.*  
-**Observe***:* It goes into "Thinking Process" and observe a spinner
-"Processing your plan and coordinating with AI Agents".  
-Review the output.
+    *Note: Average response time is around 01 minute.*  
+    **Observe***:* It goes into "Thinking Process" and observe a spinner
+    "Processing your plan and coordinating with AI Agents".  
+    Review the output.
 
-![](./media/image78.png)
+    ![](./media/image78.png)
 
 ## Task 10: HR Onboarding Scenario
 
@@ -485,56 +460,58 @@ onboarding activities efficiently and accurately
 
 1.  Select the HR team, follow the prompts below.
 
-**Agents Used:** HR Helper, Technical support , Proxy
+    **Agents Used:** HR Helper, Technical support , Proxy
 
-![](./media/image79.png)
+    ![](./media/image79.png)
 
-![](./media/image80.png)
+    ![](./media/image80.png)
 
 2.  The HR Onboarding Scenario allows users to explore and retrieve
     information related to OnBoarding the Employee. Key tasks include:
 
-> ![](./media/image81.png)
+    ![](./media/image81.png) 
 
-Sample operation:
+    Sample operation:
+    
+    1.  Task: Switch to the **"Human Resources Team"** from the top left
+        section and click **"Continue"**
+    
+    2.  Task: From the Quick Tasks, select **"Onboard New Employee"** and
+        submit it.
+    
+        ![](./media/image81.png) 
+    
+    3.  Click the **Submit** icon as shown in the image.
 
-1.  Task: Switch to the **"Human Resources Team"** from the top left
-    section and click **"Continue"**
+    ![](./media/image82.png) 
 
-2.  Task: From the Quick Tasks, select **"Onboard New Employee"** and
-    submit it.
+    **Note**: Average response time is 15–20 seconds.
+    
+    **Observe:** If it asks for additional clarification (Human in the loop)
+    Please provide this information irrespective of what specific
+    information is asked. This will prevent agent for asking for multiple
+    clarifications
 
-> ![](./media/image81.png)
+    ```
+    **department**: hr, role: manager, start date: 11/23/2025, orientation
+    date: 11/25/2025, location: onsite, email: js@contoso.com, mentor: Jim
+    Shorts, benefits package: standard, ID Card: yes, salary: 70000, Laptop
+    : Dell 14 Plus
+    ```
+    
+    *Observe: It will trigger "Generating Plan Action" and "Proposed Plan"
+    with 4 or more Steps*
+    
+    **Task**: Click on **"Approve Task Plan"** Button.
 
-3.  Click the **Submit** icon as shown in the image.
+    ![](./media/image83.png)
 
-> ![](./media/image82.png)
+    **Note:** Average response time is around 01 minute 15 seconds.  
+    Observe: It goes into "Thinking Process", "Processing your plan" and
+    "coordinating with AI Agents"  
+    Review the output.
 
-**Note**: Average response time is 15–20 seconds.
-
-**Observe:** If it asks for additional clarification (Human in the loop)
-Please provide this information irrespective of what specific
-information is asked. This will prevent agent for asking for multiple
-clarifications
-
-**department**: hr, role: manager, start date: 11/23/2025, orientation
-date: 11/25/2025, location: onsite, email: js@contoso.com, mentor: Jim
-Shorts, benefits package: standard, ID Card: yes, salary: 70000, Laptop
-: Dell 14 Plus
-
-*Observe: It will trigger "Generating Plan Action" and "Proposed Plan"
-with 4 or more Steps*
-
-**Task**: Click on **"Approve Task Plan"** Button.
-
-![](./media/image83.png)
-
-**Note:** Average response time is around 01 minute 15 seconds.  
-Observe: It goes into "Thinking Process", "Processing your plan" and
-"coordinating with AI Agents"  
-Review the output.
-
-![](./media/image84.png)
+    ![](./media/image84.png)
 
 ## Task 11: RFP Analysis Scenario
 
@@ -548,37 +525,37 @@ accurately
 
 1.  Select the RFP team, follow the prompts below.
 
-**Agents Used:** RFP Summary, RFP Risk, RFP Compliance
+    **Agents Used:** RFP Summary, RFP Risk, RFP Compliance
 
-![](./media/image85.png)
+    ![](./media/image85.png)
 
-![](./media/image86.png)
+    ![](./media/image86.png)
 
-The RFP Analysis Scenario allows users to explore and analyze Request
-for Proposal (RFP) and contract documents. Key tasks include:
+    The RFP Analysis Scenario allows users to explore and analyze Request
+    for Proposal (RFP) and contract documents. Key tasks include:
+    
+    *Sample operation:*
+    
+    - **Task**: Switch to the **"RFP Team"** from the top left section and
+      click **"Continue"** button.
+    
+    - **Task**: From the Quick Tasks, select **"RFP Document Summary"** and
+      submit it.
 
-*Sample operation:*
-
-- **Task**: Switch to the **"RFP Team"** from the top left section and
-  click **"Continue"** button.
-
-- **Task**: From the Quick Tasks, select **"RFP Document Summary"** and
-  submit it.
-
-> ![](./media/image87.png)
+    ![](./media/image87.png) 
 
 1.  Click the **Submit** icon as shown in the image.
 
-> ![](./media/image88.png)
+    ![](./media/image88.png) 
 
-**Note:** Average response time is 10–15 minutes.
+    **Note:** Average response time is 10–15 minutes.
+    
+    **Observe**: It will trigger the "Generating Plan Action" and give the
+    Proposed Plan with 5 or more Steps
 
-**Observe**: It will trigger the "Generating Plan Action" and give the
-Proposed Plan with 5 or more Steps
+    ![](./media/image89.png)
 
-![](./media/image89.png)
-
-![](./media/image90.png)
+    ![](./media/image90.png)
 
 **Task 12: Contract Compliance Review Scenario**
 
@@ -595,48 +572,48 @@ contract reviews while keeping humans in control of final decisions.
 
 1.  Select the Contract Compliance team, follow the prompts below.
 
-**Agents Used:** Contract Summary, Contract Risk, Contract Compliance
+    **Agents Used:** Contract Summary, Contract Risk, Contract Compliance
 
-The Contract Compliance Review Scenario allows users to explore and
-analyze NDA and contract documents for compliance and risk assessment.
-Key tasks include:
+    The Contract Compliance Review Scenario allows users to explore and
+    analyze NDA and contract documents for compliance and risk assessment.
+    Key tasks include:
 
-![](./media/image91.png)
+    ![](./media/image91.png)
 
-Sample operation:
+    Sample operation:
+    
+    - **Task**: Switch to the **"Contract Compliance Review Team"** from the
+      top left section and click **"Continue"** button.
+    
+    ![](./media/image92.png)
+    
+    - **Task**: From the Quick Tasks, select **"NDA Contract Review"** and
+      submit it.
 
-- T**ask**: Switch to the **"Contract Compliance Review Team"** from the
-  top left section and click **"Continue"** button.
-
-![](./media/image92.png)
-
-- **Task**: From the Quick Tasks, select **"NDA Contract Review"** and
-  submit it.
-
-![](./media/image93.png)
+    ![](./media/image93.png)
 
 2.  Click the **Submit** icon as shown in the image.
 
-![](./media/image94.png)
+    ![](./media/image94.png)
 
-*Note: Average response time is 10–15 minutes.*  
-**Observe***:* It will trigger the "Generating Plan Action" and give the
-Proposed Plan with 4 or more Steps
+    *Note: Average response time is 10–15 minutes.*  
+    **Observe***:* It will trigger the "Generating Plan Action" and give the
+    Proposed Plan with 4 or more Steps
+    
+    - Task: Click on **"Approve Task Plan"** Button.
 
-- Task: Click on **"Approve Task Plan"** Button.
+    ![](./media/image95.png)
 
-![](./media/image95.png)
+    Note: Average response time is around 01 minute.  
+    **Observe**: It goes into "Thinking Process", "Processing your plan" and
+    "coordinating with AI Agents".  
+    **Review the output.**
+    
+    This structured approach ensures that users receive automated,
+    AI-coordinated task execution and intelligent responses from specialized
+    agents.
 
-Note: Average response time is around 01 minute.  
-**Observe**: It goes into "Thinking Process", "Processing your plan" and
-"coordinating with AI Agents".  
-**Review the output.**
-
-This structured approach ensures that users receive automated,
-AI-coordinated task execution and intelligent responses from specialized
-agents.
-
-![](./media/image96.png)
+    ![](./media/image96.png)
 
 ## Task 12: Delete the Resources
 
@@ -644,28 +621,24 @@ agents.
     portal search bar, navigate and click on **Resource
     groups** under **Services**.
 
-> ![A screenshot of a computer Description automatically
-> generated](./media/image97.png)
+    ![](./media/image97.png)
 
 2.  In the Resource groups page, select your resource group.
 
 3.  In the **Resource group** home page, select all resources and click
     on **delete**
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image98.png)
+    ![](./media/image98.png)
 
 4.  In the **Delete Resources** pane that appears on the right side,
     navigate to **Enter “delete” to confirm deletion** field, then click
     on the **Delete** button
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image99.png)
+    ![](./media/image99.png)
 
 5.  On **Delete confirmation** dialog box, click on **Delete** button.
 
-> ![A screenshot of a computer error AI-generated content may be
-> incorrect.](./media/image100.png)
+    ![](./media/image100.png)
 
 **Summary**
 
