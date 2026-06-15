@@ -90,7 +90,7 @@ JSON-based indexes to provide fast, relevant search results.
 
     - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
 
-    - Storage account name – +++searchleaves@lab.LabInstance.Id+++
+    - Search Service name – +++searchleaves@lab.LabInstance.Id+++
 
     - Location – @lab.CloudResourceGroup(AgenticAI).Location
 
@@ -249,7 +249,9 @@ access the Microsoft Foundry.
 
     - Name: +++agentic-@lab.LabInstance.Id+++
 
-    - Region: **CanadaCentral**
+    - Region: @lab.CloudResourceGroup(AgenticAI).Location
+  
+      >[!Alert] If you are experiencing a Regional capacity limitation, please try one of the following regions: **[SwedenCentral, JapanEast, NorthEurope, EastAsia]**
 
     - Default project name: +++agentic-ai-project-@lab.LabInstance.Id+++
 
