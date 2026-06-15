@@ -269,7 +269,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     
     - **Enter a value for existingResourceGroup Name:** +++@lab.CloudResourceGroup(AgenticAI).Name+++
     
-    - **Enter location**: @lab.CloudResourceGroup(AgenticAI).Location
+    - **Enter location**: Sweden Central
       
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image39.png)
 
