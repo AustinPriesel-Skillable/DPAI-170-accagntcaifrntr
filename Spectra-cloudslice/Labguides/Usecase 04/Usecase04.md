@@ -419,23 +419,22 @@ reports.
 2.  Enter +++NetworkOperationsOntology+++ for the **Name** of your
     ontology and select **Create**.
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image68.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image68.png)
 
-   ** Tip:** Ontology names can include numbers, letters, and
- underscores. Don't use spaces or dashes.
+    **Tip:** Ontology names can include numbers, letters, and underscores. Don't use spaces or dashes.
 
 3.  The ontology opens when it's ready.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image69.png)
 
- Next, create entity types, data bindings, and relationships based on
- data from your lakehouse tables.
+Next, create entity types, data bindings, and relationships based on
+data from your lakehouse tables.
 
 ## Task 8: Create Entity Types and Data Bindings
 
- Entity types represent categories of objects in your business domain.
- For this schema, you will create two entity
- types: **Tickets** and **Inspections**.
+Entity types represent categories of objects in your business domain.
+For this schema, you will create two entity
+types: **Tickets** and **Inspections**.
 
 1.  From the top ribbon or the center of the configuration canvas,
     select **Add entity type**.
