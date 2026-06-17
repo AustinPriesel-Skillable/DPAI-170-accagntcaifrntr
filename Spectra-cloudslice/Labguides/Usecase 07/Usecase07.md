@@ -89,10 +89,9 @@ project.
 3.  You should see a dialog prompting you to select a project to
     continue
 
-4.  Click the input area - you will see the ***Create a new
-    project*** option and select it
+4.  . In the Azure AI Foundry project, navigate to **Agents**, select **New agent**, and then choose **Build an agent** from the drop-down menu.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga5.png)
 
 5.  Enter the name +++Contoso-Travel-@lab.LabInstance.Id+++,
     select your subscription and resource group, then click **Create**
@@ -138,32 +137,51 @@ playground interface.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image13.png) 
 
-### Task 3: Create Application Insights
+## Task 3: Configure Application Insights Access for Azure AI Foundry Traces
 
-This task focuses on enabling observability for your AI solution. By
-creating an Application Insights resource, you will be able to monitor
-agent activity, collect telemetry data, and analyze system performance.
-This is a critical step in understanding how your agent behaves in
-real-time and identifying potential issues.
+1.  Open a browser and login to Azure portal at
+    +++https://portal.azure.com/+++ with your credentials.
 
-1.  On the Microsoft Foundry home page, select the **Traces** tab. Then
-    click **Create** Application Insights to set up monitoring for your
-    project.
+2.  Select **AgenticAI** resource group
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image14.png)
+![](./media/imga6.png)
 
-2.  To Create App Insights enter the below details, accept the default
-    values in the other fields and click on **Create**.
+3.  Open the **Application Insights** resource that was created for the
+    lab.
 
-    - Application insinghts resource: Create new resource
-    
-    - Name: Contoso-Travel-XXXX-appinsights-XXXX
+![](./media/imga7.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image15.png)
+4.  Select **Access Control (IAM)** from the left pane. Select **Add -\>
+    Add role assignment**.
 
-3.  App Insights has been created.
+![](./media/imga8.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image16.png) 
+5.  Search for **Monitoring Reader**, select it and click on **Next**.
+
+![](./media/imga9.png)
+
+6.  Select **Managed identity** and then select **+ Select members**.
+    Select the managed identity associated with your **Azure AI Foundry
+    Project** (for example, your Contoso Travel project).
+
+![](./media/imga10.png)
+
+![](./media/imga11.png)
+
+7.  Click on **Select** to select the search service.
+
+> ![](./media/imga12.png)
+
+8.  Back in the Add role assignment screen, click on **Review +
+    assign**.
+
+> ![](./media/imga13.png)
+
+9.  Select **Review + assign** again in the next screen.
+
+> ![](./media/imga14.png)
+
+![](./media/imga15.png)
 
 ### Task 4: Test the Agent Prompt
 
