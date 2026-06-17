@@ -396,16 +396,16 @@ also invoke *code-first*.
 
 1.  Click on the **Evaluations** item in the sidebar menu.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image42.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga16.png)
 
 2.  Select the **Evaluators catalog** to see the full list of supported
     evaluators
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image43.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga17.png)
 
 3.  Filter to see evaluators for a particular category - e.g., agents
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image44.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga18.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image45.png)
 
@@ -417,16 +417,21 @@ also invoke *code-first*.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image47.png)
 
-5.  Click the **Create** button. You should see this dialog. This is the
-    workflow to create a +++customevaluator+++ to cover criteria
-    specific to your requirements that are not covered by built-in
-    evaluators. 
+5. Click the **Create evaluator** button. 
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image48.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga19.png)
+6.	Give the following details:
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image49.png) 
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image50.png)
+   Evaluator name as **customevaluator** 
+    Model: **gpt 4.1**
+    Target agent: **contoso-travel-portal**
+    Click on **Generate rubic**
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga20.png) 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga21.png)
+7.	Click on Save evaluator    
+ ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga22.png)
+ ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/imga23.png)
+ 
 
 ### Task 6: Run a Red Teaming Scan
 
