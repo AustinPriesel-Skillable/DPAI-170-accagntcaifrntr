@@ -29,15 +29,15 @@ JSON-based indexes to provide fast, relevant search results.
 
     - Password - +++@lab.CloudPortalCredential(User1).AccessToken+++
 
-1.  From the Home page of the Azure portal, select **Foundry** and
+2.  From the Home page of the Azure portal, select **Foundry** and
     select **Microsoft Foundry** under Services.
 
-2.  In the **Microsoft Foundry** Overview page, select **Use with Foundry** on the left side. Select **AI Search** and then select **+ Create**.
+3.  In the **Microsoft Foundry** Overview page, select **Use with Foundry** on the left side. Select **AI Search** and then select **+ Create**.
 
     ![A screenshot of a search engine AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image2.png)
 
-3.  Enter the below details and select **Review + create**.
+4.  Enter the below details and select **Review + create**.
 
     - Subscription – @lab.CloudSubscription.Name
 
@@ -50,34 +50,34 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     ![A screenshot of a search service AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image3.png)
 
-4.  Once the validation passes, select **Create**.
+5.  Once the validation passes, select **Create**.
 
     ![A screenshot of a search engine AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image4.png)
 
-5.  The deployment takes around 10 minutes to complete. Select **Go to
+6.  The deployment takes around 10 minutes to complete. Select **Go to
     resource** once the search service is created.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image5.png)
 
-6.  From the **Overview** page, copy the **Url** value and save it in a
+7.  From the **Overview** page, copy the **Url** value and save it in a
     notepad to be used in a future exercise.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image6.png)
 
-7.  Select **Keys** under **Settings** from the left pane. Copy
+8.  Select **Keys** under **Security+networking** from the left pane. Copy
     the **Primary admin key** and save it in a notepad for using it in
     the upcoming exercises.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image7.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/imga1.png)
 
-8.  Select **Identity** under **Settings** from the left pane.
+9.  Select **Identity** under **Security+networking** from the left pane.
 
     ![A screenshot of a search engine AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image8.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/imga2.png)
 
 9.  Toggle the Status to **On** under **System assigned** and then click
     on **Save**.
@@ -483,6 +483,18 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image70.png)
+## Exercise 7: Clean up all the resources
+
+1.  Switch back to **Azure portal -\> Resource group-\> Resource group
+    name.**
+
+2.  Select all the resources and then click on Delete as shown in the
+    below image. (**DO NOT DELETE** resource group)
+
+    ![A screenshot of a computer AI-generated content may be
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/AzAifndry-Agntsdepth/refs/heads/Cloudslice/Labguides/Usecase%2002/media/imga3.png)
+
+3.  Type delete on the text box and then click on **Delete**.
 
 **Summary:**
 
