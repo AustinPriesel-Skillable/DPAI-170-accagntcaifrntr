@@ -94,8 +94,7 @@ incorrect.](./media/image2.png)
     - Resource group – Select your **assigned Resource
       group** (**ResourceGroup1**)
 
-    - Storage account name –
-      +++[**searchleaves@lab.LabInstance.Id**](mailto:searchleaves@lab.LabInstance.Id)+++
+    - Search Service name – +++searchleaves@lab.LabInstance.Id+++
 
     - Location – Select @lab.CloudResourceGroup(ResourceGroup1).Location
 
@@ -259,8 +258,9 @@ incorrect.](./media/image33.png)
 
     - Name - <+++agentic-@lab.LabInstance.Id>+++
 
-    - Default project name
-      - <+++agentic-ai-project-@lab.LabInstance.Id>+++
+    - Region: @lab.CloudResourceGroup(AgenticAI).Location
+  
+      >[!Alert] If you are experiencing a Regional capacity limitation, please try one of the following regions: **[SwedenCentral, JapanEast, NorthEurope, EastAsia]**
 
 ![](./media/image34.png)
 
@@ -435,23 +435,22 @@ incorrect.](./media/image46.png)
 2.  Enter +++**NetworkOperationsOntology+++** for the **Name** of your
     ontology and select **Create**.
 
-> ![](./media/image68.png)
->
-> ** Tip:** Ontology names can include numbers, letters, and
-> underscores. Don't use spaces or dashes.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image68.png)
+
+    **Tip:** Ontology names can include numbers, letters, and underscores. Don't use spaces or dashes.
 
 3.  The ontology opens when it's ready.
 
-> ![](./media/image69.png)
->
-> Next, create entity types, data bindings, and relationships based on
-> data from your lakehouse tables.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image69.png)
+
+Next, create entity types, data bindings, and relationships based on
+data from your lakehouse tables.
 
 ## Task 8: Create Entity Types and Data Bindings
 
-> Entity types represent categories of objects in your business domain.
-> For this schema, you will create two entity
-> types: **Tickets** and **Inspections**.
+Entity types represent categories of objects in your business domain.
+For this schema, you will create two entity
+types: **Tickets** and **Inspections**.
 
 1.  From the top ribbon or the center of the configuration canvas,
     select **Add entity type**.
