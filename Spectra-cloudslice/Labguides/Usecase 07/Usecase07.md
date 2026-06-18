@@ -6,7 +6,7 @@ In modern AI-driven applications, managing multiple AI agents, ensuring
 their reliability, and maintaining visibility into their behavior is
 essential. This scenario focuses on implementing centralized governance
 and observability using Microsoft Foundry Control Plane. The lab walks
-through the complete lifecycle of AI agents—from creation and
+through the complete lifecycle of AI agents-from creation and
 configuration to monitoring, evaluation, and security testing. By
 leveraging built-in capabilities such as tracing, Application Insights
 integration, evaluation frameworks, and red teaming, this use case
@@ -68,11 +68,11 @@ all subsequent AI development and management activities will take place.
 Follow the steps below to complete the setup of your Microsoft Foundry
 project.
 
-1.  Open a browser and login to Azure portal at +++https://ai.azure.com/templates+++ with your credentials.
+1.  Open a browser and login to Azure portal at +++https://ai.azure.com/templates+++ with your credentials.
 
-    - Username - +++@lab.CloudPortalCredential(User1).Username+++
+    - Username - +++@lab.CloudPortalCredential(User1).Username+++
 
-    - Password - +++@lab.CloudPortalCredential(User1).AccessToken+++
+    - Temporary Access Pass (TAP) - +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image1.png)
 
@@ -84,15 +84,18 @@ project.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image4.png)    
 
-    Note :(Alternatively) switch toggle to "New Foundry"
+    > [!Note] (Alternatively) switch toggle to "New Foundry"
 
 3.  You should see a dialog prompting you to select a project to
     continue
 
-4.  Click the input area - you will see the ***Create a new
-    project*** option and select it
+4.  Click the input area - you will see the ***Create a new
+    project*** option and select it
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image5.png)
+
+	
+
 
 5.  Enter the name +++Contoso-Travel-@lab.LabInstance.Id+++,
     select your subscription and resource group, then click **Create**
@@ -100,12 +103,14 @@ project.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image6.png) 
 
+    > [!Alert] You may see an error stating that the resouce is blocked by policy. That will go away when you change your **Project Name** to Contoso-Travel-@lab.LabInstance.Id.
+
 6.  The project creation process may take a few minutes to complete.
    
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image7.png)    
 
-8.  You should now see your Foundry project landing page. **Take note of
-    the Project Endpoint information shown here** - we will use it
+8.  You should now see your Foundry project landing page. **Take note of
+    the Project Endpoint information shown here** - we will use it
     later.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image8.png)
@@ -117,7 +122,7 @@ project.
 In this task, you will create your first AI agent within the Foundry
 environment. The agent will act as a travel assistant designed to help
 users plan trips and provide relevant recommendations. You will define
-the agent’s identity, deploy it, and test its functionality using the
+the agent's identity, deploy it, and test its functionality using the
 playground interface.
 
 1.  Click **Start building**, then select **Create agents** to begin
@@ -126,7 +131,7 @@ playground interface.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image10.png)
 
 2.  Enter the Agent name as +++**contoso-travel-portal**+++ and click
-    on **Create** to create the Agent.
+    on **Create** to create the Agent.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image11.png) 
 
@@ -153,7 +158,7 @@ real-time and identifying potential issues.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image14.png)
 
 2.  To Create App Insights enter the below details, accept the default
-    values in the other fields and click on **Create**.
+    values in the other fields and click on **Create**.
 
     - Application insinghts resource: Create new resource
     
@@ -167,7 +172,7 @@ real-time and identifying potential issues.
 
 ### Task 4: Test the Agent Prompt
 
-In this task, you will refine and test your agent’s behavior using
+In this task, you will refine and test your agent's behavior using
 prompt engineering. You will define clear instructions for the agent,
 execute sample queries, and evaluate the responses. This helps ensure
 that the agent provides accurate, relevant, and user-friendly outputs
@@ -215,7 +220,7 @@ while adhering to its intended role
     - For vague or broad user queries (e.g., vague destination or service
     requests), proactively use web_search to gather suggestions and relevant
     information, AND ask clarifying questions as needed. Do not limit
-    yourself to only follow-up queries—use web_search to supply initial
+    yourself to only follow-up queries-use web_search to supply initial
     helpful ideas.
     
     - For requests that are outside your scope (e.g., Python scripting,
@@ -229,12 +234,12 @@ while adhering to its intended role
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image18.png)
 
-3.  **Save** the agent 
+3.  **Save** the agent 
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image19.png)
 
 4.  Enter +++Hi. I'm thinking about planning a trip to Paris. What
-    should I know?+++ and select **Send**
+    should I know?+++ and select **Send**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image20.png) 
 
@@ -254,7 +259,7 @@ while adhering to its intended role
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image23.png)
 
-8.  Observe the *AI Quality* and *Safety* metrics in the line below the
+8.  Observe the *AI Quality* and *Safety* metrics in the line below the
     response.
 
 9.  Hover over each number - you should see the custom metrics used and
@@ -294,7 +299,7 @@ while adhering to its intended role
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image26.png)
 
 12. In the Test pane, enter +++I want to plan a multi-day travel
-    itinerary+++ and click **Send.**
+    itinerary+++ and click **Send.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image27.png) 
 
@@ -303,10 +308,10 @@ while adhering to its intended role
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image28.png)
 
-14. Enter the following text and click on the **Submit icon** as shown
+14. Enter the following text and click on the **Submit icon** as shown
     in the below image.
 
-    +++Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours+++.
+    +++Hi! I'm thinking about planning a trip to Paris from Jul 1-4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours+++.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image29.png) 
 
@@ -319,7 +324,7 @@ while adhering to its intended role
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image31.png)
 
-17. Want to understand what the Trace ID is showing - try **Ask AI**
+17. Want to understand what the Trace ID is showing - try **Ask AI**
 
      +++Explain what the trace ID is showing+++
 
@@ -342,7 +347,7 @@ while adhering to its intended role
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image38.png)
 
-20. Enter the following text and click on the **Submit icon** as shown
+20. Enter the following text and click on the **Submit icon** as shown
     in the below image.
 
     +++I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for
@@ -372,15 +377,15 @@ you will learn how to create custom evaluators tailored to your specific
 requirements.
 
 By now you should have a sense for
-the *Tracing* and *Evaluations* capabilities in the agent playground.
+the *Tracing* and *Evaluations* capabilities in the agent playground.
 Microsoft Foundry has a large number of built-in evaluators that you can
-also invoke *code-first*.
+also invoke *code-first*.
 
 1.  Click on the **Evaluations** item in the sidebar menu.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image42.png)
 
-2.  Select the **Evaluators catalog** to see the full list of supported
+2.  Select the **Evaluators catalog** to see the full list of supported
     evaluators
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image43.png)
@@ -399,10 +404,10 @@ also invoke *code-first*.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image47.png)
 
-5.  Click the **Create** button. You should see this dialog. This is the
-    workflow to create a +++customevaluator+++ to cover criteria
+5.  Click the **Create** button. You should see this dialog. This is the
+    workflow to create a +++customevaluator+++ to cover criteria
     specific to your requirements that are not covered by built-in
-    evaluators. 
+    evaluators. 
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image48.png) 
 
@@ -424,7 +429,7 @@ behaves responsibly under different conditions.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image52.png) 
 
-3.  For now, select the *Model* option and pick the default model used
+3.  For now, select the *Model* option and pick the default model used
     in your agent (e.g, gpt-4.1)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image53.png) 
@@ -464,14 +469,14 @@ Codespace, and prepare your workspace for development.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image58.png) 
 
-5.  Click on **fork** to fork the repo. Give unique name to the repo and
-    click on **Create repo** button.
+5.  Click on **fork** to fork the repo. Give unique name to the repo and
+    click on **Create repo** button.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image59.png) 
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image60.png) 
 
-3.  Click on **Code > Codespaces > Create Codespace**
+3.  Click on **Code > Codespaces > Create Codespace**
    
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image61.png)    
 
@@ -489,12 +494,12 @@ Codespace, and prepare your workspace for development.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image65.png)
 
 7.  It should prompt you to log into Azure as shown. Complete this step,
-    then let the script run till complete. 
+    then let the script run till complete. 
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image66.png) 
 
 8.  Default browser opens to enter the generated code to verify. Enter
-    the code and click **Next**.
+    the code and click **Next**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image67.png) 
 
@@ -509,7 +514,7 @@ Codespace, and prepare your workspace for development.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image70.png) 
 
 11. Enter the existing resource group that you created while setting up
-    agents in Exercise 1 from the available options.
+    agents in Exercise 1 from the available options. +++@lab.CloudResourceGroup(AgenticAI).Name+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image71.png)
 
@@ -535,16 +540,16 @@ and the Foundry project.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image74.png) 
 
-3.  Select **Python Environments**
+3.  Select **Python Environments**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image75.png) 
 
-4.  If prompted to select the path, then select the **Python** version
+4.  If prompted to select the path, then select the **Python** version
     i.e **3.12.13**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image76.png)
 
-5.   To install dependencies, run the first cell in the notebook
+5.   To install dependencies, run the first cell in the notebook
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image77.png)    
 
@@ -631,7 +636,7 @@ responses.
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image99.png) 
 
 7.  Run the cell under **Explore the Response Object** to inspect the
-    structure and details of the agent’s response.
+    structure and details of the agent's response.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image100.png)
 
@@ -690,7 +695,7 @@ responses.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image112.png)
 
-9.  Run the cell under **Test: Flight Search** to test the agent’s
+9.  Run the cell under **Test: Flight Search** to test the agent's
     ability to call the **search_flights** tool and return relevant results.
     
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image113.png)    
@@ -840,14 +845,14 @@ requests.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image145.png)
 
-9.  Open a browser go to +++https://portal.azure.com+++ and sign in with your cloud slice
+9.  Open a browser go to +++https://portal.azure.com+++ and sign in with your cloud slice
     account.
 
-10. Select **Resource groups**
+10. Select **Resource groups**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image146.png)
 
-11. Click on your assigned **Resource group**.
+11. Click on your assigned **Resource group**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image147.png)
 
@@ -878,7 +883,7 @@ requests.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image154.png)
 
-    ** Note:** Traces may take 2-5 minutes to appear in Azure Monitor after execution.
+    ** Note:** Traces may take 2-5 minutes to appear in Azure Monitor after execution.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image155.png)
 
@@ -897,8 +902,8 @@ requests.
 
 ### Task 7: Evaluate Your Travel Agent
 
-This task focuses on evaluating your agent’s performance using
-structured evaluation techniques. You will assess the agent’s responses
+This task focuses on evaluating your agent's performance using
+structured evaluation techniques. You will assess the agent's responses
 for quality, safety, and relevance, and interpret the results to
 identify areas for improvement.
 
@@ -1006,7 +1011,7 @@ identify areas for improvement.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image182.png)
 
-17. Click on the **Evaluations** tab in the left navigation
+17. Click on the **Evaluations** tab in the left navigation
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image183.png)
 
@@ -1086,7 +1091,7 @@ the agent operates safely and adheres to responsible AI principles.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image199.png)
 
-22. Navigate to **Evaluations** → select the red team evaluation
+22. Navigate to **Evaluations** → select the red team evaluation
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image200.png)
 
@@ -1107,26 +1112,26 @@ In the final task, you will clean up all resources created during the
 lab. This ensures that no unnecessary costs are incurred and that your
 environment is reset for future use.
 
-1.  To delete Resource group , type **Resource groups** in the Azure
-    portal search bar, navigate and click on **Resource
-    groups** under **Services**.
+1.  To delete Resource group , type **Resource groups** in the Azure
+    portal search bar, navigate and click on **Resource
+    groups** under **Services**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image204.png)
 
 2.  In the Resource groups page, select your resource group.
 
-3.  In the **Resource group** home page, select all resources and click
-    on **Delete**
+3.  In the **Resource group** home page, select all resources and click
+    on **Delete**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image205.png) 
 
-4.  In the **Delete Resources** pane that appears on the right side,
-    navigate to **Enter “delete” to confirm deletion** field, then click
-    on the **Delete** button
+4.  In the **Delete Resources** pane that appears on the right side,
+    navigate to **Enter "delete" to confirm deletion** field, then click
+    on the **Delete** button
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image206.png) 
 
-5.  On **Delete confirmation** dialog box, click on **Delete** button.
+5.  On **Delete confirmation** dialog box, click on **Delete** button.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image207.png)
 
@@ -1150,3 +1155,5 @@ environment is reset for future use.
  governance, observability, and evaluation can be combined to build
  reliable, scalable, and secure AI agent solutions ready for real-world
  deployment.
+
+===
