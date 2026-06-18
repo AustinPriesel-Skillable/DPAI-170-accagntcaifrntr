@@ -1,4 +1,4 @@
-# Usecase 4 - Build a customer resolution agent grounded with Work IQ, Foundry IQ, and Fabric IQ
+# Usecase 04-Build a customer resolution agent grounded with Work IQ, Foundry IQ, and Fabric IQ
 
 **Introduction**
 
@@ -57,7 +57,7 @@ The main objectives of this use case are:
 - Send email samples (**C:\LabFiles\LabFiles\Usecase 6\\**WorkIQ
   Labfiles) from mail id of your choice to your tenant id.
 
-![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image1.png)
+![](./media/image1.png)
 
 ## Task 1: Create an Azure AI Search resource
 
@@ -69,163 +69,172 @@ capability.
 privately curated data. It uses a combination of Microsoft’s AI and
 JSON-based indexes to provide fast, relevant search results.
 
-1.  Open a browser and login to Azure portal at +++https://portal.azure.com/+++ with your credentials.
+1.  Open a browser and login to Azure portal at
+    +++<https://portal.azure.com/+++> with your credentials.
 
-    - Username - +++@lab.CloudPortalCredential(User1).Username+++
+    - Username - <+++@lab.CloudPortalCredential>(User1).Username+++
 
-    - Password - +++@lab.CloudPortalCredential(User1).Password+++
+    - Password - <+++@lab.CloudPortalCredential>(User1).Password+++
 
-    From the Home page of the Azure portal, select **Microsoft Foundry** and select **Microsoft Foundry** under Services.
+From the Home page of the Azure portal, select **Microsoft Foundry** and
+select **Microsoft Foundry** under Services.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image2.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image2.png)
 
 2.  In the **AI Foundry page**, select **AI Search** under **Use with AI
     Foundry** from the left pane and then select **+ Create**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image3.png)
+![](./media/image3.png)
 
 3.  Enter the below details and select **Review + create**.
 
-    - Subscription – @lab.CloudSubscription.Name
+    - Subscription – Select your **assigned subscription**
 
-    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
+    - Resource group – Select your **assigned Resource
+      group** (**ResourceGroup1**)
 
     - Search Service name – +++searchleaves@lab.LabInstance.Id+++
 
-    - Location – @lab.CloudResourceGroup(AgenticAI).Location
+    - Location – Select @lab.CloudResourceGroup(ResourceGroup1).Location
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image4.png)
+![A screenshot of a search service AI-generated content may be
+incorrect.](./media/image4.png)
 
 4.  Once the validation passes, select **Create**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image5.png)
+![A screenshot of a search engine AI-generated content may be
+incorrect.](./media/image5.png)
 
 5.  The deployment takes around 10 minutes to complete. Select **Go to
     resource** once the search service is created.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image6.png)
+![](./media/image6.png)
 
 6.  From the **Overview** page, copy the **Url** value and save it in a
     notepad to be used in a future exercise.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image7.png)
+![](./media/image7.png)
 
-7.  Select **Keys** under **Settings** from the left pane. Copy
-    the **Primary admin key** and save it in a notepad for using it in
-    the upcoming exercises.
+7.  In the AI Search service, navigate to **Security+networking**, select **Keys**, and under Manage admin keys, click the **copy icon** next to the Primary admin key to copy it for later use
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image8.png)
+![](./media/a1.png)
 
-8.  Select **Identity** under **Settings** from the left pane.
+8.  Select **Identity** under **Security+networking** from the left pane.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image9.png)
+![](./media/a2.png)
 
 9.  Toggle the Status to **On** under **System assigned** and then click
     on **Save**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image10.png)
+![](./media/image10.png)
 
 10. Select **Yes** in the **Enable system assigned managed
     identity** confirmation dialog.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image11.png)
+![](./media/image11.png)
 
 ## Task 2: Create a Storage account
 
-1.  From the Azure portal Home page select **Storage accounts**.
+1.  From the Azure portal Home page (+++<https://portal.azure.com/+++>),
+    select **Storage accounts**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image12.png)
+![](./media/image12.png)
 
 2.  Select **+ Create** to create a new Storage account.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image13.png)
+![](./media/image13.png)
 
 3.  Enter the below details, accept the default values in the other
     fields and click on **Review + create**.
 
-    - Subscription – @lab.CloudSubscription.Name
-    
-    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
-    
-    - Storage account name – +++iqlab@lab.LabInstance.Id+++
-    
-    - Region – Select @lab.CloudResourceGroup(AgenticAI).Location
-    
-    - Primary service – Select **Azure Blob Storage or Azure Data Lake
-    Storage Gen 2**
+    - Subscription – Select your **assigned subscription**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image14.png)
+    - Resource group – Select your **assigned Resource
+      group** (**ResourceGroup1**)
+
+    - Storage account name –
+      +++[**iqlab@lab.LabInstance.Id**](mailto:iqlab@lab.LabInstance.Id)+++
+
+    - Region – Select @lab.CloudResourceGroup(ResourceGroup1).Location
+
+    - Primary service – Select **Azure Blob Storage or Azure Data Lake
+      Storage Gen 2**
+
+![](./media/image14.png)
 
 4.  Once the validation passes, click on **Create**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image15.png)
+![](./media/image15.png)
 
 5.  Once the resource creation succeeds, click on **Go to resource**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image16.png)
+![](./media/image16.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image17.png)
+![](./media/image17.png)
 
 6.  Select **Containers** under **Data storage**. Select **+
-    Container**, enter the name as +++document+++ and click
+    Container**, enter the name as +++**document**+++ and click
     on **Create** to create the container.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image18.png)
+![](./media/image18.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image19.png)
+![](./media/image19.png)
 
 7.  Select the created container **document** to upload the leave policy
     document into it.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image20.png)
+> ![](./media/image20.png)
 
 8.  Click on **Upload** and then select **Browse for files**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image21.png)
+![](./media/image21.png)
 
 9.  Select the **all
     documents** from **C:\Labfiles\LabFiles\Usecase4\Foundry** and then
     click on **Upload**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image22.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image23.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image24.png)
+> ![](./media/image22.png)
+>
+> ![](./media/image23.png)
+>
+> ![](./media/image24.png)
 
 10. Navigate to the
-    +++iqlab@lab.LabInstance.Id+++
+    +++[**iqlab@lab.LabInstance.Id**](mailto:iqlab@lab.LabInstance.Id)+++
     Storage account (Select **Storageaccounts** from the **Home
     page** of the Azure portal and select  and select **Access Control
-    (IAM)** from the left pane. Select **Add > Add role assignment**.
+    (IAM)** from the left pane. Select **Add -\> Add role assignment**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image25.png)
+![](./media/image25.png)
 
-11. Search for +++Storage Blob Data Reader+++, select it and click
+11. Search for +++**Storage Blob Data Reader**+++, select it and click
     on **Next**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image26.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image26.png)
 
 12. Click on **+Select members**, search for and select your **user
-    name**, +++@lab.CloudPortalCredential(User1).Username+++ and then
+    name**, <+++@lab.CloudPortalCredential>(User1).Username+++ and then
     click on **Select**. This adds the Storage Blob Data Reader role to
     your user id.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image27.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image27.png)
 
 13. Select **Managed identity** and then select **+ Select members**.
     Select **Search service** under **Managed identity** and select
     the **searchleaves** search service that gets listed.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image28.png)
+![](./media/image28.png)
 
 14. Select **Review + assign** in the next 2 screens.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image29.png)
+![](./media/image29.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image30.png)
+![](./media/image30.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image31.png)
+![](./media/image31.png)
 
 ## Task 3: Create Foundry resource
 
@@ -233,63 +242,60 @@ In this task, you will create a Foundry resource which is required to
 access the Microsoft Foundry.
 
 1.  From the Home page of the Azure
-    portal +++https://portal.azure.com+++,
+    portal(+++[https://portal.azure.com+++](https://portal.azure.com+++/)),
     select **Foundry**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image32.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image32.png)
 
 2.  Select **Foundry** from the left pane, and then select **Create** to
     create the Foundry resource.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image33.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image33.png)
 
 3.  Enter the below details and select **Review + create**.
 
-    - Resource Group: AgenticAI   
-
-    - Name: +++agentic-@lab.LabInstance.Id+++
+    - Name - <+++agentic-@lab.LabInstance.Id>+++
 
     - Region: @lab.CloudResourceGroup(AgenticAI).Location
   
       >[!Alert] If you are experiencing a Regional capacity limitation, please try one of the following regions: **[SwedenCentral, JapanEast, NorthEurope, EastAsia]**
 
-    - Default project name: +++agentic-ai-project-@lab.LabInstance.Id+++
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image34.png)
+![](./media/image34.png)
 
 4.  Select **Create** once validated.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image35.png)
+![](./media/image35.png)
 
 5.  Ensure that the resource is created.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image36.png)
+![](./media/image36.png)
 
-6.  Go to the **agentic-ai-project-@lab.LabInstance.Id** resource and
+6.  Open
+    the [**agentic-ai-project-@lab.LabInstance.Id**](mailto:agentic-ai-project-@lab.LabInstance.Id) and
     select **Go to Foundry portal**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image37.png)
+![](./media/image37.png)
 
 7.  Click **Go to Foundry portal** 
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image38.png)
+![](./media/image38.png)
 
-8.  Enable New Foundry, and in the top navigation, select **Build**
+8.  In the top navigation, select **Build**
 
-    >[!Note] It might take 2-3 minutes for the background permissions to finalize.  Just refresh the page until the Create agent button is visible.   
+![](./media/image39.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image39.png)
+9.  In the Azure AI Foundry project, navigate to **Agents**, select **New agent**, and then choose **Build an agent** from the drop-down menu..
 
-9.  Select **Create agent** to create a new agent.
+> ![](./media/a3.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image40.png)
-
-10. Enter a the agent name +++IQAgent-fabric+++ and click **Create**
+10. Enter a unique agent name (e.g., **IQAgent**) and click **Create**
     to create the new agent.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image41.png)
+![](./media/a4.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image42.png)
+![](./media/image42.png)
 
 ## Task 4 : Create a Fabric workspace
 
@@ -302,52 +308,61 @@ reports.
     the following URL: +++https://app.fabric.microsoft.com/+++
     then press the **Enter** button and sign in with your credentials
 
-    | Field    | Value                                              |
-    |----------|----------------------------------------------------|
-    | Username | +++@lab.CloudPortalCredential(User1).Username+++   |
-    | Password | +++@lab.CloudPortalCredential(User1).Password+++   |
+| Credential | Value |
+|------------|-------|
+| Username | `+++@lab.CloudPortalCredential(User1).Username+++` |
+| Password | `+++@lab.CloudPortalCredential(User1).Password+++` |
 
 2.  In the Workspaces pane, click on **+New workspace** tile
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image43.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image43.png)
 
 3.  In the **Create a workspace** pane that appears on the right side,
     enter the following details, and click on the **Apply** button.
-    
-    | Field     | Value                                    |
-    |-----------|------------------------------------------|
-    | Name      | +++Fabric IQ Ontology@lab.labinstance.id+++ |
-    | Advanced  | Under License mode, select Fabric        |
-    | Default   | Small dataset storage format             |
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image44.png)
+| Setting | Value |
+|----------|----------|
+| Name | `+++Fabric IQ OntologyXXXX+++` *(XXXX can be a unique number)* |
+| Advanced | Under **License mode**, select **Fabric** |
+| Default storage format | **Small dataset storage format** |
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image45.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image44.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image46.png)
+![](./media/image45.png)
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image46.png)
 
 ## Task 5: Create a lakehouse
 
 1.  Create a new lakehouse by clicking on the **+New item** button in
     the navigation bar.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image47.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image47.png)
 
-2.  Filter by, and select, the **Lakehouse** tile.
+2.  Filter by, and select, the **+++Lakehouse+++** tile.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image48.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image48.png)
 
-3.  In the **New lakehouse** dialog box, enter +++IQ_Lakehouse+++ in the **Name** field and **unselect** the lakehouses schemas.
+3.  In the **New lakehouse** dialog box, enter **+++IQ_Lakehouse
+    +++** in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image49.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image50.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image49.png)
+>
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image50.png)
 
 4.  You will see a notification stating **Successfully created SQL
     endpoint**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image51.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image51.png)
 
 ## Task 6: Ingest sample data
 
@@ -355,68 +370,69 @@ reports.
     lakehouse** section, and click on **Upload files as shown in the
     below image.**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image52.png)
+> ![](./media/a5.png)
 
 2.  On the Upload files tab, click on the folder under the Files
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image53.png)
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image53.png)
 
-3.  Browse to **C:\LabFiles\LabFiles\Usecase4\Fabric** on your VM, then
+3.  Browse to **C:\LabFiles\LabFiles\Usecase 6\Fabric** on your VM, then
     select  ** all** tables and click on **Open** button.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image54.png)
+> ![](./media/image54.png)
 
 4.  Then, click on the **Upload** button and close the **Upload
     files** dialog by selecting the **X** icon for the dialog.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image55.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image56.png)
+> ![](./media/image55.png)
+>
+> ![](./media/image56.png)
 
 5.  Click and select refresh on the **Files**. The file appear.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image57.png)
+> ![](./media/image57.png)
 
 6.  In the **Lakehouse** page, Under the Explorer pane select **Files**.
     Now, hover your mouse over the **Customer.csv** file. Click on the
     horizontal ellipses **(…)** beside **Customer.csv**. Navigate and
     click on **Load Table**, then select **New table**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image58.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image59.png)
+> ![](./media/image58.png)
+>
+> ![](./media/image59.png)
 
 7.  In the **Load file to new table** dialog box, click on
     the **Load** button.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image60.png)
+> ![](./media/image60.png)
 
 8.  Now successfully created **Customer** table
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image61.png)
+> ![](./media/image61.png)
 
 9.  Repeat Steps 7 through 9 to push the remaining file into the tables.
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image62.png)
+![](./media/image62.png)
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image63.png)
+![](./media/image63.png)
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image64.png)
+![](./media/image64.png)
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image65.png)
+![](./media/image65.png)
 
 10. From the left navigation bar, select **Fabric IQ Ontology**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image66.png)
+> ![](./media/image66.png)
 
 ## Task 7: Create ontology (preview) item
 
 1.  In your Fabric workspace, select **+ New item**. Search for and
     select the **Ontology (preview)** item.
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image67.png)
+> ![](./media/image67.png)
 
-2.  Enter +++NetworkOperationsOntology+++ for the **Name** of your
+2.  Enter +++**NetworkOperationsOntology+++** for the **Name** of your
     ontology and select **Create**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image68.png)
@@ -439,592 +455,659 @@ types: **Tickets** and **Inspections**.
 1.  From the top ribbon or the center of the configuration canvas,
     select **Add entity type**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image70.png)
+> ![](./media/image70.png)
 
-2.  Enter +++Customer+++ as the name and select **Add Entity
+2.  Enter +++**Customer**+++ as the name and select **Add Entity
     Type**. 
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image71.png)
+> ![](./media/image71.png)
 
-3.  The **Tickets** entity type appears on the configuration canvas and
-    the **Entity type configuration** pane opens.
+3.  On the configuration canvas, select **...** next to the entity name
+    and select **Bind data**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image72.png)
+> ![](./media/image72.png)
 
-4.  Switch to the **Bindings** tab and select **Add data to entity
-    type**.
+4.  Select **Add data binding \> Lakehouse table**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image73.png)
+> ![](./media/image73.png)
 
-5.  Choose your data source: a. Select your **Lakehouse** and
+5.  Next, choose your data source.Select the **IQ_Lakehouse** lakehouse
+    and select **Next**.
+
+> ![](./media/image74.png)
+
+6.  Select the **Customers** table and select **Select**.
+
+> ![](./media/image75.png)
+
+7.  Select **Define entity type key** at the top of the configuration.
+
+> ![](./media/image76.png)
+
+8.  Select **customer_id** as the key property and select **Save**.
+
+> ![](./media/image77.png)
+
+9.  **Save** the data binding.
+
+> ![](./media/image78.png)
+
+10. Confirm that the entity type updated successfully, then
+    select **Cancel** to close the configuration options.
+
+> ![](./media/image79.png)
+
+11. You see the **Configure** page of the entity type details. This page
+    surfaces important information about the entity type, including its
+    properties and data bindings. View your configured data bindings.
+
+> ![](./media/image80.png)
+
+12. Select **Home** to return to the configuration canvas and add new
+    entity types.
+
+> ![](./media/image81.png)
+
+13. Switch to the **Home** tab → **Add data to entity type**. 
+
+> ![](./media/image82.png)
+
+14. Enter +++**Store**+++ for the name of your entity type and
+    select **Add Entity Type**.
+
+> ![A screenshot of a computer AI-generated content may be
+> incorrect.](./media/image83.png)
+
+15. Choose your data source, select your **Lakehouse** and
     select **Add**. 
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image74.png)
+> ![](./media/image84.png)
 
-6.  Select the **Customers** table and select **Next**. 
+16. Select the **orders** table and select **Next**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image75.png)
+> ![](./media/image85.png)
 
-7.  Configure a **Static** data binding:
+17. Enter **Order** as the name and select **Add Entity Type**.
 
-  - For **Binding type**, keep the default **Static**.
-  
-  - Under **Bind your properties**, the columns from the tickets table
-    populate automatically:
-  
-  - Select **Save**.
+> ![](./media/image86.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image76.png)
+18. Select **Add data binding \> Lakehouse table**.
 
-8.  Back in the Entity type configuration pane, select **Add entity type
-    key**. 
+> ![](./media/image87.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image77.png)
+19. Next, choose your data source.Select the **IQ_Lakehouse** lakehouse
+    and select **Next**.
 
-9.  Select **customer_id** as the key property and select **Save**.
+> ![](./media/image88.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image78.png)
+20. Select the **orders** table and select **Select**.
 
-10. Select **Add entity type** from the ribbon. 
+> ![](./media/image89.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image79.png)
+21. Select **Define entity type key** at the top of the configuration.
 
-11. Enter **Order** as the name and select **Add Entity Type**. 
+> ![](./media/image90.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image80.png)
+22. Select **OrderID** as the key property and select **Save**.
 
-12. Switch to the **Bindings** tab → **Add data to entity type**. 
+> ![](./media/image91.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image81.png)
+23. **Save** the data binding.
 
-13. Choose your data source, select your **Lakehouse** and
-    select **Add**. 
+> ![](./media/image92.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image82.png)
+24. Confirm that the entity type updated successfully, then
+    select **Cancel** to close the configuration options.
 
-14. Select the **orders** table and select **Next**.
+> ![](./media/image93.png)
+>
+> ![](./media/image94.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image83.png)
-
-15. Configure a **Static** data binding with the following columns:
-
-    - Select **Save**.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image84.png)
-
-16. Select **Add entity type key** 
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image85.png)
-
-17. Select **OrderID** as the key property and select **Save**.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image86.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image87.png)
-
-18. Follow the same steps that you used for the **Store** entity type to
+25. Follow the same steps that you used for the **Store** entity type to
     create the entity types described in the following table. Each
     entity has a static data binding with the default columns from its
     source table.
 
-    | Entity type name        | Source table in IQ_Lakehouse | Entity type key |
-    |-------------------------|------------------------------|-----------------|
-    | OrderItem               | OrderItems                   | OrderItemID     |
-    | SupportTicket           | SupportTickets               | TicketID        |
-    | RefundClaim             | RefundClaims                 | ClaimID         |
-    | ShipmentTrackingEvent   | ShipmentTracking             | TrackingID      |
+| Entity Type Name | Source Table in IQ_Lakehouse | Entity Type Key |
+|------------------|------------------------------|-----------------|
+| OrderItem | OrderItems | OrderItemID |
+| SupportTicket | SupportTickets | TicketID |
+| RefundClaim | RefundClaims | ClaimID |
+| ShipmentTrackingEvent | ShipmentTracking | TrackingID |
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image88.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image89.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image90.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image91.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image92.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image93.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image94.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image95.png)
+> ![](./media/image95.png)
+>
+> ![](./media/image96.png)
+>
+> ![](./media/image97.png)
+>
+> ![](./media/image98.png)
+>
+> ![](./media/image99.png)
+>
+> ![](./media/image100.png)
+>
+> ![](./media/image101.png)
+>
+> ![](./media/image102.png)
+>
+> ![](./media/image103.png)
+>
+> ![](./media/image104.png)
 
 ## Task 9: Create relationship types
 
 Next, create relationship types between the entity types to represent
 contextual connections in your data.
 
-1.  Select **Add relationship** from the menu ribbon.
+1.  Select the **Customer** entity type from the **Explorer**, then
+    select **Add Relationship** from the menu ribbon.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image96.png)
+![](./media/image105.png)
 
 2.  Enter the following relationship type details and select **Add
     relationship type**.
 
-    - **Relationship type name**: +++Places+++
+    - **Relationship type name**: +++Places +++
 
     - **Source entity type**: Customer
 
     - **Target entity type**: Order
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image97.png)
+![](./media/image106.png)
 
-3.  The **Relationship configuration** pane opens, where you can
-    configure additional information. Enter the following details (some
-    fields become visible based on other selections) and
-    select **Create**.
+![](./media/image107.png)
 
-    1.  **Source data**: Select your tutorial workspace, the **Fabric IQ
-        Ontology_Lakehouse** lakehouse, and the **Customers** table.
+1.  The relationship is added to the semantic canvas. Select it to open
+    the relationship details configuration. Observe the sections of the
+    configuration page
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image98.png)
+![](./media/image108.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image99.png)
+2.  In the middle section, enter the following details.
 
-  Now the first relationship is created, and bound to data in your source
-  table. Continue to the next section to create another relationship type.
-  
-  **Products soldIn SaleEvent**
+- **Mapping table**: **Browse available sources** and select
+  the **customers** table. This table in the source data can
+  link *Customer_id* entities together.
+
+![](./media/image109.png)
+
+![](./media/image110.png)
+
+3.  **Save** the relationship type. Confirm that the relationship type
+    updated successfully, then select **Cancel** to close the
+    configuration options.
+
+Now the first relationship is created, and bound to data in your source
+table. Continue to the next section to create another relationship type.
+
+**Products soldIn SaleEvent**
 
 4.  Follow the same steps that you used for the first relationship type
     to create the relationship type described in the following table.
 
-    | Relationship type name | Source data table                          | Source entity type        |
-    |------------------------|--------------------------------------------|---------------------------|
-    | Contains               | Tutorial workspace → Lakehouse → Order     | Products (OrderItem)      |
-    | hasSupportTicket       | Order                                      | SupportTicket             |
-    | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
-    | mayLeadTo              | OrderItem                                  | RefundClaim               |
-    | hasInventory           | OrderItem                                  | InventoryRecord           |
+| Relationship Type Name | Source Data Table | Source Entity Type |
+|------------------------|------------------|--------------------|
+| Contains | Tutorial workspace → Lakehouse → Order | Products (OrderItem) |
+| hasSupportTicket | Order | SupportTicket |
+| hasTrackingEvent | Order | ShipmentTrackingEvent |
+| mayLeadTo | OrderItem | RefundClaim |
+| hasInventory | OrderItem | InventoryRecord |
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image100.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image101.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image102.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image103.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image104.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image105.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image106.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image107.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image108.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image109.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image110.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image111.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image112.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image113.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image114.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image115.png)
+| Relationship | Mapping Table to Select |
+|--------------|-------------------------|
+| Places | customers |
+| Contains | Tutorial workspace → Lakehouse → Order Products (OrderItems) |
+| hasSupportTicket | SupportTickets |
+| hasTrackingEvent | ShipmentTracking |
+| mayLeadTo | RefundClaims |
+| hasInventory | Inventory / InventoryRecord |
+
+> ![](./media/image111.png)
+>
+> ![](./media/image112.png)
+>
+> ![](./media/image113.png)
+>
+> ![](./media/image114.png)
+>
+> ![](./media/image115.png)
+>
+> ![](./media/image116.png)
+>
+> ![](./media/image117.png)
+>
+> ![](./media/image118.png)
+>
+> ![](./media/image119.png)
+>
+> ![](./media/image120.png)
+>
+> ![](./media/image121.png)
+>
+> ![](./media/image122.png)
+>
+> ![](./media/image123.png)
+>
+> ![](./media/image124.png)
+>
+> ![](./media/image125.png)
 
 ## Task 10: Create data agent with ontology (preview) source
 
 Follow these steps to create a new data agent that connects to your
 ontology (preview) item.
 
-1.  Now, click on **Fabric IQ Ontology@lab.labinstance.id** on the left-sided navigation
+1.  Now, click on **Fabric IQ OntologyXX** on the left-sided navigation
     pane.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image116.png)
+![](./media/image126.png)
 
 2.  In the **Fabric** home page, select **+New item.** In the Filter by
-    item type search box, enter +++data agent+++ and select the Data
+    item type search box, enter +++**data agent**+++ and select the Data
     agent
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image117.png)
+> ![](./media/image127.png)
 
-3.  Enter +++IQ_Agent+++ as the Data agent name and
+3.  Enter **+++**IQ_Agent**+++** as the Data agent name and
     select **Create**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image118.png)
+> ![](./media/image128.png)
 
 4.  In **FabricDataAgent** page, select **Add a data source**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image119.png)
+> ![](./media/image129.png)
 
 5.  In the OneLake catalog tab, select the **NetworkOperationsOntology**
     Ontology and select **Add.**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image120.png)
+![](./media/image130.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image121.png)
+![](./media/image131.png)
 
-19. Select **Agent instructions** to configure and customize the
+26. Select **Agent instructions** to configure and customize the
     behavior of the agent.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image122.png)
+![](./media/image132.png)
 
-20. Enter the following data into the **Instructions** section, then
+27. Enter the following data into the **Instructions** section, then
     select **Publish**.
-    
-    ```
-    You are a customer operations and order resolution analytics agent.
-    
-    Your purpose is to help answer business questions related to:
-    
-    - customer orders
-    
-    - shipment issues
-    
-    - support escalations
-    
-    - refund or replacement claims
-    
-    - fulfillment delays
-    
-    - product availability
-    
-    - account history and trends
-    
-    Use business-friendly language and provide concise but useful answers.
-    
-    Interpret the data using these business concepts:
-    
-    - A customer can place many orders.
-    
-    - An order can contain multiple products.
-    
-    - An order can have shipment incidents, tracking events, support
-    tickets, and refund claims.
-    
-    - A customer can also have account notes that provide relationship or
-    operational context.
-    
-    - Inventory reflects current stock availability by SKU and warehouse.
-    
-    Use these tables/concepts for the following question types:
-    
-    1. Customer and order history
-    
-    - Use Customers, Orders, OrderItems, and AccountNotes.
-    
-    - When asked about a customer’s background, summarize recent orders,
-    important account notes, and notable support or shipment history.
-    
-    2. Shipment and delivery issues
-    
-    - Use Orders, ShipmentIncidents, ShipmentTracking, and SupportTickets.
-    
-    - When asked about delays, damaged shipments, shortages, or delivery
-    problems, prioritize these sources.
-    
-    3. Refunds and replacements
-    
-    - Use RefundClaims, ShipmentIncidents, SupportTickets, and Orders.
-    
-    - When asked whether a refund or replacement is appropriate, look for
-    shipment issues, customer complaints, and prior claim patterns.
-    
-    4. Product and stock availability
-    
-    - Use Inventory and OrderItems.
-    
-    - When asked whether a replacement can be fulfilled, check whether the
-    requested SKU is available in stock.
-    
-    5. Trend and historical analysis
-    
-    - Use Orders, ShipmentIncidents, RefundClaims, SupportTickets, and
-    ShipmentTracking.
-    
-    - When asked for trends, summarize patterns by month, issue type,
-    customer, or product where appropriate.
-    
-    Important interpretation rules:
-    
-    - “Issue”, “problem”, or “complaint” may refer to shipment incidents,
-    support tickets, or refund claims.
-    
-    - “Replacement” and “reshipment” should be treated as operational
-    recovery actions.
-    
-    - “Escalation” usually refers to urgent or unresolved support or
-    delivery issues.
-    
-    - “High-risk customer” may indicate repeated shipment issues, open
-    tickets, unresolved claims, or negative account notes.
-    
-    - “Historical trend” means analysis over time, usually by month unless
-    otherwise specified.
-    
-    Response guidance:
-    
-    - Prefer summaries over raw data dumps.
-    
-    - If the user asks for trends, provide a short interpretation in
-    addition to the numbers.
-    
-    - If there is insufficient data, clearly say so.
-    
-    - If multiple records exist, prioritize the most recent and most
-    severe items.
-    
-    - If asked for a recommendation, provide a business-oriented
-    recommendation based on the available evidence.
-    
-    Support group by in GQL
-    ```
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image123.png)
+> You are a customer operations and order resolution analytics agent.
+>
+> Your purpose is to help answer business questions related to:
+>
+> - customer orders
+>
+> - shipment issues
+>
+> - support escalations
+>
+> - refund or replacement claims
+>
+> - fulfillment delays
+>
+> - product availability
+>
+> - account history and trends
+>
+> Use business-friendly language and provide concise but useful answers.
+>
+> Interpret the data using these business concepts:
+>
+> - A customer can place many orders.
+>
+> - An order can contain multiple products.
+>
+> - An order can have shipment incidents, tracking events, support
+> tickets, and refund claims.
+>
+> - A customer can also have account notes that provide relationship or
+> operational context.
+>
+> - Inventory reflects current stock availability by SKU and warehouse.
+>
+> Use these tables/concepts for the following question types:
+>
+> 1. Customer and order history
+>
+> - Use Customers, Orders, OrderItems, and AccountNotes.
+>
+> - When asked about a customer’s background, summarize recent orders,
+> important account notes, and notable support or shipment history.
+>
+> 2. Shipment and delivery issues
+>
+> - Use Orders, ShipmentIncidents, ShipmentTracking, and SupportTickets.
+>
+> - When asked about delays, damaged shipments, shortages, or delivery
+> problems, prioritize these sources.
+>
+> 3. Refunds and replacements
+>
+> - Use RefundClaims, ShipmentIncidents, SupportTickets, and Orders.
+>
+> - When asked whether a refund or replacement is appropriate, look for
+> shipment issues, customer complaints, and prior claim patterns.
+>
+> 4. Product and stock availability
+>
+> - Use Inventory and OrderItems.
+>
+> - When asked whether a replacement can be fulfilled, check whether the
+> requested SKU is available in stock.
+>
+> 5. Trend and historical analysis
+>
+> - Use Orders, ShipmentIncidents, RefundClaims, SupportTickets, and
+> ShipmentTracking.
+>
+> - When asked for trends, summarize patterns by month, issue type,
+> customer, or product where appropriate.
+>
+> Important interpretation rules:
+>
+> - “Issue”, “problem”, or “complaint” may refer to shipment incidents,
+> support tickets, or refund claims.
+>
+> - “Replacement” and “reshipment” should be treated as operational
+> recovery actions.
+>
+> - “Escalation” usually refers to urgent or unresolved support or
+> delivery issues.
+>
+> - “High-risk customer” may indicate repeated shipment issues, open
+> tickets, unresolved claims, or negative account notes.
+>
+> - “Historical trend” means analysis over time, usually by month unless
+> otherwise specified.
+>
+> Response guidance:
+>
+> - Prefer summaries over raw data dumps.
+>
+> - If the user asks for trends, provide a short interpretation in
+> addition to the numbers.
+>
+> - If there is insufficient data, clearly say so.
+>
+> - If multiple records exist, prioritize the most recent and most
+> severe items.
+>
+> - If asked for a recommendation, provide a business-oriented
+> recommendation based on the available evidence.
+>
+> Support group by in GQL
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image124.png)
+![](./media/image133.png)
 
-21. After publishing, verify the success message and select **View
+> ![](./media/image134.png)
+
+28. After publishing, verify the success message and select **View
     publishing details** to review the agent deployment.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image125.png)
+> ![](./media/image135.png)
 
-22. Copy the **Published URL** and paste it into Notepad for use in the
+29. Copy the **Published URL** and paste it into Notepad for use in the
     next task.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image126.png)
+> ![](./media/image136.png)
 
-23. Save the **Workspace ID** and **AISkills ID** in **Notepad** for
+30. Save the **Workspace ID** and **AISkills ID** in **Notepad** for
     later use
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image127.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image128.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image129.png)
+![](./media/image137.png)
+
+![](./media/image138.png)
+
+31. Enter the following text and click on the **Submit icon** as shown
+    in the below image.
+
++++Predict which products may run out of stock soon+++
+
+![](./media/image139.png)
+
+![](./media/image140.png)
+
+32. Enter the following text and click on the **Submit icon** as shown
+    in the below image.
+
++++ Show me all open support tickets+++
+
+![](./media/image141.png)
 
 ## Task 11: Create Foundry agent that unifies all IQ’s data
 
-1.  Open a browser go to +++https://portal.azure.com+++ and sign in with your cloud slice account.
+1.  Open a browser go to
+    +++[https://portal.azure.com+++](https://portal.azure.com+++/) and
+    sign in with your cloud slice account below.
 
 2.  Select your **Resource group**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image130.png)
+![](./media/image142.png)
 
 3.  Select **Foundry project**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image131.png)
+> ![](./media/image143.png)
 
 4.  On the Overview pane, click on **Go to Foundry portal**. This will
     navigate you to the Microsoft Foundry portal.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image132.png)
+![](./media/image144.png)
 
 5.  Select **Build** to proceed
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image133.png)
+![](./media/image145.png)
 
 6.  In the **Agents** section, locate and select the newly created agent
     (for example, **IQAgent**) from the list.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image134.png)
+![](./media/image146.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image135.png)
+![](./media/image147.png)
 
 7.  In the **Instructions** section, enter the following data to define
     the agent’s behavior.
-    
-    ```
-   You are Contoso’s Resolution Agent for customer shipment and delivery
-   issues.
-  
-   Your job is to:
-  
-   1. Review customer and internal emails to understand the issue and
-   urgency.
-  
-   2. Use the Fabric Data Agent to validate customer, order, inventory,
-   shipment, and support facts.
-  
-   3. Use Foundry IQ to apply Contoso’s internal policies, SLA guidance,
-   escalation criteria, and communication standards.
-  
-   4. Recommend the best next action based on both data and policy.
-  
-   5. Draft clear, professional customer-facing or internal responses
-   when requested.
-  
-   Always:
-  
-   - Validate facts using available business data before making a
-   recommendation.
-  
-   - Use policy documents when deciding replacement, refund, escalation,
-   or SLA handling.
-  
-   - Distinguish between confirmed facts, likely causes, and recommended
-   actions.
-  
-   - If inventory is available and policy supports replacement,
-   prioritize fast resolution for Premium customers.
-    ```
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image136.png)
+> You are Contoso’s Resolution Agent for customer shipment and delivery
+> issues.
+>
+> Your job is to:
+>
+> 1. Review customer and internal emails to understand the issue and
+> urgency.
+>
+> 2. Use the Fabric Data Agent to validate customer, order, inventory,
+> shipment, and support facts.
+>
+> 3. Use Foundry IQ to apply Contoso’s internal policies, SLA guidance,
+> escalation criteria, and communication standards.
+>
+> 4. Recommend the best next action based on both data and policy.
+>
+> 5. Draft clear, professional customer-facing or internal responses
+> when requested.
+>
+> Always:
+>
+> - Validate facts using available business data before making a
+> recommendation.
+>
+> - Use policy documents when deciding replacement, refund, escalation,
+> or SLA handling.
+>
+> - Distinguish between confirmed facts, likely causes, and recommended
+> actions.
+>
+> - If inventory is available and policy supports replacement,
+> prioritize fast resolution for Premium customers.
+
+![](./media/image148.png)
 
 8.  Click **Save**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image137.png)
+![](./media/image149.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image138.png)
+![](./media/image150.png)
 
 9.  In the **Knowledge** section, select **Add**, then choose **Connect
     to Foundry IQ** to link the agent with the data source.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image139.png)
+> ![](./media/image151.png)
 
 10. In the **Connect to Foundry IQ** window, select **Connect to an AI
     Search resource** to configure the connection.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image140.png)
+> ![](./media/image152.png)
 
 11. In the **Choose a knowledge type** window, select **Azure Blob
     Storage**, then click **Connect** to proceed.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image141.png)
+![](./media/image153.png)
 
 12. In the **Choose a knowledge type** window, select Chat completions
     model as gpt-4.1 and click on **create**
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image142.png)
+> ![](./media/image154.png)
 
 13. After configuring the knowledge base details, select **Save
     knowledge base** to create and save it.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image143.png)
+![](./media/image155.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image144.png)
+![](./media/image156.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image145.png)
+![](./media/image157.png)
 
 14. Verify that the knowledge source is added successfully and its
     status is **Active**.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image146.png)
+![](./media/image158.png)
 
 11. Select **Use in an agent**, then choose the created agent (for
     example, **IQAgent**) to associate the knowledge base with it
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image147.png)
+![](./media/image159.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image148.png)
+![](./media/image160.png)
 
 12. In the **Tools** section, select **Add**, then choose **Browse all
     tools** to view and configure additional tools for the agent.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image149.png)
+![](./media/image161.png)
 
 13. In the **Catalog** tab, search for **Work IQ**, select **Work IQ
     Mail**, and then click **Create** to add the tool to the agent.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image150.png)
+![](./media/image162.png)
 
 14. In the **Connect the Work IQ Mail tool** window, review the default
     settings and select **Connect** to complete the configuration.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image151.png)
+![](./media/image163.png)
 
 15. Verify that **Work IQ Mail** is connected successfully.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image152.png)
+![](./media/image164.png)
 
 16. In the **Tools** section, select **Add**, then choose **Browse all
     tools** to view and configure additional tools for the agent.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image153.png)
+![](./media/image165.png)
 
 17. Select **Fabric Data Agent**, and then click **Create** to add the
     tool to the agent.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image154.png)
+![](./media/image166.png)
 
-18. In the **Connect to Fabric Data Agent** window, enter the required
-    **Workspace ID** and **Artifact ID**, then select **Connect** to
-    complete the setup.
+18. In the **OneLake Catalog** window, select **IQ_Agent**, then choose
+    **Add** to complete the setup.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image155.png)
+![](./media/image167.png)
 
 19. Verify that **Fabric Data Agent** and **Work IQ Mail** is connected
     successfully.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image156.png)
+![](./media/image168.png)
 
 20. A chat panel will open where you can enter your prompts. The agent
     will now respond.
 
-   +++Review the latest Apex Legal email and tell me what happened.+++
+> +++Review the latest Apex Legal email and tell me what happened.+++
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image157.png)
+![](./media/image169.png)
 
 21. Select **Approve** to grant the required permissions and continue.
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image158.png)
+![](./media/image170.png)
 
 22. Select **Always Approve this tool**
 
-     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image159.png)
+![](./media/image171.png)
 
 23. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
-   +++Is this customer eligible for replacement based on our policy?+++
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image160.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image161.png)
+> +++Is this customer eligible for replacement based on our policy?+++
+>
+> ![](./media/image172.png)
+>
+> ![](./media/image173.png)
 
 25. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
-   +++Do we have enough stock to resolve this today?+++
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image162.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image163.png)
+> +++Do we have enough stock to resolve this today?+++
+>
+> ![](./media/image174.png)
+>
+> ![](./media/image175.png)
 
 26. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
-   +++Should this issue be escalated?+++
+> +++Should this issue be escalated?+++
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image164.png)
+![](./media/image176.png)
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image165.png)
+![](./media/image177.png)
 
 27. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
-  +++Draft a customer response based on the issue and our communication
++++Draft a customer response based on the issue and our communication
 standards.+++
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image166.png)
+![](./media/image178.png)
 
 28. A chat panel will open where you can enter your prompts. The agent
     will now respond
 
-   +++What is the best operational resolution for order O5001?+++
+> +++ What is the best operational resolution for order O5001?+++
+>
+> ![](./media/image179.png)
+> ![](./media/image180.png)
+## Task 12: Delete the resources
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image167.png)
-  
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image168.png)
+1.  To delete the storage account, navigate to **Azure portal Home**
+    page, click on **Resource groups**.
+2.  Click on the **AgentiAI** resource group.
+3.  Select all the resources and then click on Delete as shown in the below image. (DO NOT DELETE resource group)
+![](./media/image181.png)
+4. Type delete on the text box and then click on Delete.
 
- **Summary**
+![](./media/image182.png)
 
- In this use case, you successfully built an end-to-end **AI-powered
- customer resolution system** by combining data, knowledge, and
- communication tools. The agent can intelligently analyze customer
- complaints, validate order and shipment details, apply organizational
- policies, and recommend the best course of action.
-
- By integrating Work IQ, Foundry IQ, and Fabric IQ, the solution
- demonstrates how organizations can move from reactive support
- processes to proactive, data-driven decision-making. This approach not
- only improves resolution time and accuracy but also enhances customer
- experience and operational productivity.
+> **Summary**
+>
+> In this use case, you successfully built an end-to-end **AI-powered
+> customer resolution system** by combining data, knowledge, and
+> communication tools. The agent can intelligently analyze customer
+> complaints, validate order and shipment details, apply organizational
+> policies, and recommend the best course of action.
+>
+> By integrating Work IQ, Foundry IQ, and Fabric IQ, the solution
+> demonstrates how organizations can move from reactive support
+> processes to proactive, data-driven decision-making. This approach not
+> only improves resolution time and accuracy but also enhances customer
+> experience and operational productivity.
