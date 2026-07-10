@@ -70,11 +70,11 @@ privately curated data. It uses a combination of Microsoft’s AI and
 JSON-based indexes to provide fast, relevant search results.
 
 1.  Open a browser and login to Azure portal at
-    +++<https://portal.azure.com/+++> with your credentials.
+    +++https://portal.azure.com/+++ with your credentials.
 
-    - Username - <+++@lab.CloudPortalCredential>(User1).Username+++
+    - Username - +++@lab.CloudPortalCredential(User1).Username+++
 
-    - Password - <+++@lab.CloudPortalCredential>(User1).Password+++
+    - Password - +++@lab.CloudPortalCredential(User1).Password+++
 
 From the Home page of the Azure portal, select **Microsoft Foundry** and
 select **Microsoft Foundry** under Services.
