@@ -154,7 +154,7 @@ incorrect.](./media/image5.png)
       group** (**ResourceGroup1**)
 
     - Storage account name –
-      +++[**iqlab@lab.LabInstance.Id**](mailto:iqlab@lab.LabInstance.Id)+++
+      +++iqlab@lab.LabInstance.Id+++
 
     - Region – Select @lab.CloudResourceGroup(ResourceGroup1).Location
 
@@ -256,9 +256,10 @@ incorrect.](./media/image33.png)
 
 3.  Enter the below details and select **Review + create**.
 
-    - Name - <+++agentic-@lab.LabInstance.Id>+++
+    - Name - +++agentic-@lab.LabInstance.Id+++
 
     - Region: @lab.CloudResourceGroup(AgenticAI).Location
+    - Default project name- agentic-ai-project-2306402
   
       >[!Alert] If you are experiencing a Regional capacity limitation, please try one of the following regions: **[SwedenCentral, JapanEast, NorthEurope, EastAsia]**
 
@@ -310,8 +311,8 @@ reports.
 
 | Credential | Value |
 |------------|-------|
-| Username | `+++@lab.CloudPortalCredential(User1).Username+++` |
-| Password | `+++@lab.CloudPortalCredential(User1).Password+++` |
+| Username | +++@lab.CloudPortalCredential(User1).Username+++ |
+| Password | +++@lab.CloudPortalCredential(User1).Password+++ |
 
 2.  In the Workspaces pane, click on **+New workspace** tile
 
@@ -323,7 +324,7 @@ reports.
 
 | Setting | Value |
 |----------|----------|
-| Name | `+++Fabric IQ OntologyXXXX+++` *(XXXX can be a unique number)* |
+| Name | +++Fabric IQ OntologyXXXX+++ **(XXXX can be a unique number)** |
 | Advanced | Under **License mode**, select **Fabric** |
 | Default storage format | **Small dataset storage format** |
 
@@ -348,8 +349,7 @@ incorrect.](./media/image46.png)
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image48.png)
 
-3.  In the **New lakehouse** dialog box, enter **+++IQ_Lakehouse
-    +++** in the **Name** field and **unselect** the lakehouses schemas.
+3.  In the **New lakehouse** dialog box, enter **+++IQ_Lakehouse+++** in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -608,9 +608,9 @@ contextual connections in your data.
 2.  Enter the following relationship type details and select **Add
     relationship type**.
 
-    - **Relationship type name**: +++Places +++
+    - **Relationship type name**: **+++Places+++**
 
-    - **Source entity type**: Customer
+    - **Origin entity type**: Customer
 
     - **Target entity type**: Order
 
@@ -646,13 +646,13 @@ table. Continue to the next section to create another relationship type.
 4.  Follow the same steps that you used for the first relationship type
     to create the relationship type described in the following table.
 
-| Relationship Type Name | Source Data Table | Source Entity Type |
+| Relationship Type Name |Origin entity type | Target Entity Type |
 |------------------------|------------------|--------------------|
 | Contains | Tutorial workspace → Lakehouse → Order | Products (OrderItem) |
-| hasSupportTicket | Order | SupportTicket |
-| hasTrackingEvent | Order | ShipmentTrackingEvent |
-| mayLeadTo | OrderItem | RefundClaim |
-| hasInventory | OrderItem | InventoryRecord |
+| +++hasSupportTicket+++ | Order | SupportTicket |
+| +++hasTrackingEvent+++ | Order | ShipmentTrackingEvent |
+| +++mayLeadTo+++ | OrderItem | RefundClaim |
+| +++hasInventory+++ | OrderItem | InventoryRecord |
 
 | Relationship | Mapping Table to Select |
 |--------------|-------------------------|
