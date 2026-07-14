@@ -210,8 +210,17 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image26.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image27.png)
+5. In Visual Studio Code, navigate to the scripts > ForBeginners > azd-setup > infra folder, and then open the main.bicep file.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/imga1.png)
+6.Replace the existing main.bicep file with the main.bicep file located in C:\Lab Files\Usecase 9
 
-5.  Run this script from root of repo - it will create .env with values
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/imga4.png)
+
+7. Repeat the same process to replace the main.json and main.parameters.json files with the updated versions from C:\Lab Files\Usecase 9.
+       ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/imga2.png)
+       ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/imga3.png)
+
+7.  Run this script from root of repo - it will create .env with values
     extracted by Azure CLI. By default it looks for an  resource group
     but you can override it.
 
@@ -223,7 +232,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image28.png)
 
-7.  When prompted, type **y** and press Enter to log in to Azure before
+8.  When prompted, type **y** and press Enter to log in to Azure before
     continuing with the deployment.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image29.png)
