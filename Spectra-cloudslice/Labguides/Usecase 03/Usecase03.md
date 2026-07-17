@@ -119,20 +119,20 @@ incorrect.](./media/image10.png)
 ## Task 2: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
-    following URL: +++https://github.com/technofocus-pte/MultiAgentAccelerator/tree/main+++
+    following URL: +++https://github.com/technofocus-pte/MultiAgent-CustomAutomatiSolution-Acceleratoron-Engine+++
 
     ![](./media/image12.png) 
 
-2.  Click on **fork** to fork the repo. Give unique name to the repo and
+3.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
     ![](./media/image13.png)
 
-3.  Click on **Code > Codespaces > Codespaces+**
+4.  Click on **Code > Codespaces > Codespaces+**
 
     ![](./media/image14.png) 
 
-4.  Wait for the Codespaces environment to setup .It takes few minutes
+5.  Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
     ![](./media/image15.png) 
