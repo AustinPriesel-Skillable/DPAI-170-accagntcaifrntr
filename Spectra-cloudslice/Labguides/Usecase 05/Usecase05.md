@@ -232,7 +232,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
     - **Select an Azure Subscription to use**: @lab.CloudSubscription.Name
 
-    - **azureAiServiceLocation**: japaneast
+    - **azureAiServiceLocation**: swedencentral
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image26.png)
 
