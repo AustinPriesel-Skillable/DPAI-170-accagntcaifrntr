@@ -207,6 +207,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
     container.
 
     +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
+    
     +++azd env set Azure_Location JapanEast+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/media/image26.png)
