@@ -157,7 +157,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL: 
 
- +++https://github.com/technofocus-pte/KnowledgeSolution-accelerator+++
+ +++https://github.com/technofocus-pte/Document-KnowledgeMining-SolutionAccelerator+++
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
