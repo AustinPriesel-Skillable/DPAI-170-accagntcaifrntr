@@ -186,9 +186,8 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/re
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL: 
-
-    +++https://github.com/technofocus-pte/MultiAIAgentAccelerator+++
-
++++https://github.com/CloudLabsAI-Azure/Prior-Authorization-Multi-Agent-Solution-Accelerator.git+++
+ 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image20.png)
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
