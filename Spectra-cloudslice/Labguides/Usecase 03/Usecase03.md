@@ -119,7 +119,7 @@ incorrect.](./media/image10.png)
 ## Task 2: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
-    following URL: +++https://github.com/technofocus-pte/MultiAgentAccelerator/tree/main+++
+    following URL: +++https://github.com/technofocus-pte/MultiAgent-CustomAutomatiSolution-Acceleratoron-Engine+++
 
     ![](./media/image12.png) 
 
