@@ -1,3 +1,14 @@
+---
+lab:
+  title: Usecase 04 - Build a customer resolution agent grounded with Work IQ, Foundry IQ, and Fabric IQ
+  description: In this task, you will create a Foundry resource which is required to access the Microsoft Foundry.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Microsoft Foundry
+---
+
 # Usecase 04 - Build a customer resolution agent grounded with Work IQ, Foundry IQ, and Fabric IQ
 
 **Introduction**
