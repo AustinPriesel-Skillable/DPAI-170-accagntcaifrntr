@@ -1,3 +1,15 @@
+---
+lab:
+  title: Usecase 08- Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry
+  description: As organizations adopt AI agents to automate workflows, answer questions, and retrieve internal knowledge, ensuring these systems behave safely and reliably becomes critical. Zava, a fast-growing technology company, is deploying an internal AI knowledge assistant to help employees quickly retrieve information from documents, manuals, and training materials. To protect this AI agent against harmful behavior, security gaps, or unintended responses, Zava leverages Microsoft Foundry’s AI Red Teaming capabilities. This use case demonstrates how to build a secure end-to-end AI agent, evaluate its behavior, detect risks through automated red teaming, and monitor its performance using Azure’s observability tools. Through guided steps, you will deploy the agent, test its retrieval capabilities, run red teaming evaluations, and enforce continuous monitoring to ensure safety, accuracy, and compliance.
+  duration: 10 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Azure
+    - Microsoft Foundry
+---
+
 ## Usecase 08- Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry
 
 **Scenario**

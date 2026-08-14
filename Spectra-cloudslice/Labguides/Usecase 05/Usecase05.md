@@ -1,3 +1,14 @@
+---
+lab:
+  title: Usecase 5 - Extracting Customer Insights from Conversations using Foundry IQ and AI agents
+  description: In this lab, you successfully deployed a full-stack AI solution that leverages Azure services and AI agents to analyze and extract insights from customer-related data. You learned how to provision infrastructure, deploy applications, and integrate multiple Azure services into a cohesive system.
+  duration: 25 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+---
+
 # Usecase 5 - Extracting Customer Insights from Conversations using Foundry IQ and AI agents
 
 **Introduction**

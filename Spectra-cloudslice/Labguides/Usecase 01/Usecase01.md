@@ -1,3 +1,14 @@
+---
+lab:
+  title: Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot
+  description: In this lab, we have learnt to connect the agent to a Azure AI Search service as a knowledge source and test the agent based on the source.
+  duration: 10 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+---
+
 # Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot
 Studio that leverages Azure AI Search
 

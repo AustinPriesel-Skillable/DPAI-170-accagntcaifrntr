@@ -1,3 +1,12 @@
+---
+lab:
+  title: Use case 6 - Build an intelligent banking assistant with MCP tools and Microsoft Agent Framework
+  description: 'By implementing this use case, you will:'
+  duration: 10 minutes
+  level: 200
+  islab: true
+---
+
 # Use case 6 - Build an intelligent banking assistant with MCP tools and Microsoft Agent Framework
 
 **Introduction**

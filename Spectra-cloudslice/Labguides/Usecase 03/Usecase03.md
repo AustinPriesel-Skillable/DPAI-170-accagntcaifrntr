@@ -1,3 +1,12 @@
+---
+lab:
+  title: Usecase 03- Create a cross-department intelligent multi-agent
+  description: 'The objective of this use case is to demonstrate how a multi-agent AI system can:'
+  duration: 10 minutes
+  level: 400
+  islab: true
+---
+
 ## Usecase 03- Create a cross-department intelligent multi-agent
 automation solution
 

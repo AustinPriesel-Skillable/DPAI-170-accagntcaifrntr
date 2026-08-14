@@ -1,3 +1,15 @@
+---
+lab:
+  title: Usecase 9 - Implement end to end agent operations for Zava’s shopping assistant in Microsoft Foundry
+  description: In this lab, you implemented a complete end-to-end AI solution for a retail assistant using Azure AI Foundry. Starting from environment setup and deployment, you built Cora, enhanced it with search capabilities, and evolved it into a multi-agent system.
+  duration: 15 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Microsoft Foundry
+---
+
 # Usecase 9 - Implement end to end agent operations for Zava’s shopping assistant in Microsoft Foundry
 
 **Introduction**

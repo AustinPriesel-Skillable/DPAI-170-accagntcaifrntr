@@ -1,3 +1,12 @@
+---
+lab:
+  title: Usecase 2 - Building multi agent AI solution for streamlining Healthcare prior authorization workflows
+  description: In this usecase, you successfully built and deployed a multi-agent AI-powered healthcare solution that automates prior authorization workflows. By integrating multiple intelligent agents, the system reduces manual intervention, improves operational efficiency, and ensures accurate, compliant decision-making.
+  duration: 146 minutes
+  level: 400
+  islab: true
+---
+
 ## Usecase 2 - Building multi agent AI solution for streamlining Healthcare prior authorization workflows 
 
 **Introduction**
