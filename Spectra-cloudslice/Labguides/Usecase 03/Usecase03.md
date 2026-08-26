@@ -9,9 +9,7 @@ lab:
 
 # Usecase 03 - Create a cross-department intelligent multi-agent
 
-automation solution
-
-### Introduction
+## Introduction
 
 Contoso, a growing global technology company, hires dozens of employees every month across multiple regions. Their onboarding process involves coordination between HR, IT, Facilities, Security, and Finance. Each department uses different systems, and onboarding tasks are often managed through email threads, spreadsheets, and manual follow-ups. This leads to delays, missed steps, and a poor first-day experience for new hires.
 
@@ -124,9 +122,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 ### Task 3: Provision Services and deploy application to Azure
 
-1. Run the following command on the Terminal. It generates the code to
-
-    `copy. Copy the code and press Enter.`
+1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
     +++azd auth login+++
 
