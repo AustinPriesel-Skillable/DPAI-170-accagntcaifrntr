@@ -826,8 +826,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
 1. Enter the following details to draft an email:
 
-    - **To (1)**:
-    Enter +++odl_user_2306402@sandboxailabs1012.onmicrosoft.comodl_user_2306402@sandboxailabs1012.onmicrosoft.com+++
+    - **To (1)**: +++odl_user_2306402@sandboxailabs1012.onmicrosoft.com+++
 
 
 ## Email 1:
