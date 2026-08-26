@@ -17,7 +17,7 @@ This usecase focuses on building an end-to-end AI-powered solution to extract me
 
 The solution demonstrates how organizations can analyze housing reports, contracts, and conversational data to uncover trends, compare insights, and support data-driven decision-making. It also introduces the use of Foundry AI agents for advanced document analysis, summarization, and contextual querying.
 
-### Scenario
+## Scenario
 
 In this usecase, you step into the role of a data analyst or AI engineer working for an organization dealing with large volumes of **customer conversations, housing reports, and contract documents**. The organization faces a common challenge: valuable insights are buried inside unstructured data such as PDFs, reports, and handwritten contracts, making manual analysis slow, error-prone, and inefficient.
 
@@ -162,9 +162,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 ### Task 4: Provision Services and deploy application to Azure
 
-1. Run the following command on the Terminal. It generates the code to
-
-    `copy. Copy the code and press Enter.`
+1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
     +++azd auth login+++
 
@@ -190,9 +188,7 @@ In this task, we will identify and understand the credentials that we will be us
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image23.png)
 
-1. Run below command to provision the services to Azure, build your
-
-    `container.`
+1. Run below command to provision the services to Azure, build your container.
 
     +++azd env set AZURE_RESOURCE_GROUP AgenticAI+++
 
@@ -234,11 +230,7 @@ In this task, we will identify and understand the credentials that we will be us
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/media/image32.png)
 
-1. Run the following command to install PowerShell in Codespaces to
-
-    `enable execution of PowerShell scripts within your development`
-
-    environment.
+1. Run the following command to install PowerShell in Codespaces to enable execution of PowerShell scripts within your development environment.
 
     `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
@@ -254,7 +246,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 1. Change directory to **Deployment** `cd Deployment`
 
-1. Run +++.\resourcedeployment.ps1+++
+1. Run `.\resourcedeployment.ps1`
 
 1. Enter your email address for certificate management, then open the provided URL and enter the displayed code to complete Azure login authentication.
 
