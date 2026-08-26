@@ -14,7 +14,7 @@ lab:
 
 ## Introduction
 
-This lab demonstrates how to implement **end-to-end agent operations** using Azure AI Foundry by building an intelligent retail assistant named +++Cora+++ for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution—from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
+This lab demonstrates how to implement **end-to-end agent operations** using Azure AI Foundry by building an intelligent retail assistant named **Cora** for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution—from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
 
 You will gain hands-on experience with Azure services such as **Azure AI Search, Azure AI Agent Service, and model evaluation tools**, enabling you to design scalable, intelligent, and production-ready AI applications.
 
