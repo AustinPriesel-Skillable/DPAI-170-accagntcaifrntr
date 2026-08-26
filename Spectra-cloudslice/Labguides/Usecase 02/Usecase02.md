@@ -1,376 +1,418 @@
 <!--
 lab:
-  title: Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot
-  description: In this lab, we have learnt to connect the agent to a Azure AI Search service as a knowledge source and test the agent based on the source.
-  duration: 10 minutes
-  level: 300
+  title: Usecase 2 - Building multi agent AI solution for streamlining Healthcare prior authorization workflows
+  description: In this usecase, you successfully built and deployed a multi-agent AI-powered healthcare solution that automates prior authorization workflows. By integrating multiple intelligent agents, the system reduces manual intervention, improves operational efficiency, and ensures accurate, compliant decision-making.
+  duration: 146 minutes
+  level: 400
   islab: true
-  primarytopics:
-    - Azure
 -->
 
-# Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot
+# Usecase 2 - Building multi agent AI solution for streamlining Healthcare prior authorization workflows
 
-Studio that leverages Azure AI Search
+### Introduction
 
-### Objective:
+In today’s rapidly evolving digital landscape, enterprises like **Contoso Ltd.** face increasing pressure to streamline operations, improve decision-making, and scale intelligent automation across departments. Traditional automation approaches often fall short when dealing with **complex, cross-functional workflows**, where multiple systems, teams, and data sources must be coordinated efficiently.
 
-A large enterprise wants to reduce the time employees spend searching for HR-related information (policies, benefits, leave guidelines, etc.) spread across SharePoint, PDFs, internal wikis, and documents.
+To address these challenges, Contoso adopts the **Multi-Agent Solution Accelerator**, an advanced AI-driven framework that leverages multiple specialized agents working collaboratively to execute business processes.
 
-To overcome this issue, in this lab, you will build a **Knowledge assistant** **agent** in **Copilot Studio** that uses **Azure AI Search**, to index and semantically search across enterprise HR documents.
+This accelerator enables organizations to design **intelligent, agent-based workflows**, where each AI agent is responsible for a specific function—such as data retrieval, reasoning, validation, and execution. These agents operate in a coordinated manner, orchestrated through a central system that interprets user requests and dynamically assigns tasks.
 
-## Exercise 1: Create an Azure AI Search resource
+Built on modern cloud technologies like **Azure OpenAI Service**, **Azure Cosmos DB**, and containerized microservices, the solution provides a scalable and extensible foundation for enterprise AI applications.
 
-In this exercise, you will create an Azure AI Search resource from the Azure portal. This will be used to search the documents using AI capability.
+### Business Scenario
 
-**Azure AI Search** is a cloud-based service for searching within your privately curated data. It uses a combination of Microsoft’s AI and JSON-based indexes to provide fast, relevant search results.
+Contoso operates across multiple business units including **supply chain, finance, customer service, and compliance**. Each department relies on different systems and processes, resulting in:
+- Fragmented workflows across departments
+- Manual coordination causing delays and inefficiencies
+- High risk of human errors in decision-making
+- Limited scalability of automation initiatives
 
-1. Open a browser and login to Azure portal at +++https://portal.azure.com/+++ with your credentials.
 
-    - Username - +++@lab.CloudPortalCredential(User1).Username+++
-    - Password - +++@lab.CloudPortalCredential(User1).AccessToken+++
+To overcome these challenges, Contoso implements a **multi-agent AI system** where:
 
+Multi-Agent Workflow
 
-1. From the Home page of the Azure portal, select **Foundry** and select **Microsoft Foundry** under Services.
+1. **User Request Intake Agent** Captures business queries (e.g., “Approve supplier contract” or “Analyze sales performance”).
 
-1. In the **Microsoft Foundry** Overview page, select **Use with Foundry** on the left side. Select **AI Search** and then select **+ Create**.
+1. **Planning Agent** Breaks down the request into smaller executable tasks.
 
-    ![A screenshot of a search engine AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image2.png)
+1. **Data Retrieval Agent** Fetches relevant data from enterprise systems (ERP, CRM, data warehouses).
 
-1. Enter the below details and select **Review + create**.
+1. **Reasoning Agent** Applies AI models to analyze data and generate insights.
 
-    - Subscription – @lab.CloudSubscription.Name
-    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
-    - Storage account name – +++searchleaves@lab.LabInstance.Id+++
-    - Location – @lab.CloudResourceGroup(AgenticAI).Location
+1. **Validation Agent** Ensures accuracy, compliance, and business rule alignment.
 
-    ![A screenshot of a search service AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image3.png)
+1. **Execution Agent** Triggers actions such as approvals, notifications, or report generation.
 
 
-1. Once the validation passes, select **Create**.
+### Prerequisites
 
-    ![A screenshot of a search engine AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image4.png)
+    - **GitHub Account**: You are expected to have your own GitHub login
+  credentials. If you do not have an account, please create one by visiting: +++https://github.com/signup+++
 
-1. The deployment takes around 10 minutes to complete. Select **Go to resource** once the search service is created.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image5.png)
+### Task 1: Register Service provider
 
-1. From the **Overview** page, copy the **Url** value and save it in a notepad to be used in a future exercise.
+1. Open a browser go to +++https://portal.azure.com+++ and sign in with your cloud slice account below.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image6.png)
-
-1. Select **Keys** under **Security+networking** from the left pane. Copy the **Primary admin key** and save it in a notepad for using it in the upcoming exercises.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/imga1.png)
-
-1. Select **Identity** under **Security+networking** from the left pane.
-
-    ![A screenshot of a search engine AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/imga2.png)
-
-1. Toggle the Status to **On** under **System assigned** and then click on **Save**.
-
-    ![A screenshot of a search engine AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image9.png)
-
-1. Select **Yes** in the **Enable system assigned managed identity** confirmation dialog.
-
-    ![A screenshot of a computer error AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image10.png)
-
-
-## Exercise 2: Create a Storage account
-
-1. From the Azure portal Home page (+++https://portal.azure.com/+++), select **Storage accounts**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image11.png)
-
-1. Select **+ Create** to create a new Storage account.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image12.png)
-
-1. Enter the below details, accept the default values in the other fields and click on **Review + create**.
-
-    - Subscription – @lab.CloudSubscription.Name
-    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
-    - Storage account name – +++leavepolicystg@lab.LabInstance.Id+++
-    - Region – @lab.CloudResourceGroup(AgenticAI).Location
-    - Primary service – Select **Azure Blob Storage or Azure Data Lake
-    Storage Gen 2**
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image13.png)
-
-
-1. Once the validation passes, click on **Create**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image14.png)
-
-1. Once the resource creation succeeds, click on **Go to resource**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image15.png)
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image16.png)
-
-1. Select **Containers** under **Data storage**. Select **+ Container**, enter the name as +++document+++ and click on **Create** to create the container.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image17.png)
-
-1. Select the created container **document** to upload the leave policy document into it.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image18.png)
-
-1. Click on **Upload** and then select **Browse for files**.
-
-    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image19.png)
-
-1. Select the **LeavePolicy.docx** from **C:\Labfiles\LabFiles** and then click on **Upload**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image20.png)
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image21.png)
-
-1. Navigate to the **leavepolicystg@lab.LabInstance.Id** Storage account (Select **Storageaccounts** from the **Home page** of the Azure portal and select leavepolicystg@lab.LabInstance.Id) and select **Access Control (IAM)** from the left pane. Select **Add -\> Add role assignment**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image22.png)
-
-1. Search for +++Storage Blob Data Reader+++, select it and click on **Next**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image23.png)
-
-1. Click on **+Select members**, search for and select your **user name**, +++@lab.CloudPortalCredential(User1).Username+++ and then click on **Select**. This adds the Storage Blob Data Reader role to your user id.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image24.png)
-
-1. Select **Managed identity** and then select **+ Select members**. Select **Search service** under **Managed identity** and select the **searchleaves** search service that gets listed.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image25.png)
-
-1. Click on **Select** to select the search service.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image26.png)
-
-1. Back in the Add role assignment screen, click on **Review + assign**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image27.png)
-
-1. Select **Review + assign** again in the next screen.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image28.png)
-
-1. Proceed to the next step once the roles are added.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image29.png)
-
-    In this exercise, we have created a Storage account and added the document and required Role permissions to it.
-
-
-## Exercise 3: Create an Azure OpenAI Service and deploy a model
-
-1. From the Azure portal Home page, search for and select +++Azure
-    OpenAI+++.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image30.png)
-
-1. Select **+ Create**, **Azure OpenAI**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image31.png)
-
-1. Enter the below details and select **Next**.
-
-    - Subscription – @lab.CloudSubscription.Name
-    - Resource group – @lab.CloudResourceGroup(AgenticAI).Name
-    - Region – @lab.CloudResourceGroup(AgenticAI).Location
-    - Name – +++openaiservice@lab.LabInstance.Id+++
-    - Pricing tier – **Standard S0**
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image32.png)
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image33.png)
-
-
-1. Select **Next** in the next 2 screens select **Create** in the **Review + submit** screen.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image34.png)
-
-1. Click on **Go to resource** once the service is created.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image35.png)
-
-1. Select **Access control (IAM)** from the left pane, select **Add -\> Add role assignment**.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image36.png)
-
-1. Search for +++Cognitive Services OpenAI User+++, select the role and click on **Next**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image37.png)
-
-1. Select **+ Select members**, search for your **user name**, +++@lab.CloudPortalCredential(User1).Username+++, select it and click on **Select**.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image38.png)
-
-1. Back in the **Add role assignment** screen, select **Managed identity**. Then select **+ Select members**. In the **Select managed identities** screen, select **Search service** under **Managed identity** and select the **seachleaves** service.
-
-    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image39.png)
-
-1. Once selected, click on **Select**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image40.png)
-
-1. Select **Review + assign** in the next 2 screens.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image41.png)
-
-1. Wait for a **success** message on the role additions before proceeding with the next tasks.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image42.png)
-
-1. From the **Overview** page of the Azure OpenAI Service resource, select **Go to Azure AI Foundry portal** to open the Azure OpenAI Service there and deploy a model.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image43.png)
-
-1. Select **Deployments** from the left pane.
-
-    ![A screenshot of a chat AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image44.png)
-
-1. Select **+ Deploy model** -\> **Deploy base model**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image45.png)
-
-1. Select **Embeddings** under **Inference tasks**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image46.png)
-
-1. Search for +++text-embedding+++, select **text-embedding-3-large** and then select **Confirm**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image47.png)
-
-1. Select **Deployment type** as **Standard** and then select **Deploy** in the **Deploy text-embedding-3-large** screen..
-
-    ![image](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image48.png)
-
-1. The model gets deployed and the screen is loaded with the deployment details.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image49.png)
-
-
-## Exercise 4: Create a vector index
-
-1. Back in the Azure portal, open the **searchleaves** AI Search service resource.
-
-1. Select **Import data**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image50.png)
-
-1. Select the **Azure Blob Storage** option.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image51.png)
-
-1. Select the **RAG** option in the **What scenarios are you targeting?** screen.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image52.png)
-
-1. Enter the below details, accept the other values as default and click **Next**.
-
-    - Subscription – @lab.CloudSubscription.Name
-    - Storage account- **leavepolicystg@lab.LabInstance.Id**
-    - Blob-container – Select **document**
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image53.png)
-
-
-1. In the Vectorize your text screen, the subscription is pre-populated. Enter the below details and click **Next**.
-
-    - Azure OpenAI Service –
-    Select **openaiservice@lab.LabInstance.Id**
+    Username: +++@lab.CloudPortalCredential(User1).Username+++
   
-    - Model deployment – **text-embedding-3-large**
-    - Authentication type – **System assigned identity**
-    - Select the checkbox to acknowledge the cost alert of Azure OpenAI.
+    Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
+  
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image1.png)
+  
+    ![A login box with a red box and blue box with text AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image2.png)
+
+1. Click on **Subscriptions** tile.
+
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image3.png)
+
+1. Click on the subscription name.
+
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image4.png)
+
+1. Expand Settings from the left navigation menu. Click on **Resource providers**, enter +++Microsoft.CognitiveServices+++ and select it, and then click **Register**.
+
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image5.png)
+
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image6.png)
+
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image7.png)
+
+1. Repeat step 4 to register the following Resource provider.
+
+    - +++Microsoft.AlertsManagement+++
+    - +++Microsoft.App+++
+    - +++Microsoft.ContainerRegistry+++
+    - +++Microsoft.OperationalInsights+++
+    - +++Microsoft.Insights+++
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image8.png)
 
 
-1. Select Next in the **Vectorize and enrich your images** screen since we are not dealing with images here and select **Next** in the **Advanced settings** screen as well.
+### Task 2: Assign Contributor Role
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image54.png)
+1. Select **Subscriptions**.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image55.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image9.png)
 
-1. Select **Create** in the **Review + create** screen.
+1. From the left menu, click on the **Access control(IAM).**
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image56.png)
+1. On the Access control(IAM) page, Click +**Add** and select **Add role assignments.**
 
-1. Click on **Close** in the success dialog box.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image10.png)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image57.png)
+1. In the Azure “Add role assignment” page, the **Contributor** role is selected under **Privileged administrator roles**, and the user proceeds by clicking **Next** to continue the assignment process.
 
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image11.png)
 
-## Exercise 5: Create a knowledge assistant agent
+1. In the **Add role assignment** tab, select Assign access to User group or service principal. Under Members, click **+Select members**
 
-1. Open a new broser and login to +++https://copilotstudio.microsoft.com+++ using your login credentials.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image12.png)
 
-1. Select **Get Started** in the Welcome to Microsoft Copilot Studio.
+1. On the Select members tab , search your subscription and click **Select.**
 
-    ![image](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image58.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image13.png)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image59.png)
+1. In the **Add role assignment** page, Click **Review + Assign**, you will get a notification once the role assignment is complete.
 
-1. Select Agents from the left pane. Enter ```You are a Knowledge assistant agent for HR who will answer questions related to leaves and leave policies to the employees.``` and select **Send**.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image14.png)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image60.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image15.png)
 
-1. Once the agent is created, in the Test pane, enter ```How many days of Maternity leaves can I avail?``` and click **Send.**
+1. You will see a notification
 
-    ![image](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image61.png)
-
-1. It gives a generalized reply as in the screenshot below.
-
-    ![image](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image62.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image16.png)
 
 
-## Exercise 6: Add the Azure AI Search as a knowledge source
+### Task 3: Retrieve resource group name and location
 
-1. From the **Overview** page of the agent, select **Add knowledge**.
+1. Type in +++Resource group+++ in the search bar and select **Resource groups**.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image63.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image17.png)
 
-1. Select Azure AI Search from the list of knowledge sources available.
+1. Click on your assigned **Resource group**.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image64.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image18.png)
 
-1. Click on the **drop down** next to **Not connected** in the next screen and select **Create new connection**.
+1. In **Resource group** page, copy **resource group name and location** and paste them in a notepad, then **Save** the notepad to use the information in the upcoming tasks.
 
-    ![A screenshot of a search engine AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image65.png)
-
-1. Enter the **Endpoint url** and the **Admin key** values which we saved to a notepad in a previous exercise and then click on **Create** to create the connection.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image66.png)
-
-1. Once the connection is established, the available index is listed and already selected. Click on **Add to agent**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image67.png)
-
-1. The AI Search service is added as a knowledge source to the agent and is in **Ready** state now. Ensure that the **Web search** option is **disabled** in the Knowledge section.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image68.png)
-
-1. Now, let us test the agent with the same question we tried before.
-
-1. In the Test pane, enter `How many days of Maternity leaves can I avail?` and click **Send.**
-
-    ![image](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image69.png)
-
-1. You can see that the response from the agent now is from the document uploaded in the AI Search service.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/media/image70.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image19.png)
 
 
-## Exercise 7: Clean up all the resources
+### Task 4: Open Github Codespaces environment
 
-1. Switch back to **Azure portal -\> Resource group-\> Resource group name.**
+1. Open your browser, navigate to the address bar, type or paste the following URL: +++https://github.com/CloudLabsAI-Azure/Prior-Authorization-Multi-Agent-Solution-Accelerator.git+++
 
-1. Select all the resources and then click on Delete as shown in the below image. (**DO NOT DELETE** resource group)
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image20.png)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/AzAifndry-Agntsdepth/refs/heads/Cloudslice/Labguides/Usecase%2002/media/imga3.png)
+1. Click on **fork** to fork the repo. Give unique name to the repo and click on **Create repo** button.
 
-1. Type delete on the text box and then click on **Delete**.
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image21.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image22.png)
+
+1. Click on **Code > codespaces > codespaces+**
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image23.png)
+
+1. Wait for the Codespaces environment to setup. It takes few minutes to setup completely
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image24.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image25.png)
+
+1. The environment is now ready for resource deployment.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image26.png)
 
 
-### Summary:
+### Task 5: Provision Services and deploy application to Azure
 
-In this lab, we have learnt to connect the agent to a Azure AI Search service as a knowledge source and test the agent based on the source.
+1. Run the following command on the Terminal. It generates the code to
+
+    `copy. Copy the code and press Enter.`
+
+    +++azd auth login+++
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image27.png)
+
+1. Run the azd auth login command, copy the displayed authentication code, and complete the sign-in process in your browser to authenticate your environment.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image28.png)
+
+1. Default browser opens to enter the generated code to verify. Enter the code and click **Next**.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image29.png)
+
+1. Sign in with your Azure credentials.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image30.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image31.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image32.png)
+
+1. Run `az login`, copy the displayed authentication code, and complete the sign-in process in your browser to authenticate your environment.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image33.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image34.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image30.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image35.png)
+
+1. Run `azd up` - This will provision Azure resources
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image36.png)
+
+1. Enter any name of +++prior-auth-dev@lab.LabInstance.Id+++
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image37.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image38.png)
+
+1. Select below values.
+
+    - **Select an Azure Subscription to use** : @lab.CloudSubscription.Name
+    - **Enter a value for existingResourceGroup Name:** @lab.CloudResourceGroup(AgenticAI).Name
+    - **Enter location**: Sweden Central
+  
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image39.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image40.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image41.png)
+
+
+1. Enter +++Y+++ to proceed with the deployment.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image42.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image43.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image44.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image45.png)
+
+1. The deployment process is currently building container images using a remote Azure Container Registry (ACR) build.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image46.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image47.png)
+
+1. The frontend container image has been built successfully, and the agent-clinical image build process has started in Azure Container Registry (ACR).
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image48.png)
+
+1. Agent-clinical image build process completed and building agent-coverage build process has started in Azure Container Registry (ACR).
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image49.png)
+
+1. Agent-coverage image build process completed and building agent-compliance build process has started in Azure Container Registry (ACR).
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image50.png)
+
+1. Agent-compliance image build process completed and building agent-synthesis build process has started in Azure Container Registry (ACR).
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image51.png)
+
+1. Agent-synthesis image build process completed
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image52.png)
+
+1. Backend and frontend container app updated sucessfully
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image53.png)
+
+1. The agent-synthesis image has been built successfully, container apps have been updated, required roles have been ensured, and Foundry MCP tool connections have been created successfully.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image54.png)
+
+1. The deployment has completed successfully, and the frontend and backend application URLs, along with the backend health check endpoint, are now available for access.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image55.png)
+
+
+### Task 6: Verify deployed resources in the Azure portal
+
+1. Select **Resource groups**
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image56.png)
+
+1. Click on your assigned **Resource group**.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image57.png)
+
+1. Make sure the below resource got deployed successfully
+
+    - Foundry
+    - Foundry project
+    - Container App
+    - Container registry
+    - Container App Environment
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image58.png)
+
+
+1. Click on **Foundry Project.**
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image58.png)
+
+1. Click **Go to Foundry portal** to verify that the agents has been successfully deployed.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image59.png)
+
+1. In Microsoft Foundry, navigate to the **Build** section from the top menu to start creating and managing your AI solutions.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image60.png)
+
+1. Agents has been successfully deployed
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image61.png)
+
+1. Select the **synthesis-agent**.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image61.png)
+
+1. Click on **Start agent deployment** to deploy the synthesis-agent.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image62.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image63.png)
+
+1. Select the **compliance-agent**.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image64.png)
+
+1. Click on **Start agent deployment** to deploy the **compliance-agent**.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image65.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image66.png)
+
+1. Repeat steps 10 and 11 to run the **coverage-assessment-agent** and **clinical-reviewer-agent**.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image67.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image68.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image69.png)
+
+
+### **Task 7: Test the Application**
+
+1. Go back to the codespace and copy the **Frontend URL**; it will be used later to launch the application.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image70.png)
+
+1. Run the command `python scripts/check_agents.py` to verify agent connections and application health status.
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image71.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image72.png)
+
+1. Run the check_agents.py script to verify agent registration, backend health, frontend availability, and tool connections, ensuring all checks pass successfully before proceeding with PA request submission.
+
+    `python scripts/check_agents.py --version 1`
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image73.png)
+
+1. Run the check_agents.py --poll command to continuously monitor agent status, ensuring all components like registration, tool connections, backend health, and frontend availability remain healthy before submitting PA requests.
+
+    `python scripts/check_agents.py -–poll`
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image74.png)
+
+1. Click on **Frontend**
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image74.png)
+
+1. Click on **Open** button
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image75.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image76.png)
+
+1. Click **"Load Sample Case"** to populate the form with demo data
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image77.png)
+
+1. Click **"Submit for Review"**
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image78.png)
+
+1. Monitor the progress tracker — you should see all 5 phases complete
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image79.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image80.png)
+
+1. Review the agent results in the dashboard tabs (Compliance, Clinical, Coverage)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image81.png)
+
+1. Click **Accept Recommendation**
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image82.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image83.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image84.png)
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/media/image85.png)
+
+
+### Summary
+
+In this usecase, you successfully built and deployed a **multi-agent AI-powered healthcare solution** that automates prior authorization workflows. By integrating multiple intelligent agents, the system reduces manual intervention, improves operational efficiency, and ensures accurate, compliant decision-making.
+
+The hands-on experience covered:
+    - Setting up Azure resources and permissions
+    - Deploying containerized AI agents
+    - Orchestrating agent collaboration
+    - Testing the application with real scenarios
+
+
+Overall, this use case demonstrates how **multi-agent AI systems can transform complex healthcare processes** into efficient, scalable, and intelligent workflows, providing a strong foundation for enterprise AI adoption.
