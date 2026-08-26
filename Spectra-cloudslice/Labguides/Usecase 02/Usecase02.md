@@ -47,8 +47,7 @@ Multi-Agent Workflow
 
 ### Prerequisites
 
-    - **GitHub Account**: You are expected to have your own GitHub login
-  credentials. If you do not have an account, please create one by visiting: +++https://github.com/signup+++
+- **GitHub Account**: You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting: +++https://github.com/signup+++
 
 
 ### Task 1: Register Service provider
@@ -169,9 +168,7 @@ Multi-Agent Workflow
 
 ### Task 5: Provision Services and deploy application to Azure
 
-1. Run the following command on the Terminal. It generates the code to
-
-    `copy. Copy the code and press Enter.`
+1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
     +++azd auth login+++
 
