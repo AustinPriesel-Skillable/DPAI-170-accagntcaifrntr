@@ -320,7 +320,7 @@ In this task, we will identify and understand the credentials that we will be us
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image56.png)
 
-    +++How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?+++
+    `How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image57.png)
 
