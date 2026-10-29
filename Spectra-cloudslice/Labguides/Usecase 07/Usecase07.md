@@ -41,7 +41,7 @@ This task introduces you to the process of setting up your Microsoft Foundry pro
 
 Follow the steps below to complete the setup of your Microsoft Foundry project.
 
-1. Open a new tab and copy and navigate to this link +++https://ai.azure.com/templates+++.
+1. Open a new tab and copy and navigate to this link +++https://ai.azure.com/templates+++
 
 1. You should see a dialog box prompting you to select a project to continue.
 
